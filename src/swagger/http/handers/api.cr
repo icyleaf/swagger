@@ -4,20 +4,19 @@ module Swagger::HTTP
   class APIHandler
     include Swagger::HTTP::Handler
 
-    def self.new(document : Document, endpoint : String)
+    def self.new(document : Document, endpoint : String, debug_mode = true)
       json = document.to_json
       new(json, endpoint)
     end
 
-    def initialize(@json : String, @endpoint : String)
+    def initialize(@json : String, @endpoint : String, @debug_mode = true)
     end
 
     def call(context)
-      if match?(context)
-        response_with(context, @json)
-      else
-        call_next(context)
-      end
+      return call_next(context) unless match?(context)
+
+      context.response.headers["Access-Control-Allow-Origin"] = "*" if @debug_mode
+      response_with(context, @json)
     end
 
     def match?(context)

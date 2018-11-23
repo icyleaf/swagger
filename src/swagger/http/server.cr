@@ -20,9 +20,8 @@ module Swagger::HTTP
       api_handler = HTTP::APIHandler.new(document, server_endpoint)
 
       server = ::HTTP::Server.new([
-        HTTP::WebHandler.new(@swagger_uri, api_handler.api_url),
         api_handler,
-        ::HTTP::StaticFileHandler.new(File.expand_path("assets", __DIR__), directory_listing: false)
+        HTTP::WebHandler.new(@swagger_uri, api_handler.api_url),
       ])
       server.bind_tcp @host, @port
       server
