@@ -2,12 +2,18 @@ require "../src/swagger"
 require "../src/swagger/http/server"
 
 builder = Swagger::Builder.new(
-  title: "Simple App API Demo",
+  title: "Authorization API Demo",
   version: "1.0.0",
-  description: "Simple App API Demo document written by Crystal",
+  description: "Authorization API Demo document written by Crystal",
   terms_url: "https://github.com/icyleaf/swagger",
-  license: Swagger::License.new("MIT", "https://opensource.org/licenses/MIT"),
-  contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", "http://icyleaf.com")
+  contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", "http://icyleaf.com"),
+  authorizations: [
+    Swagger::Authorization.none,
+    Swagger::Authorization.new(Swagger::Authorization::Type::Basic, "Basic Auth"),
+    Swagger::Authorization.new("bearer", "Private Token Auth"),
+    Swagger::Authorization.jwt(description: "JWT Auth"),
+    Swagger::Authorization.api_key(name: "api_key", location: "query", description: "API Key Auth"),
+  ]
 )
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
@@ -20,11 +26,5 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
     Swagger::Response.new("404", "Not found user")
   ])
 ]))
-
-builder.add(Swagger::Server.new("http://swagger.dev:{port}/{version}/api", "Development", [
-  Swagger::Server::Variable.new("port", "3000", ["3000"], "API port"),
-  Swagger::Server::Variable.new("version", "v2", ["v2", "v3"], description: "API version"),
-]))
-builder.add(Swagger::Server.new("http://example.com/api", "Production"))
 
 Swagger::HTTP::Server.run(builder.built)

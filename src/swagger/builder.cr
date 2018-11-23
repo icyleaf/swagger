@@ -38,12 +38,17 @@ module Swagger
     end
 
     def built
+      security_schemes = build_security_schemes
+      security = build_security(security_schemes)
+      components = build_components(security_schemes)
+
       Document.new(
         info: info,
         paths: paths,
         servers: servers,
         tags: tags,
-        components: components
+        security: security,
+        components: components,
       )
     end
 
@@ -84,10 +89,58 @@ module Swagger
       end
     end
 
-    private def components
-      @objects.each_with_object(Hash(String, Object::Schema).new) do |object, obj|
+    private def build_components(security_schemes)
+      Object::Components.new(security_schemes: security_schemes)
+    end
 
+    def build_security(security_schemes)
+      return unless security_schemes
+      security_schemes.keys.each_with_object(Hash(String, Array(String)).new) do |name, obj|
+        obj[name] = Array(String).new
       end
+    end
+
+    def build_security_schemes
+      return unless authorizations = @authorizations
+      authorizations.each_with_object(Hash(String, Object::SecurityScheme).new) do |auth, obj|
+        scheme = case auth.type
+                  when Authorization::Type::Basic
+                    Object::SecurityScheme.new(
+                      "http",
+                      auth.description,
+                      parameter_location: "header",
+                      scheme: "basic"
+                    )
+                  when Authorization::Type::Bearer
+                    Object::SecurityScheme.new(
+                      "http",
+                      auth.description,
+                      parameter_location: "header",
+                      scheme: "bearer",
+                      bearer_format: auth.bearer_format
+                    )
+                  when Authorization::Type::APIKey
+                    Object::SecurityScheme.new(
+                      "apiKey",
+                      auth.description,
+                      name: auth.api_key_name,
+                      parameter_location: auth.parameter_location,
+                      bearer_format: auth.bearer_format
+                    )
+                  end
+        obj[security_name(auth)] = scheme if scheme
+      end
+    end
+
+    def security_name(authorization)
+      Array(String).new.tap do |obj|
+        if authorization.type == Authorization::Type::Bearer && (format = authorization.bearer_format)
+          obj << format.downcase
+        else
+          obj << authorization.name
+        end
+        obj << "auth"
+      end.join("_")
     end
   end
 end
