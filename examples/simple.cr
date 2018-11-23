@@ -18,7 +18,11 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
   Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user")
-  ])
+  ]),
+  Swagger::Action.new("get", "/user/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+    Swagger::Response.new("200", "Success response"),
+    Swagger::Response.new("404", "Not found user")
+  ], deprecated: true)
 ]))
 
 builder.add(Swagger::Server.new("http://swagger.dev:{port}/{version}/api", "Development", [
