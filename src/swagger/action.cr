@@ -8,11 +8,11 @@ module Swagger
     property request
     property responses
     property authorization
+    property deprecated
 
-    # TODO: authorization
     def initialize(@method : String, @route : String, @summary : String? = nil, @parameters : Array(Parameter)? = nil,
                    @description : String? = nil, @request : Request? = nil, @responses : Array(Response)? = nil,
-                   @authorization = false)
+                   @authorization = false, @deprecated = false)
     end
   end
 end

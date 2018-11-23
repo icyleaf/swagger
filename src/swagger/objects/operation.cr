@@ -2,9 +2,17 @@ module Swagger::Object
   struct Operation
     include JSON::Serializable
 
-    def self.from(action : Action, controller_name : String? = nil)
-      new(action.summary, action.description, tags(controller_name), parameters(action),
-          request_body(action), responses(action), action.authorization)
+    def self.from(action : Action, controller_name : String? = nil, security : Hash(String, Array(String))? = nil)
+      new(
+        summary: action.summary,
+        description: action.description,
+        tags: tags(controller_name),
+        parameters: parameters(action),
+        request_body: request_body(action),
+        responses: responses(action),
+        security: security(action, security),
+        deprecated: action.deprecated
+      )
     end
 
     def self.tags(name)
@@ -36,6 +44,10 @@ module Swagger::Object
       end
     end
 
+    def self.security(action, security)
+      [security] if action.authorization && security
+    end
+
     getter summary : String? = nil
     getter description : String? = nil
     getter tags : Array(String)? = nil
@@ -46,9 +58,9 @@ module Swagger::Object
 
     getter responses : Hash(String, Response)? = nil
     getter deprecated : Bool = false
+    getter security : Array(Hash(String, Array(String)))? = nil
 
     # TODO: Add instace vars to initialize
-    getter security : Array(Hash(String, String)) ? = nil
     getter servers : Array(Server)? = nil
 
     @[JSON::Field(key: "externalDocs")]
@@ -59,7 +71,7 @@ module Swagger::Object
 
     def initialize(@summary : String? = nil, @description : String? = nil, @tags : Array(String)? = nil,
                    @parameters : Array(Parameter)? = nil, @request_body : RequestBody? = nil, @responses : Hash(String, Response)? = nil,
-                   @deprecated : Bool = false)
+                   @deprecated : Bool = false, @security : Array(Hash(String, Array(String)))? = nil)
     end
   end
 end

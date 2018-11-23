@@ -8,6 +8,7 @@ builder = Swagger::Builder.new(
   terms_url: "https://github.com/icyleaf/swagger",
   contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", "http://icyleaf.com"),
   authorizations: [
+    # List all usages to instance an authorization
     Swagger::Authorization.none,
     Swagger::Authorization.new(Swagger::Authorization::Type::Basic, "Basic Auth"),
     Swagger::Authorization.new("bearer", "Private Token Auth"),
@@ -16,15 +17,19 @@ builder = Swagger::Builder.new(
   ]
 )
 
+builder.add(Swagger::Controller.new("Auth", "Authorization", [
+  Swagger::Action.new("get", "/access_token", "Get Access Token")
+]))
+
 builder.add(Swagger::Controller.new("Users", "User Resources", [
   Swagger::Action.new("get", "/users", "List users", parameters: [
     Swagger::Parameter.new("page", "query", "integer", "Current page"),
     Swagger::Parameter.new("limit", "query", "integer", "How many items to return at one time (max 100)"),
-  ]),
+  ], authorization: true),
   Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user")
-  ])
+  ], authorization: true)
 ]))
 
 Swagger::HTTP::Server.run(builder.built)
