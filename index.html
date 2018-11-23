@@ -315,7 +315,10 @@ builder <span class="o">=</span> <span class="t">Swagger</span><span class="t">:
   description: <span class="s">&quot;This is a sample api for users&quot;</span>,
   terms: <span class="t">URI</span>.parse(<span class="s">&quot;http://yourapp.com/terms&quot;</span>),
   contact: <span class="t">Swagger</span><span class="t">::</span><span class="t">Contact</span>.<span class="k">new</span>(<span class="s">&quot;icyleaf&quot;</span>, <span class="s">&quot;icyleaf.cn@gmail.com&quot;</span>, <span class="t">URI</span>.parse(<span class="s">&quot;http://icyleaf.com&quot;</span>)),
-  license: <span class="t">Swagger</span><span class="t">::</span><span class="t">License</span>.<span class="k">new</span>(<span class="s">&quot;MIT&quot;</span>, <span class="t">URI</span>.parse(<span class="s">&quot;https://github.com/icyleaf/swagger/blob/master/LICENSE&quot;</span>))
+  license: <span class="t">Swagger</span><span class="t">::</span><span class="t">License</span>.<span class="k">new</span>(<span class="s">&quot;MIT&quot;</span>, <span class="t">URI</span>.parse(<span class="s">&quot;https://github.com/icyleaf/swagger/blob/master/LICENSE&quot;</span>)),
+  authorizations: [
+    <span class="t">Swagger</span><span class="t">::</span><span class="t">Authorization</span>.jwt(description: <span class="s">&quot;Use JWT Auth&quot;</span>),
+  ]
 )
 
 builder.add(<span class="t">Swagger</span><span class="t">::</span><span class="t">Controller</span>.<span class="k">new</span>(<span class="s">&quot;Users&quot;</span>, <span class="s">&quot;User resources&quot;</span>, [
@@ -341,7 +344,7 @@ p document</code></pre>
 
 <h2>Todo</h2>
 
-<ul><li>[x] openapi</li><li>[x] Info Object</li><li>[x] Paths Object</li><ul><li>[x] PathItem Object</li><li>[ ] Parameter Object</li><li>[ ] RequestBody Object</li><li>[ ] Responses Object</li><li>[ ] Security Object</li><li>[x] Tag Object</li></ul><li>[x] Tags Object</li><li>[x] Servers Objec</li><ul><li>[x] ServerVariables Object</li></ul><li>[ ] Security Object</li><li>[ ] ExternalDocs Object</li><li>[ ] Components Object</li><ul><li>[ ] Schemas Object</li><li>[x] SecuritySchemes Object</li><li>[x] None</li><li>[x] Basic</li><li>[x] Bearer (include JWT)</li><li>[x] APIKey</li><li>[ ] OAuth2</li></ul></ul>
+<ul><li>[x] openapi</li><li>[x] Info Object</li><li>[x] Paths Object</li><ul><li>[x] PathItem Object</li><li>[ ] Parameter Object</li><li>[ ] RequestBody Object</li><li>[ ] Responses Object</li><li>[ ] Security Object</li><li>[x] Tag Object</li></ul><li>[x] Tags Object</li><li>[x] Servers Objec</li><ul><li>[x] ServerVariables Object</li></ul><li>[ ] Security Object</li><li>[ ] ExternalDocs Object</li><li>[ ] Components Object</li><ul><li>[ ] Schemas Object</li><li>[x] SecuritySchemes Object</li><li>[x] Basic</li><li>[x] Bearer (include JWT)</li><li>[x] APIKey</li><li>[ ] OAuth2</li></ul></ul>
 
 <h2>Donate</h2>
 
