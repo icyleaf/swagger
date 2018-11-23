@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.27.0">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../../js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "../../";
+</script>
+
+  <meta id="repository-name" content="github.com/icyleaf/swagger">
+  <title>Swagger::HTTP::WebHandler - github.com/icyleaf/swagger</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="../../index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger" data-name="swagger">
+      <a href="../../Swagger.html">Swagger</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Action" data-name="swagger::action">
+      <a href="../../Swagger/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Builder" data-name="swagger::builder">
+      <a href="../../Swagger/Builder.html">Builder</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Contact" data-name="swagger::contact">
+      <a href="../../Swagger/Contact.html">Contact</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Controller" data-name="swagger::controller">
+      <a href="../../Swagger/Controller.html">Controller</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Document" data-name="swagger::document">
+      <a href="../../Swagger/Document.html">Document</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger/HTTP" data-name="swagger::http">
+      <a href="../../Swagger/HTTP.html">HTTP</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/HTTP/APIHandler" data-name="swagger::http::apihandler">
+      <a href="../../Swagger/HTTP/APIHandler.html">APIHandler</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/HTTP/Handler" data-name="swagger::http::handler">
+      <a href="../../Swagger/HTTP/Handler.html">Handler</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/HTTP/Server" data-name="swagger::http::server">
+      <a href="../../Swagger/HTTP/Server.html">Server</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/HTTP/WebHandler" data-name="swagger::http::webhandler">
+      <a href="../../Swagger/HTTP/WebHandler.html">WebHandler</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/License" data-name="swagger::license">
+      <a href="../../Swagger/License.html">License</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Object" data-name="swagger::object">
+      <a href="../../Swagger/Object.html">Object</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Encoding" data-name="swagger::object::encoding">
+      <a href="../../Swagger/Object/Encoding.html">Encoding</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Example" data-name="swagger::object::example">
+      <a href="../../Swagger/Object/Example.html">Example</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/ExternalDocumentation" data-name="swagger::object::externaldocumentation">
+      <a href="../../Swagger/Object/ExternalDocumentation.html">ExternalDocumentation</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Header" data-name="swagger::object::header">
+      <a href="../../Swagger/Object/Header.html">Header</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Object/Info" data-name="swagger::object::info">
+      <a href="../../Swagger/Object/Info.html">Info</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Info/AuthorizationType" data-name="swagger::object::info::authorizationtype">
+      <a href="../../Swagger/Object/Info/AuthorizationType.html">AuthorizationType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Info/Contact" data-name="swagger::object::info::contact">
+      <a href="../../Swagger/Object/Info/Contact.html">Contact</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Info/License" data-name="swagger::object::info::license">
+      <a href="../../Swagger/Object/Info/License.html">License</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/MediaType" data-name="swagger::object::mediatype">
+      <a href="../../Swagger/Object/MediaType.html">MediaType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Operation" data-name="swagger::object::operation">
+      <a href="../../Swagger/Object/Operation.html">Operation</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Parameter" data-name="swagger::object::parameter">
+      <a href="../../Swagger/Object/Parameter.html">Parameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/PathItem" data-name="swagger::object::pathitem">
+      <a href="../../Swagger/Object/PathItem.html">PathItem</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Property" data-name="swagger::object::property">
+      <a href="../../Swagger/Object/Property.html">Property</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/RequestBody" data-name="swagger::object::requestbody">
+      <a href="../../Swagger/Object/RequestBody.html">RequestBody</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Object/Response" data-name="swagger::object::response">
+      <a href="../../Swagger/Object/Response.html">Response</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Response/Link" data-name="swagger::object::response::link">
+      <a href="../../Swagger/Object/Response/Link.html">Link</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Schema" data-name="swagger::object::schema">
+      <a href="../../Swagger/Object/Schema.html">Schema</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Object/Server" data-name="swagger::object::server">
+      <a href="../../Swagger/Object/Server.html">Server</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Server/Variable" data-name="swagger::object::server::variable">
+      <a href="../../Swagger/Object/Server/Variable.html">Variable</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Tag" data-name="swagger::object::tag">
+      <a href="../../Swagger/Object/Tag.html">Tag</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Parameter" data-name="swagger::parameter">
+      <a href="../../Swagger/Parameter.html">Parameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Request" data-name="swagger::request">
+      <a href="../../Swagger/Request.html">Request</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Response" data-name="swagger::response">
+      <a href="../../Swagger/Response.html">Response</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Server" data-name="swagger::server">
+      <a href="../../Swagger/Server.html">Server</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Server/Variable" data-name="swagger::server::variable">
+      <a href="../../Swagger/Server/Variable.html">Variable</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Structure" data-name="swagger::structure">
+      <a href="../../Swagger/Structure.html">Structure</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Swagger::HTTP::WebHandler
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Swagger/HTTP/WebHandler.html">Swagger::HTTP::WebHandler</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+  <h2>Included Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type">HTTP::Handler</li>
+  
+    <li class="other-type"><a href="../../Swagger/HTTP/Handler.html">Swagger::HTTP::Handler</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L5" target="_blank">
+        swagger/http/handers/web.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="DEMO_API_URL">
+        <strong>DEMO_API_URL</strong> = <code><span class="s">&quot;https://petstore.swagger.io/v2/swagger.json&quot;</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SWAGGER_WEB_URI">
+        <strong>SWAGGER_WEB_URI</strong> = <code><span class="s">&quot;/swagger&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28route%3DSWAGGER_WEB_URI%2Capi_url%3AString%3DDEMO_API_URL%29-class-method" class="signature"><strong>.new</strong>(route = <span class="t">SWAGGER_WEB_URI</span>, api_url : String = <span class="t">DEMO_API_URL</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#call%28context%29-instance-method" class="signature"><strong>#call</strong>(context)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#match_router%3F%28context%2Cpath%2Cmethod%3D%26quot%3BGET%26quot%3B%29-instance-method" class="signature"><strong>#match_router?</strong>(context, path, method = <span class="s">&quot;GET&quot;</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#not_found%28context%29-instance-method" class="signature"><strong>#not_found</strong>(context)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#redirect_to%28context%2Curi%2Cstatus_code%3D301%29-instance-method" class="signature"><strong>#redirect_to</strong>(context, uri, status_code = <span class="n">301</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#response_with%28context%2Cbody%2Cheaders%3A%3A%3AHTTP%3A%3AHeaders%2Cstatus_code%3D200%29-instance-method" class="signature"><strong>#response_with</strong>(context, body, headers : ::HTTP::Headers, status_code = <span class="n">200</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#response_with%28context%2Cbody%2Ccontent_type%3D%26quot%3Bapplication%2Fjson%26quot%3B%2Cstatus_code%3D200%29-instance-method" class="signature"><strong>#response_with</strong>(context, body, content_type = <span class="s">&quot;application/json&quot;</span>, status_code = <span class="n">200</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(route=SWAGGER_WEB_URI,api_url:String=DEMO_API_URL)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(route = <span class="t">SWAGGER_WEB_URI</span>, api_url : String = <span class="t">DEMO_API_URL</span>)
+
+        <a class="method-permalink" href="#new%28route%3DSWAGGER_WEB_URI%2Capi_url%3AString%3DDEMO_API_URL%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="call(context)-instance-method">
+      <div class="signature">
+        
+        def <strong>call</strong>(context)
+
+        <a class="method-permalink" href="#call%28context%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="match_router?(context,path,method=&amp;quot;GET&amp;quot;)-instance-method">
+      <div class="signature">
+        
+        def <strong>match_router?</strong>(context, path, method = <span class="s">&quot;GET&quot;</span>)
+
+        <a class="method-permalink" href="#match_router%3F%28context%2Cpath%2Cmethod%3D%26quot%3BGET%26quot%3B%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="not_found(context)-instance-method">
+      <div class="signature">
+        
+        def <strong>not_found</strong>(context)
+
+        <a class="method-permalink" href="#not_found%28context%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="redirect_to(context,uri,status_code=301)-instance-method">
+      <div class="signature">
+        
+        def <strong>redirect_to</strong>(context, uri, status_code = <span class="n">301</span>)
+
+        <a class="method-permalink" href="#redirect_to%28context%2Curi%2Cstatus_code%3D301%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="response_with(context,body,headers:::HTTP::Headers,status_code=200)-instance-method">
+      <div class="signature">
+        
+        def <strong>response_with</strong>(context, body, headers : ::HTTP::Headers, status_code = <span class="n">200</span>)
+
+        <a class="method-permalink" href="#response_with%28context%2Cbody%2Cheaders%3A%3A%3AHTTP%3A%3AHeaders%2Cstatus_code%3D200%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="response_with(context,body,content_type=&amp;quot;application/json&amp;quot;,status_code=200)-instance-method">
+      <div class="signature">
+        
+        def <strong>response_with</strong>(context, body, content_type = <span class="s">&quot;application/json&quot;</span>, status_code = <span class="n">200</span>)
+
+        <a class="method-permalink" href="#response_with%28context%2Cbody%2Ccontent_type%3D%26quot%3Bapplication%2Fjson%26quot%3B%2Cstatus_code%3D200%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/a3f9aea2993d8d42dc2f3e02b9a1a001a64df800/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
