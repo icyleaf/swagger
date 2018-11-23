@@ -313,9 +313,9 @@ builder <span class="o">=</span> <span class="t">Swagger</span><span class="t">:
   title: <span class="s">&quot;App API&quot;</span>,
   version: <span class="s">&quot;1.0.0&quot;</span>,
   description: <span class="s">&quot;This is a sample api for users&quot;</span>,
-  terms: <span class="t">URI</span>.parse(<span class="s">&quot;http://yourapp.com/terms&quot;</span>),
-  contact: <span class="t">Swagger</span><span class="t">::</span><span class="t">Contact</span>.<span class="k">new</span>(<span class="s">&quot;icyleaf&quot;</span>, <span class="s">&quot;icyleaf.cn@gmail.com&quot;</span>, <span class="t">URI</span>.parse(<span class="s">&quot;http://icyleaf.com&quot;</span>)),
-  license: <span class="t">Swagger</span><span class="t">::</span><span class="t">License</span>.<span class="k">new</span>(<span class="s">&quot;MIT&quot;</span>, <span class="t">URI</span>.parse(<span class="s">&quot;https://github.com/icyleaf/swagger/blob/master/LICENSE&quot;</span>)),
+  terms: <span class="s">&quot;http://yourapp.com/terms&quot;</span>,
+  contact: <span class="t">Swagger</span><span class="t">::</span><span class="t">Contact</span>.<span class="k">new</span>(<span class="s">&quot;icyleaf&quot;</span>, <span class="s">&quot;icyleaf.cn@gmail.com&quot;</span>, <span class="s">&quot;http://icyleaf.com&quot;</span>),
+  license: <span class="t">Swagger</span><span class="t">::</span><span class="t">License</span>.<span class="k">new</span>(<span class="s">&quot;MIT&quot;</span>, <span class="s">&quot;https://github.com/icyleaf/swagger/blob/master/LICENSE&quot;</span>),
   authorizations: [
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Authorization</span>.jwt(description: <span class="s">&quot;Use JWT Auth&quot;</span>),
   ]
