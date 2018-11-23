@@ -22,7 +22,7 @@ module Swagger::Object
     def self.parameters(action)
       return unless parameters = action.parameters
       parameters.each_with_object(Array(Parameter).new) do |parameter, obj|
-        schema = Schema.new(type: parameter.type)
+        schema = Schema.new(parameter.type, default: parameter.default_value)
         obj << Parameter.new(parameter.name, parameter.parameter_location, schema,
                              parameter.description, parameter.required, parameter.allow_empty_value,
                              parameter.deprecated, parameter.ref)

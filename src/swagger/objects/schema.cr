@@ -8,12 +8,13 @@ module Swagger::Object
 
     getter type : String? = nil
     getter required : Array(String)? = nil
+    getter default : (String | Int32 | Int64 | Float64 | Bool)? = nil
     getter properties : Hash(String, Property)? = nil
 
     @[JSON::Field(key: "$ref")]
     getter ref : String? = nil
 
-    def initialize(@type : String? = nil, @required : Array(String)? = nil,
+    def initialize(@type : String? = nil, @required : Array(String)? = nil, @default : (String | Int32 | Int64 | Float64 | Bool)? = nil,
                    @properties : Hash(String, Property)? = nil, @ref : String? = nil)
     end
   end
