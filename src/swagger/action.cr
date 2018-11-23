@@ -1,13 +1,13 @@
 module Swagger
   struct Action
-    getter method
-    getter route
-    getter summary
-    getter description
-    getter parameters
-    getter request
-    getter responses
-    getter authorization
+    property method
+    property route
+    property summary
+    property description
+    property parameters
+    property request
+    property responses
+    property authorization
 
     # TODO: authorization
     def initialize(@method : String, @route : String, @summary : String? = nil, @parameters : Array(Parameter)? = nil,

@@ -6,7 +6,7 @@ module Swagger
 
     def initialize(@title : String, @version : String, @description : String? = nil,
                    @terms_url : String? = nil, @license : Object::Info::License? = nil, @contact : Object::Info::Contact? = nil,
-                   @authorizations : Array(Object::Info::AuthorizationType)? = nil)
+                   @authorizations : Array(Authorization)? = nil)
     end
 
     def add(controller name : String, description : String, actions : Array(Action))
@@ -48,7 +48,7 @@ module Swagger
     end
 
     private def info
-      Object::Info.new(@title, @version, @description, @terms_url, @license, @contact, @authorizations)
+      Object::Info.new(@title, @version, @description, @terms_url, @license, @contact)
     end
 
     private def paths

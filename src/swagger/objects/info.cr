@@ -11,11 +11,9 @@ module Swagger::Object
 
     getter license : License? = nil
     getter contact : Contact? = nil
-    getter authorizations : Array(AuthorizationType)? = nil
 
     def initialize(@title : String, @version : String, @description : String? = nil,
-                   @terms_url : String? = nil, @license : License? = nil, @contact : Contact? = nil,
-                   @authorizations : Array(AuthorizationType)? = nil)
+                   @terms_url : String? = nil, @license : License? = nil, @contact : Contact? = nil)
     end
 
     struct Contact
@@ -50,12 +48,6 @@ module Swagger::Object
 
       def initialize(@name : String, @url : String? = nil)
       end
-    end
-
-    enum AuthorizationType
-      None
-      BasicAuth
-      JWT
     end
   end
 end
