@@ -316,7 +316,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L2" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L2" target="_blank">
         swagger/parameter.cr
       </a>
     
@@ -331,7 +331,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28name%3AString%2Cparameter_location%3AString%2Ctype%3D%26quot%3Bstring%26quot%3B%2Cdescription%3AString%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, parameter_location : String, type = <span class="s">&quot;string&quot;</span>, description : String? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AString%2Cparameter_location%3AString%2Ctype%3D%26quot%3Bstring%26quot%3B%2Cdescription%3AString%3F%3Dnil%2Cdefault_value%3AString%7CInt32%7CInt64%7CFloat64%7CBool%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, parameter_location : String, type = <span class="s">&quot;string&quot;</span>, description : String? = <span class="n">nil</span>, default_value : String | Int32 | Int64 | Float64 | Bool? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -351,6 +351,16 @@
     
       <li class="entry-summary">
         <a href="#allow_empty_value%3D%28allow_empty_value%29-instance-method" class="signature"><strong>#allow_empty_value=</strong>(allow_empty_value)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_value%3ABool%7CFloat64%7CInt32%7CInt64%7CString%7CNil-instance-method" class="signature"><strong>#default_value</strong> : Bool | Float64 | Int32 | Int64 | String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#default_value%3D%28default_value%29-instance-method" class="signature"><strong>#default_value=</strong>(default_value)</a>
         
       </li>
     
@@ -467,18 +477,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(name:String,parameter_location:String,type=&amp;quot;string&amp;quot;,description:String?=nil,required=false,allow_empty_value=false,deprecated=false,ref:String?=nil)-class-method">
+    <div class="entry-detail" id="new(name:String,parameter_location:String,type=&amp;quot;string&amp;quot;,description:String?=nil,default_value:String|Int32|Int64|Float64|Bool?=nil,required=false,allow_empty_value=false,deprecated=false,ref:String?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : String, parameter_location : String, type = <span class="s">&quot;string&quot;</span>, description : String? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(name : String, parameter_location : String, type = <span class="s">&quot;string&quot;</span>, description : String? = <span class="n">nil</span>, default_value : String | Int32 | Int64 | Float64 | Bool? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28name%3AString%2Cparameter_location%3AString%2Ctype%3D%26quot%3Bstring%26quot%3B%2Cdescription%3AString%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cparameter_location%3AString%2Ctype%3D%26quot%3Bstring%26quot%3B%2Cdescription%3AString%3F%3Dnil%2Cdefault_value%3AString%7CInt32%7CInt64%7CFloat64%7CBool%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -501,7 +511,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -517,7 +527,39 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_value:Bool|Float64|Int32|Int64|String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>default_value</strong> : Bool | Float64 | Int32 | Int64 | String | Nil
+
+        <a class="method-permalink" href="#default_value%3ABool%7CFloat64%7CInt32%7CInt64%7CString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="default_value=(default_value)-instance-method">
+      <div class="signature">
+        
+        def <strong>default_value=</strong>(default_value)
+
+        <a class="method-permalink" href="#default_value%3D%28default_value%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -533,7 +575,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -549,7 +591,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -565,7 +607,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -581,7 +623,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -597,7 +639,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -613,7 +655,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -629,7 +671,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -645,7 +687,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -661,7 +703,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -677,7 +719,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -693,7 +735,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -709,7 +751,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -725,7 +767,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -741,7 +783,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/e071e87ffcfe174b6082e69d015ddcaffb001a71/src/swagger/parameter.cr#L4" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/860eea5311627c6fe84a2d54ff29df07536c9362/src/swagger/parameter.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
