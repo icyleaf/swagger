@@ -3,72 +3,38 @@ module Swagger::Object
     include JSON::Serializable
 
     def self.from(action : Action, controller_name : String? = nil)
-      new(action.summary, action.description, tags(controller_name), action.parameters,
-          action.request, responses(action.responses), action.authorization)
+      new(action.summary, action.description, tags(controller_name), parameters(action),
+          request_body(action), responses(action), action.authorization)
     end
 
     def self.tags(name)
       [name] if name
     end
 
-    def self.responses(responses)
-      return unless values = responses
-      values.each_with_object(Hash(String, Response).new) do |response, obj|
+    def self.parameters(action)
+      return unless parameters = action.parameters
+      parameters.each_with_object(Array(Parameter).new) do |parameter, obj|
+        schema = Schema.new(type: parameter.type)
+        obj << Parameter.new(parameter.name, parameter.parameter_location, schema,
+                             parameter.description, parameter.required, parameter.allow_empty_value,
+                             parameter.deprecated, parameter.ref)
+      end
+    end
+
+    def self.request_body(action)
+      return unless request = action.request
+      media_type = MediaType.schema_reference(request.name)
+      content_type = request.content_type || "application/json"
+      RequestBody.new(request.description, {content_type => media_type})
+    end
+
+    def self.responses(action)
+      return unless responses = action.responses
+      responses.each_with_object(Hash(String, Response).new) do |response, obj|
         reference : String? = nil
         obj[response.code] = Response.new(response.description)
       end
     end
-
-  #   func built() -> [String: OpenAPIResponse]? {
-  #     var openAPIResponses: [String: OpenAPIResponse] = [:]
-
-  #     for apiResponse in apiResponses {
-
-  #         var objectTypeReference: String? = nil
-  #         var isArray: Bool = false
-
-  #         if let apiResponseObject = apiResponse.object {
-  #             objectTypeReference = self.objectReference(for: apiResponseObject)
-  #         }
-
-  #         if let apiResponseArray = apiResponse.array {
-  #             isArray = true
-  #             objectTypeReference = self.objectReference(for: apiResponseArray)
-  #         }
-
-  #         if objectTypeReference != nil {
-
-  #             var openAPISchema: OpenAPISchema?
-  #             if isArray {
-  #                 let objectInArraySchema = OpenAPISchema(ref: objectTypeReference!)
-  #                 openAPISchema = OpenAPISchema(type: "array", items: objectInArraySchema)
-  #             } else {
-  #                 openAPISchema = OpenAPISchema(ref: objectTypeReference!)
-  #             }
-
-  #             let contentType = apiResponse.contentType ?? "application/json"
-  #             let openAPIResponseSchema = OpenAPIMediaType(schema: openAPISchema)
-
-  #             let openAPIResponse = OpenAPIResponse(
-  #                 description: apiResponse.description,
-  #                 content: [contentType: openAPIResponseSchema]
-  #             )
-
-  #             openAPIResponses[apiResponse.code] = openAPIResponse
-  #         } else {
-  #             let openAPIResponse = OpenAPIResponse(description: apiResponse.description)
-  #             openAPIResponses[apiResponse.code] = openAPIResponse
-  #         }
-  #     }
-
-  #     return openAPIResponses
-  # }
-
-  # func objectReference(for type: Any.Type) -> String {
-  #     let mirrorObjectType = String(describing: type)
-  #     let objectTypeReference = "#/components/schemas/\(mirrorObjectType)"
-  #     return objectTypeReference
-  # }
 
     getter summary : String? = nil
     getter description : String? = nil
@@ -76,7 +42,7 @@ module Swagger::Object
     getter parameters : Array(Parameter)? = nil
 
     @[JSON::Field(key: "requestBody")]
-    getter request_body : String? = nil
+    getter request_body : RequestBody? = nil
 
     getter responses : Hash(String, Response)? = nil
     getter deprecated : Bool = false
@@ -92,7 +58,7 @@ module Swagger::Object
     getter operation_id : String? = nil
 
     def initialize(@summary : String? = nil, @description : String? = nil, @tags : Array(String)? = nil,
-                   @parameters : Array(Parameter)? = nil, @request_body : String? = nil, @responses : Hash(String, Response)? = nil,
+                   @parameters : Array(Parameter)? = nil, @request_body : RequestBody? = nil, @responses : Hash(String, Response)? = nil,
                    @deprecated : Bool = false)
     end
   end

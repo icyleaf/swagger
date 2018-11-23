@@ -2,7 +2,7 @@ module Swagger
   class Builder
     @controllers = Array(Controller).new
     @servers = Array(Server).new
-    @objects = Array(String).new
+    @objects = Array(Structure).new
 
     def initialize(@title : String, @version : String, @description : String? = nil,
                    @terms_url : String? = nil, @license : Object::Info::License? = nil, @contact : Object::Info::Contact? = nil,
@@ -29,12 +29,21 @@ module Swagger
       add(server)
     end
 
+    def add(object : Structure)
+      @objects << object
+    end
+
+    def <<(object : Structure)
+      add(object)
+    end
+
     def built
       Document.new(
         info: info,
         paths: paths,
         servers: servers,
-        tags: tags
+        tags: tags,
+        components: components
       )
     end
 
@@ -72,6 +81,12 @@ module Swagger
     private def tags
       @controllers.each_with_object(Array(Object::Tag).new) do |controller, obj|
         obj << Object::Tag.new(controller.name, controller.description)
+      end
+    end
+
+    private def components
+      @objects.each_with_object(Hash(String, Object::Schema).new) do |object, obj|
+
       end
     end
   end

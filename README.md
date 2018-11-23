@@ -1,8 +1,21 @@
 # Swagger
 
-Swagger contains a OpenAPI / Swagger universal documentation generator and server handler.
+![Project Status](https://img.shields.io/badge/status-WIP-yellow.svg)
+[![Language](https://img.shields.io/badge/language-crystal-776791.svg)](https://github.com/crystal-lang/crystal)
+[![Tag](https://img.shields.io/github/tag/icyleaf/swagger.svg)](https://github.com/icyleaf/swagger/blob/master/CHANGELOG.md)
+[![Source](https://img.shields.io/badge/source-github-brightgreen.svg)](https://github.com/icyleaf/swagger/)
+[![Document](https://img.shields.io/badge/document-api-brightgreen.svg)](https://icyleaf.github.io/swagger/)
+[![Build Status](https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat)](https://circleci.com/gh/icyleaf/swagger)
 
 Swagger is low-level library which generate output compatible with [Swagger / OpenAPI Spec 3.0.1](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md).
+
+## Installation
+
+```yaml
+dependencies:
+  swagger:
+    github: icyleaf/swagger
+```
 
 ## Quick look
 
@@ -34,25 +47,11 @@ builder.add(Swagger::Controller.new("Users", "User resources", [
 
 document = builder.built
 p document
-
 ```
 
-## Installation
+## Examples
 
-1. Add the dependency to your `shard.yml`:
-
-```yaml
-dependencies:
-  swagger:
-    github: icyleaf/swagger
-```
-2. Run `shards install`
-
-## Usage
-
-```crystal
-require "swagger"
-```
+See more [examples](/examples).
 
 ## Todo
 
@@ -65,21 +64,38 @@ require "swagger"
     - [ ] Responses Object
     - [ ] Security Object
     - [x] Tag Object
-- [x] Tags Object
+- [x] Tags Object
 - [ ] Components Object
   - [ ] Schemas Object
   - [ ] SecuritySchemes Object
 - [x] Servers Object
   - [x] ServerVariables Object
 
-## Contributing
+## Donate
 
-1. Fork it (<https://github.com/icyleaf/swagger/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Swagger is a open source, collaboratively funded project. If you run a business and are using Swagger in a revenue-generating product,
+it would make business sense to sponsor Swagger development. Individual users are also welcome to make a one time donation
+if Swagger has helped you in your work or personal projects.
 
-## Contributors
+You can donate via [Paypal](https://www.paypal.me/icyleaf/5).
 
-- [icyleaf](https://github.com/icyleaf) - creator and maintainer
+## How to Contribute
+
+Your contributions are always welcome! Please submit a pull request or create an issue to add a new question, bug or feature to the list.
+
+Here is a throughput graph of the repository for the last few weeks:
+
+All [Contributors](https://github.com/icyleaf/swagger/graphs/contributors) are on the wall.
+
+## You may also like
+
+- [halite](https://github.com/icyleaf/halite) - HTTP Requests Client with a chainable REST API, built-in sessions and middlewares.
+- [totem](https://github.com/icyleaf/totem) - Load and parse a configuration file or string in JSON, YAML, dotenv formats.
+- [markd](https://github.com/icyleaf/markd) - Yet another markdown parser built for speed, Compliant to CommonMark specification.
+- [poncho](https://github.com/icyleaf/poncho) - A .env parser/loader improved for performance.
+- [popcorn](https://github.com/icyleaf/popcorn) - Easy and Safe casting from one type to another.
+- [fast-crystal](https://github.com/icyleaf/fast-crystal) - 💨 Writing Fast Crystal 😍 -- Collect Common Crystal idioms.
+
+## License
+
+[MIT License](https://github.com/icyleaf/swagger/blob/master/LICENSE) © icyleaf

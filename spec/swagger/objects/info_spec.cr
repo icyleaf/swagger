@@ -90,7 +90,7 @@ describe Swagger::Object::Info do
       raw.title.should eq "API"
       raw.version.should eq "1.0.0"
       raw.description.should eq "Example API document"
-      raw.terms.should be_nil
+      raw.terms_url.should be_nil
       raw.contact.should be_nil
       raw.license.should be_nil
     end
@@ -100,7 +100,7 @@ describe Swagger::Object::Info do
       raw.title.should eq "API"
       raw.version.should eq "1.0.0"
       raw.description.should eq "Example API document"
-      raw.terms.should be_nil
+      raw.terms_url.should be_nil
       raw.contact.should be_nil
       raw.license.not_nil!.name.should eq "MIT"
     end

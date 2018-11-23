@@ -1,6 +1,6 @@
 require "ecr/macros"
 require "json"
-
+require "http/server/handler"
 module Swagger::HTTP::Handler
   macro included
     include ::HTTP::Handler
@@ -27,9 +27,9 @@ module Swagger::HTTP::Handler
       context.response << body
     end
 
-    def match_router?(context, uri, method = "GET")
+    def match_router?(context, path, method = "GET")
       request = context.request
-      request.method == method && request.path == uri
+      request.method == method && ["/#{path}", path, "#{path}/"].includes?(request.path)
     end
   end
 end
