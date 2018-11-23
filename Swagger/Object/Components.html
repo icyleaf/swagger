@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
-  <title>Swagger::Object::Info - github.com/icyleaf/swagger</title>
+  <title>Swagger::Object::Components - github.com/icyleaf/swagger</title>
 </head>
 <body>
 
@@ -121,7 +121,7 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Components" data-name="swagger::object::components">
+  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Object/Components" data-name="swagger::object::components">
       <a href="../../Swagger/Object/Components.html">Components</a>
       
     </li>
@@ -146,7 +146,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger/Object/Info" data-name="swagger::object::info">
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Object/Info" data-name="swagger::object::info">
       <a href="../../Swagger/Object/Info.html">Info</a>
       
         <ul>
@@ -290,12 +290,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Swagger::Object::Info
+  <span class="kind">struct</span> Swagger::Object::Components
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Swagger/Object/Info.html">Swagger::Object::Info</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Swagger/Object/Components.html">Swagger::Object::Components</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -323,8 +323,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L2" target="_blank">
-        swagger/objects/info.cr
+      <a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L2" target="_blank">
+        swagger/objects/components.cr
       </a>
     
     <br/>
@@ -338,12 +338,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28title%3AString%2Cversion%3AString%2Cdescription%3AString%3F%3Dnil%2Cterms_url%3AString%3F%3Dnil%2Clicense%3ALicense%3F%3Dnil%2Ccontact%3AContact%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(title : String, version : String, description : String? = <span class="n">nil</span>, terms_url : String? = <span class="n">nil</span>, license : License? = <span class="n">nil</span>, contact : Contact? = <span class="n">nil</span>)</a>
+        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        <a href="#new%28schemas%3AHash%28String%2CSchema%29%3F%3Dnil%2Cresponses%3AHash%28String%2CResponse%29%3F%3Dnil%2Cparameters%3AHash%28String%2CParameter%29%3F%3Dnil%2Cexamples%3AHash%28String%2CExample%29%3F%3Dnil%2Crequest_bodies%3AHash%28String%2CRequestBody%29%3F%3Dnil%2Cheaders%3AHash%28String%2CHeader%29%3F%3Dnil%2Csecurity_schemes%3AHash%28String%2CSecurityScheme%29%3F%3Dnil%2Clinks%3AHash%28String%2CLink%29%3F%3Dnil%2Ccallbacks%3AHash%28String%2CHash%28String%2CPathItem%29%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(schemas : Hash(String, Schema)? = <span class="n">nil</span>, responses : Hash(String, Response)? = <span class="n">nil</span>, parameters : Hash(String, Parameter)? = <span class="n">nil</span>, examples : Hash(String, Example)? = <span class="n">nil</span>, request_bodies : Hash(String, RequestBody)? = <span class="n">nil</span>, headers : Hash(String, Header)? = <span class="n">nil</span>, security_schemes : Hash(String, SecurityScheme)? = <span class="n">nil</span>, links : Hash(String, Link)? = <span class="n">nil</span>, callbacks : Hash(String, Hash(String, PathItem))? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -357,32 +357,47 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#contact%3AContact%3F-instance-method" class="signature"><strong>#contact</strong> : Contact?</a>
+        <a href="#callbacks%3AHash%28String%2CHash%28String%2CPathItem%29%29%3F-instance-method" class="signature"><strong>#callbacks</strong> : Hash(String, Hash(String, PathItem))?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#examples%3AHash%28String%2CExample%29%3F-instance-method" class="signature"><strong>#examples</strong> : Hash(String, Example)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#license%3ALicense%3F-instance-method" class="signature"><strong>#license</strong> : License?</a>
+        <a href="#headers%3AHash%28String%2CHeader%29%3F-instance-method" class="signature"><strong>#headers</strong> : Hash(String, Header)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#terms_url%3AString%3F-instance-method" class="signature"><strong>#terms_url</strong> : String?</a>
+        <a href="#links%3AHash%28String%2CLink%29%3F-instance-method" class="signature"><strong>#links</strong> : Hash(String, Link)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#title%3AString-instance-method" class="signature"><strong>#title</strong> : String</a>
+        <a href="#parameters%3AHash%28String%2CParameter%29%3F-instance-method" class="signature"><strong>#parameters</strong> : Hash(String, Parameter)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#version%3AString-instance-method" class="signature"><strong>#version</strong> : String</a>
+        <a href="#request_bodies%3AHash%28String%2CRequestBody%29%3F-instance-method" class="signature"><strong>#request_bodies</strong> : Hash(String, RequestBody)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#responses%3AHash%28String%2CResponse%29%3F-instance-method" class="signature"><strong>#responses</strong> : Hash(String, Response)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#schemas%3AHash%28String%2CSchema%29%3F-instance-method" class="signature"><strong>#schemas</strong> : Hash(String, Schema)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#security_schemes%3AHash%28String%2CSecurityScheme%29%3F-instance-method" class="signature"><strong>#security_schemes</strong> : Hash(String, SecurityScheme)?</a>
         
       </li>
     
@@ -439,22 +454,6 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(title:String,version:String,description:String?=nil,terms_url:String?=nil,license:License?=nil,contact:Contact?=nil)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(title : String, version : String, description : String? = <span class="n">nil</span>, terms_url : String? = <span class="n">nil</span>, license : <a href="../../Swagger/Object/Info/License.html">License</a>? = <span class="n">nil</span>, contact : <a href="../../Swagger/Object/Info/Contact.html">Contact</a>? = <span class="n">nil</span>)
-
-        <a class="method-permalink" href="#new%28title%3AString%2Cversion%3AString%2Cdescription%3AString%3F%3Dnil%2Cterms_url%3AString%3F%3Dnil%2Clicense%3ALicense%3F%3Dnil%2Ccontact%3AContact%3F%3Dnil%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L15" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
     <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
       <div class="signature">
         
@@ -466,7 +465,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(schemas:Hash(String,Schema)?=nil,responses:Hash(String,Response)?=nil,parameters:Hash(String,Parameter)?=nil,examples:Hash(String,Example)?=nil,request_bodies:Hash(String,RequestBody)?=nil,headers:Hash(String,Header)?=nil,security_schemes:Hash(String,SecurityScheme)?=nil,links:Hash(String,Link)?=nil,callbacks:Hash(String,Hash(String,PathItem))?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(schemas : Hash(String, <a href="../../Swagger/Object/Schema.html">Schema</a>)? = <span class="n">nil</span>, responses : Hash(String, <a href="../../Swagger/Object/Response.html">Response</a>)? = <span class="n">nil</span>, parameters : Hash(String, <a href="../../Swagger/Object/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, examples : Hash(String, <a href="../../Swagger/Object/Example.html">Example</a>)? = <span class="n">nil</span>, request_bodies : Hash(String, <a href="../../Swagger/Object/RequestBody.html">RequestBody</a>)? = <span class="n">nil</span>, headers : Hash(String, <a href="../../Swagger/Object/Header.html">Header</a>)? = <span class="n">nil</span>, security_schemes : Hash(String, <a href="../../Swagger/Object/SecurityScheme.html">SecurityScheme</a>)? = <span class="n">nil</span>, links : Hash(String, <a href="../../Swagger/Object/Link.html">Link</a>)? = <span class="n">nil</span>, callbacks : Hash(String, Hash(String, <a href="../../Swagger/Object/PathItem.html">PathItem</a>))? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28schemas%3AHash%28String%2CSchema%29%3F%3Dnil%2Cresponses%3AHash%28String%2CResponse%29%3F%3Dnil%2Cparameters%3AHash%28String%2CParameter%29%3F%3Dnil%2Cexamples%3AHash%28String%2CExample%29%3F%3Dnil%2Crequest_bodies%3AHash%28String%2CRequestBody%29%3F%3Dnil%2Cheaders%3AHash%28String%2CHeader%29%3F%3Dnil%2Csecurity_schemes%3AHash%28String%2CSecurityScheme%29%3F%3Dnil%2Clinks%3AHash%28String%2CLink%29%3F%3Dnil%2Ccallbacks%3AHash%28String%2CHash%28String%2CPathItem%29%29%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -478,98 +493,146 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="contact:Contact?-instance-method">
+    <div class="entry-detail" id="callbacks:Hash(String,Hash(String,PathItem))?-instance-method">
       <div class="signature">
         
-        def <strong>contact</strong> : <a href="../../Swagger/Object/Info/Contact.html">Contact</a>?
+        def <strong>callbacks</strong> : Hash(String, Hash(String, <a href="../../Swagger/Object/PathItem.html">PathItem</a>))?
 
-        <a class="method-permalink" href="#contact%3AContact%3F-instance-method">#</a>
+        <a class="method-permalink" href="#callbacks%3AHash%28String%2CHash%28String%2CPathItem%29%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="description:String?-instance-method">
+    <div class="entry-detail" id="examples:Hash(String,Example)?-instance-method">
       <div class="signature">
         
-        def <strong>description</strong> : String?
+        def <strong>examples</strong> : Hash(String, <a href="../../Swagger/Object/Example.html">Example</a>)?
 
-        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#examples%3AHash%28String%2CExample%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="license:License?-instance-method">
+    <div class="entry-detail" id="headers:Hash(String,Header)?-instance-method">
       <div class="signature">
         
-        def <strong>license</strong> : <a href="../../Swagger/Object/Info/License.html">License</a>?
+        def <strong>headers</strong> : Hash(String, <a href="../../Swagger/Object/Header.html">Header</a>)?
 
-        <a class="method-permalink" href="#license%3ALicense%3F-instance-method">#</a>
+        <a class="method-permalink" href="#headers%3AHash%28String%2CHeader%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="terms_url:String?-instance-method">
+    <div class="entry-detail" id="links:Hash(String,Link)?-instance-method">
       <div class="signature">
         
-        def <strong>terms_url</strong> : String?
+        def <strong>links</strong> : Hash(String, <a href="../../Swagger/Object/Link.html">Link</a>)?
 
-        <a class="method-permalink" href="#terms_url%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#links%3AHash%28String%2CLink%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="title:String-instance-method">
+    <div class="entry-detail" id="parameters:Hash(String,Parameter)?-instance-method">
       <div class="signature">
         
-        def <strong>title</strong> : String
+        def <strong>parameters</strong> : Hash(String, <a href="../../Swagger/Object/Parameter.html">Parameter</a>)?
 
-        <a class="method-permalink" href="#title%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#parameters%3AHash%28String%2CParameter%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="version:String-instance-method">
+    <div class="entry-detail" id="request_bodies:Hash(String,RequestBody)?-instance-method">
       <div class="signature">
         
-        def <strong>version</strong> : String
+        def <strong>request_bodies</strong> : Hash(String, <a href="../../Swagger/Object/RequestBody.html">RequestBody</a>)?
 
-        <a class="method-permalink" href="#version%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#request_bodies%3AHash%28String%2CRequestBody%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/info.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="responses:Hash(String,Response)?-instance-method">
+      <div class="signature">
+        
+        def <strong>responses</strong> : Hash(String, <a href="../../Swagger/Object/Response.html">Response</a>)?
+
+        <a class="method-permalink" href="#responses%3AHash%28String%2CResponse%29%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="schemas:Hash(String,Schema)?-instance-method">
+      <div class="signature">
+        
+        def <strong>schemas</strong> : Hash(String, <a href="../../Swagger/Object/Schema.html">Schema</a>)?
+
+        <a class="method-permalink" href="#schemas%3AHash%28String%2CSchema%29%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="security_schemes:Hash(String,SecurityScheme)?-instance-method">
+      <div class="signature">
+        
+        def <strong>security_schemes</strong> : Hash(String, <a href="../../Swagger/Object/SecurityScheme.html">SecurityScheme</a>)?
+
+        <a class="method-permalink" href="#security_schemes%3AHash%28String%2CSecurityScheme%29%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/0c72fb838f1ed3e2f852023c10f5246478aae754/src/swagger/objects/components.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
