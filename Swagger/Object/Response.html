@@ -81,6 +81,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Error" data-name="swagger::error">
+      <a href="../../Swagger/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/ExternalDocs" data-name="swagger::externaldocs">
+      <a href="../../Swagger/ExternalDocs.html">ExternalDocs</a>
+      
+    </li>
+  
   <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/HTTP" data-name="swagger::http">
       <a href="../../Swagger/HTTP.html">HTTP</a>
       
@@ -111,6 +121,26 @@
       
     </li>
   
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
+      <a href="../../Swagger/Info.html">Info</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Info/Contact" data-name="swagger::object::info::contact">
+      <a href="../../Swagger/Object/Info/Contact.html">Contact</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Info/License" data-name="swagger::object::info::license">
+      <a href="../../Swagger/Object/Info/License.html">License</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
   <li class=" " data-id="github.com/icyleaf/swagger/Swagger/License" data-name="swagger::license">
       <a href="../../Swagger/License.html">License</a>
       
@@ -126,6 +156,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Document" data-name="swagger::object::document">
+      <a href="../../Swagger/Object/Document.html">Document</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/Encoding" data-name="swagger::object::encoding">
       <a href="../../Swagger/Object/Encoding.html">Encoding</a>
       
@@ -136,8 +171,8 @@
       
     </li>
   
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/ExternalDocumentation" data-name="swagger::object::externaldocumentation">
-      <a href="../../Swagger/Object/ExternalDocumentation.html">ExternalDocumentation</a>
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object/ExternalDocs" data-name="swagger::object::externaldocs">
+      <a href="../../Swagger/Object/ExternalDocs.html">ExternalDocs</a>
       
     </li>
   
@@ -276,6 +311,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/UndefinedMethod" data-name="swagger::undefinedmethod">
+      <a href="../../Swagger/UndefinedMethod.html">UndefinedMethod</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/UndefinedParameterLocation" data-name="swagger::undefinedparameterlocation">
+      <a href="../../Swagger/UndefinedParameterLocation.html">UndefinedParameterLocation</a>
+      
+    </li>
+  
 </ul>
 
       
@@ -300,6 +345,12 @@
 
 
 
+  <h2>Overview</h2>
+
+  <p>Response Object</p>
+
+<p>See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#responsesObject</p>
+
 
 
 
@@ -323,7 +374,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L2" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L5" target="_blank">
         swagger/objects/response.cr
       </a>
     
@@ -343,7 +394,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28description%3AString%2Cheaders%3AHash%28String%2CHeader%29%3F%3Dnil%2Ccontent%3AArray%28MediaType%29%3F%3Dnil%2Clinks%3AArray%28Link%29%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(description : String, headers : Hash(String, Header)? = <span class="n">nil</span>, content : Array(MediaType)? = <span class="n">nil</span>, links : Array(Link)? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)</a>
+        <a href="#new%28description%3AString%2Cheaders%3AHash%28String%2CHeader%29%3F%3Dnil%2Ccontent%3AHash%28String%2CMediaType%29%3F%3Dnil%2Clinks%3AArray%28Link%29%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(description : String, headers : Hash(String, Header)? = <span class="n">nil</span>, content : Hash(String, MediaType)? = <span class="n">nil</span>, links : Array(Link)? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -357,7 +408,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#content%3AArray%28MediaType%29%3F-instance-method" class="signature"><strong>#content</strong> : Array(MediaType)?</a>
+        <a href="#content%3AHash%28String%2CMediaType%29%3F-instance-method" class="signature"><strong>#content</strong> : Hash(String, MediaType)?</a>
         
       </li>
     
@@ -445,23 +496,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(description:String,headers:Hash(String,Header)?=nil,content:Array(MediaType)?=nil,links:Array(Link)?=nil,ref:String?=nil)-class-method">
+    <div class="entry-detail" id="new(description:String,headers:Hash(String,Header)?=nil,content:Hash(String,MediaType)?=nil,links:Array(Link)?=nil,ref:String?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(description : String, headers : Hash(String, <a href="../../Swagger/Object/Header.html">Header</a>)? = <span class="n">nil</span>, content : Array(<a href="../../Swagger/Object/MediaType.html">MediaType</a>)? = <span class="n">nil</span>, links : Array(<a href="../../Swagger/Object/Link.html">Link</a>)? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(description : String, headers : Hash(String, <a href="../../Swagger/Object/Header.html">Header</a>)? = <span class="n">nil</span>, content : Hash(String, <a href="../../Swagger/Object/MediaType.html">MediaType</a>)? = <span class="n">nil</span>, links : Array(<a href="../../Swagger/Object/Link.html">Link</a>)? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28description%3AString%2Cheaders%3AHash%28String%2CHeader%29%3F%3Dnil%2Ccontent%3AArray%28MediaType%29%3F%3Dnil%2Clinks%3AArray%28Link%29%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28description%3AString%2Cheaders%3AHash%28String%2CHeader%29%3F%3Dnil%2Ccontent%3AHash%28String%2CMediaType%29%3F%3Dnil%2Clinks%3AArray%28Link%29%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -473,18 +524,18 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="content:Array(MediaType)?-instance-method">
+    <div class="entry-detail" id="content:Hash(String,MediaType)?-instance-method">
       <div class="signature">
         
-        def <strong>content</strong> : Array(<a href="../../Swagger/Object/MediaType.html">MediaType</a>)?
+        def <strong>content</strong> : Hash(String, <a href="../../Swagger/Object/MediaType.html">MediaType</a>)?
 
-        <a class="method-permalink" href="#content%3AArray%28MediaType%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#content%3AHash%28String%2CMediaType%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -500,7 +551,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L5" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -516,7 +567,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -532,7 +583,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -548,7 +599,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/a168b161d8cbae7bd5ae6fa838ec6fb8978d1526/src/swagger/objects/response.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b1df8fdd9482cd4a7935427686fc75423753535e/src/swagger/objects/response.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
