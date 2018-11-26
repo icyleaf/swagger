@@ -1,4 +1,4 @@
-module Swagger::Object
+module Swagger::Objects
   struct Property
     include JSON::Serializable
 

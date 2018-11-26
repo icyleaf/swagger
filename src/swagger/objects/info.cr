@@ -1,4 +1,4 @@
-module Swagger::Object
+module Swagger::Objects
   # Info Object
   #
   # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#infoObject

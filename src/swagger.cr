@@ -7,11 +7,11 @@ module Swagger
   OPENAPI_MAJAR_VERSION = "3"
   OPENAPI_VERSION = "3.0.1"
 
-  alias Document = Object::Document
-  alias Info = Object::Info
-  alias Contact = Object::Info::Contact
-  alias License = Object::Info::License
-  alias Schema = Object::Schema
-  alias MediaType = Object::MediaType
-  alias ExternalDocs = Object::ExternalDocs
+  alias Document = Objects::Document
+  alias Info = Objects::Info
+  alias Contact = Objects::Info::Contact
+  alias License = Objects::Info::License
+  alias Schema = Objects::Schema
+  alias MediaType = Objects::MediaType
+  alias ExternalDocs = Objects::ExternalDocs
 end

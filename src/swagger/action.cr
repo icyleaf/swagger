@@ -14,8 +14,8 @@ module Swagger
                    @description : String? = nil, @request : Request? = nil, @responses : Array(Response)? = nil,
                    @authorization = false, @deprecated = false)
 
-      unless Object::PathItem::METHODS.includes?(@method.downcase)
-        raise UndefinedMethod.new("Undefined method `#{@method}`, avaiabled in #{Object::PathItem::METHODS}.")
+      unless Objects::PathItem::METHODS.includes?(@method.downcase)
+        raise UndefinedMethod.new("Undefined method `#{@method}`, avaiabled in #{Objects::PathItem::METHODS}.")
       end
       @method = @method.downcase
     end
