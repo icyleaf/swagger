@@ -19,6 +19,19 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user")
   ]),
+  Swagger::Action.new("post", "/users", "Create user",
+    request: Swagger::Request.new([
+      Swagger::Request::Property.new("username", required: true, description: "The name of user"),
+      Swagger::Request::Property.new("email", "string", required: true, description: "Email"),
+      Swagger::Request::Property.new("gender", "integer", default_value: 0, description: "Man or Female"),
+      Swagger::Request::Property.new("password", required: true, description: "Set your password"),
+      Swagger::Request::Property.new("confirm_password", required: true, description: "Confirm password"),
+    ], "Form data", "application/x-www-form-urlencoded"),
+    responses: [
+      Swagger::Response.new("200", "Success response"),
+      Swagger::Response.new("404", "Not found user")
+    ]
+  ),
   Swagger::Action.new("get", "/user/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user")

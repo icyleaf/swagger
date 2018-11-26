@@ -12,7 +12,7 @@ module Swagger::Object
     #   "boolean" => nil,
     # }
 
-    def self.reference(name)
+    def self.use_reference(name : String)
       new(ref: "#/components/schemas/#{name}")
     end
 

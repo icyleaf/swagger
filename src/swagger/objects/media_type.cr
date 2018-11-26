@@ -5,8 +5,8 @@ module Swagger::Object
   struct MediaType
     include JSON::Serializable
 
-    def self.schema_reference(schema_name)
-      new(Schema.reference(schema_name))
+    def self.use_reference(schema_name)
+      new(Schema.use_reference(schema_name))
     end
 
     getter schema : Schema? = nil

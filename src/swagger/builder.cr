@@ -3,7 +3,7 @@ module Swagger
     property info
     property controllers = Array(Controller).new
     property servers = Array(Server).new
-    # property objects = Array(Structure).new
+    property objects = Array(Structure).new
 
     def self.new(title : String, version : String, description : String? = nil,
                  terms_url : String? = nil, license : License? = nil, contact : Contact? = nil,

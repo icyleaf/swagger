@@ -11,5 +11,7 @@ module Swagger
   alias Info = Object::Info
   alias Contact = Object::Info::Contact
   alias License = Object::Info::License
+  alias Schema = Object::Schema
+  alias MediaType = Object::MediaType
   alias ExternalDocs = Object::ExternalDocs
 end

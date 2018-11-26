@@ -43,9 +43,8 @@ module Swagger::Object
 
     def self.request_body(action)
       return unless request = action.request
-      media_type = MediaType.schema_reference(request.name)
       content_type = request.content_type || "application/json"
-      RequestBody.new(request.description, {content_type => media_type})
+      RequestBody.new(request.description, {content_type => request.media_type})
     end
 
     def self.responses(action)
