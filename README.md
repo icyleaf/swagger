@@ -62,10 +62,10 @@ See more [examples](/examples).
 - [x] Info Object
 - [x] Paths Object
   - [x] PathItem Object
-    - [ ] Parameter Object
-    - [ ] RequestBody Object
+    - [x] Parameter Object
+    - [x] RequestBody Object
     - [ ] Responses Object
-    - [ ] Security Object
+    - [x] Security Object
     - [x] Tag Object
 - [x] Tags Object
 - [x] Servers Objec
