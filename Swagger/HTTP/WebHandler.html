@@ -385,7 +385,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L5" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L6" target="_blank">
         swagger/http/handers/web.cr
       </a>
     
@@ -417,7 +417,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28route%3DSWAGGER_WEB_URI%2Capi_url%3AString%3DDEMO_API_URL%29-class-method" class="signature"><strong>.new</strong>(route = <span class="t">SWAGGER_WEB_URI</span>, api_url : String = <span class="t">DEMO_API_URL</span>)</a>
+        <a href="#new%28route%3DSWAGGER_WEB_URI%2Capi_url%3AString%3DDEMO_API_URL%2Casset_dir%3AString%3Dassets_path%29-class-method" class="signature"><strong>.new</strong>(route = <span class="t">SWAGGER_WEB_URI</span>, api_url : String = <span class="t">DEMO_API_URL</span>, asset_dir : String = assets_path)</a>
         
       </li>
     
@@ -429,6 +429,11 @@
 
   <h2>Instance Method Summary</h2>
   <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#assets_path-instance-method" class="signature"><strong>#assets_path</strong></a>
+        
+      </li>
     
       <li class="entry-summary">
         <a href="#call%28context%29-instance-method" class="signature"><strong>#call</strong>(context)</a>
@@ -457,11 +462,6 @@
     
       <li class="entry-summary">
         <a href="#response_with%28context%2Cbody%2Ccontent_type%3D%26quot%3Bapplication%2Fjson%26quot%3B%2Cstatus_code%3D200%29-instance-method" class="signature"><strong>#response_with</strong>(context, body, content_type = <span class="s">&quot;application/json&quot;</span>, status_code = <span class="n">200</span>)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#swagger_assets_path-instance-method" class="signature"><strong>#swagger_assets_path</strong></a>
         
       </li>
     
@@ -518,18 +518,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(route=SWAGGER_WEB_URI,api_url:String=DEMO_API_URL)-class-method">
+    <div class="entry-detail" id="new(route=SWAGGER_WEB_URI,api_url:String=DEMO_API_URL,asset_dir:String=assets_path)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(route = <span class="t">SWAGGER_WEB_URI</span>, api_url : String = <span class="t">DEMO_API_URL</span>)
+        def self.<strong>new</strong>(route = <span class="t">SWAGGER_WEB_URI</span>, api_url : String = <span class="t">DEMO_API_URL</span>, asset_dir : String = assets_path)
 
-        <a class="method-permalink" href="#new%28route%3DSWAGGER_WEB_URI%2Capi_url%3AString%3DDEMO_API_URL%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28route%3DSWAGGER_WEB_URI%2Capi_url%3AString%3DDEMO_API_URL%2Casset_dir%3AString%3Dassets_path%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -540,6 +540,22 @@
 
 
   <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="assets_path-instance-method">
+      <div class="signature">
+        
+        def <strong>assets_path</strong>
+
+        <a class="method-permalink" href="#assets_path-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L60" target="_blank">View source</a>]
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="call(context)-instance-method">
       <div class="signature">
@@ -552,7 +568,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -568,7 +584,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -584,7 +600,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -600,7 +616,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -616,7 +632,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -632,23 +648,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L6" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="swagger_assets_path-instance-method">
-      <div class="signature">
-        
-        def <strong>swagger_assets_path</strong>
-
-        <a class="method-permalink" href="#swagger_assets_path-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/http/handers/web.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d220de841df1f38a9163c745cfc5d0b70d32f414/src/swagger/http/handers/web.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
