@@ -41,6 +41,7 @@
             }
 
             if (qp.code) {
+
                 delete oauth2.state;
                 oauth2.auth.code = qp.code;
                 oauth2.callback({auth: oauth2.auth, redirectUrl: redirectUrl});

@@ -13,6 +13,8 @@ module Swagger::Objects
         bearer(auth.description, auth.bearer_format)
       when Authorization::Type::APIKey
         api_key(auth.api_key_name.not_nil!, auth.parameter_location.not_nil!, auth.description)
+      when Authorization::Type::OAuth2
+        oauth2(auth.oauth2_flows.not_nil!, auth.description)
       end
     end
 
@@ -28,6 +30,14 @@ module Swagger::Objects
       new("apiKey", description, name: name, parameter_location: location)
     end
 
+    def self.oauth2(flows : Array(Swagger::OAuth2Flow), description : String? = nil)
+      object_flows = flows.each_with_object(Hash(String, OAuth2Flow).new) do |flow, obj|
+        obj[flow.name] = OAuth2Flow.new(flow.authorization_url, flow.token_url, flow.refresh_url)
+      end
+
+      new("oauth2", description, flows: object_flows)
+    end
+
     getter type : String? = nil
     getter description : String? = nil
     getter name : String? = nil
@@ -40,7 +50,7 @@ module Swagger::Objects
     @[JSON::Field(key: "bearerFormat")]
     getter bearer_format : String? = nil
 
-    # getter flows : OpenAPIOAuthFlows? = nil
+    getter flows : Hash(String, OAuth2Flow)? = nil
 
     @[JSON::Field(key: "openIdConnectUrl")]
     getter open_id_connect_url : String? = nil
@@ -50,8 +60,8 @@ module Swagger::Objects
 
     def initialize(@type : String? = nil, @description : String? = nil, @name : String? = nil,
                    @parameter_location : String? = nil, @scheme : String? = nil,
-                   @bearer_format : String? = nil, @open_id_connect_url : String? = nil,
-                   @ref : String? = nil)
+                   @bearer_format : String? = nil, @flows : Hash(String, OAuth2Flow)? = nil,
+                   @open_id_connect_url : String? = nil, @ref : String? = nil)
     end
   end
 end

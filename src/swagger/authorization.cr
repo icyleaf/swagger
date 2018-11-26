@@ -11,7 +11,7 @@ module Swagger
       Basic
       Bearer
       APIKey
-      # OAuth2
+      OAuth2
     end
 
     # Access without any authorization.
@@ -44,9 +44,19 @@ module Swagger
       new(Type::APIKey, description, api_key_name: name, parameter_location: location)
     end
 
-    # def self.oauth2(description : String? = nil)
-    #   new(OAuth2, description)
-    # end
+    def self.oauth2(*, grant_type name : String, authorization_url : String? = nil, token_url : String? = nil,
+                    refresh_url : String? = nil, scopes : Hash(String, String)? = nil, description : String? = nil)
+      oauth2(flows: [OAuth2Flow.new(name,
+        authorization_url: authorization_url,
+        token_url: token_url,
+        refresh_url: refresh_url,
+        scopes: scopes
+      )])
+    end
+
+    def self.oauth2(*, flows : Array(OAuth2Flow)? = nil, description : String? = nil)
+      new(Type::OAuth2, description, oauth2_flows: flows)
+    end
 
     def self.new(name : String, description : String? = nil, api_key_name : String? = nil,
                  bearer_format : String? = nil, parameter_location : String? = nil)
@@ -58,9 +68,11 @@ module Swagger
     property api_key_name
     property bearer_format
     property parameter_location
+    property oauth2_flows
 
     def initialize(@name : Type, @description : String? = nil, @api_key_name : String? = nil,
-                   @bearer_format : String? = nil, @parameter_location : String? = nil)
+                   @bearer_format : String? = nil, @parameter_location : String? = nil,
+                   @oauth2_flows : Array(OAuth2Flow)? = nil)
     end
 
     def type : Type
@@ -84,12 +96,12 @@ module Swagger
     # ```
     def key
       String.build do |io|
-        if @type == Authorization::Type::Bearer && (format = @bearer_format)
+        if type == Authorization::Type::Bearer && (format = @bearer_format)
           io << format.downcase
-        elsif @type == Authorization::Type::APIKey && @parameter_location == "cookie"
+        elsif type == Authorization::Type::APIKey && @parameter_location == "cookie"
           io << "cookie"
         else
-          io << @name
+          io << name
         end
 
         io << "_auth"

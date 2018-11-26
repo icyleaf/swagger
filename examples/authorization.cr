@@ -14,6 +14,11 @@ builder = Swagger::Builder.new(
     Swagger::Authorization.new("bearer", "Private Token Auth"),
     Swagger::Authorization.jwt(description: "JWT Auth"),
     Swagger::Authorization.api_key(name: "api_key", location: "query", description: "API Key Auth"),
+    Swagger::Authorization.cookie(name: "JSESSIONID", description: "Cookie Auth"),
+    Swagger::Authorization.oauth2(grant_type: "implicit", authorization_url: "/oauth/authorize", scopes: {
+      "read_users" => "Read users in your account",
+      "write_users" => "modify users in your account"
+    }, description: "OAuth 2 Auth")
   ]
 )
 

@@ -144,7 +144,7 @@ See more [examples](/examples).
     - [x] Basic
     - [x] Bearer (include JWT)
     - [x] APIKey
-    - [ ] OAuth2
+    - [x] OAuth2
 - [ ] ExternalDocs Object
 
 ## Donate
