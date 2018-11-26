@@ -389,7 +389,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L5" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L5" target="_blank">
         swagger/objects/security_scheme.cr
       </a>
     
@@ -409,6 +409,11 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#new%28auth%3AAuthorization%29-class-method" class="signature"><strong>.new</strong>(auth : Authorization)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#new%28type%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Cscheme%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Copen_id_connect_url%3AString%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(type : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, name : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, scheme : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, open_id_connect_url : String? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)</a>
         
       </li>
@@ -416,6 +421,26 @@
   </ul>
 
 
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#api_key%28name%3AString%2Clocation%3AString%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.api_key</strong>(name : String, location : String, description : String? = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#basic%28description%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.basic</strong>(description : String? = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bearer%28description%3AString%3F%3Dnil%2Cformat%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.bearer</strong>(description : String? = <span class="n">nil</span>, format : String? = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -526,7 +551,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(auth:Authorization)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(auth : <a href="../../Swagger/Authorization.html">Authorization</a>)
+
+        <a class="method-permalink" href="#new%28auth%3AAuthorization%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -542,13 +583,64 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
   
 
 
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="api_key(name:String,location:String,description:String?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>api_key</strong>(name : String, location : String, description : String? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#api_key%28name%3AString%2Clocation%3AString%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="basic(description:String?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>basic</strong>(description : String? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#basic%28description%3AString%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bearer(description:String?=nil,format:String?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>bearer</strong>(description : String? = <span class="n">nil</span>, format : String? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#bearer%28description%3AString%3F%3Dnil%2Cformat%3AString%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 
@@ -565,7 +657,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -581,7 +673,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L32" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -597,7 +689,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -613,7 +705,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -629,7 +721,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -645,7 +737,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -661,7 +753,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -677,7 +769,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/ccb783f044835883ce460aed65fc41f6be5ed133/src/swagger/objects/security_scheme.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/99e065b40082f3594d7beefb30edfa946f411e1c/src/swagger/objects/security_scheme.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
