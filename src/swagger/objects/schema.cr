@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Schema Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#schemaObject
   struct Schema
     include JSON::Serializable
 

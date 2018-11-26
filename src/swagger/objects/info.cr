@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Info Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#infoObject
   struct Info
     include JSON::Serializable
 
@@ -16,6 +19,9 @@ module Swagger::Object
                    @terms_url : String? = nil, @license : License? = nil, @contact : Contact? = nil)
     end
 
+    # Contact Object
+    #
+    # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#contactObject
     struct Contact
       include JSON::Serializable
 
@@ -27,6 +33,9 @@ module Swagger::Object
       end
     end
 
+    # License Object
+    #
+    # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#licenseObject
     struct License
       include JSON::Serializable
 

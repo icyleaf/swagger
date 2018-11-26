@@ -1,4 +1,7 @@
 module Swagger::Object
+  # SecurityScheme Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#componentsSecuritySchemes
   struct SecurityScheme
     include JSON::Serializable
 

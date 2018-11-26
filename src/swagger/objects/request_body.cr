@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Request Body Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#requestBodyObject
   struct RequestBody
     include JSON::Serializable
 

@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Link Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#linkObject
   struct Link
     include JSON::Serializable
 

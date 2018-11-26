@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Path Item Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#pathItemObject
   struct PathItem
     include JSON::Serializable
 

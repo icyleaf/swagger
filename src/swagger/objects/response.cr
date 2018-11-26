@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Response Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#responsesObject
   struct Response
     include JSON::Serializable
 

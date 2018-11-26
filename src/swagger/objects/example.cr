@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Example Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#exampleObject
   struct Example
     include JSON::Serializable
 

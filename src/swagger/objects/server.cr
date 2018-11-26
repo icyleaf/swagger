@@ -1,4 +1,7 @@
 module Swagger::Object
+  # Server Object
+  #
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#serverObject
   struct Server
     include JSON::Serializable
 
@@ -10,6 +13,9 @@ module Swagger::Object
                    @variables : Hash(String, Variable)? = nil)
     end
 
+    # ServerVariable Object
+    #
+    # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#serverVariableObject
     struct Variable
       include JSON::Serializable
 
