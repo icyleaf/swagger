@@ -7,7 +7,8 @@
 [![Document](https://img.shields.io/badge/document-api-brightgreen.svg)](https://icyleaf.github.io/swagger/)
 [![Build Status](https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat)](https://circleci.com/gh/icyleaf/swagger)
 
-Swagger is low-level library which generate output compatible with [Swagger / OpenAPI Spec 3.0.1](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md).
+Swagger is low-level library which generate output compatible with [Swagger / OpenAPI Spec 3.0.1](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md),
+and wrapped many friendly API let developer understand and use it easier.
 
 ## Installation
 
@@ -51,6 +52,72 @@ builder.add(Swagger::Controller.new("Users", "User resources", [
 document = builder.built
 p document
 ```
+
+## Structure
+
+```
+.
+├── action.cr
+├── authorization.cr
+├── builder.cr
+├── controller.cr
+├── error.cr
+├── object.cr
+├── parameter.cr
+├── property.cr
+├── request.cr
+├── response.cr
+├── server.cr
+├── http                          # HTTP libraries
+│   ├── assets
+│   ├── handers
+│   ├── handler.cr
+│   ├── server.cr
+│   └── views
+└── objects                       # OpenAPI objects
+    ├── components.cr
+    ├── document.cr
+    ├── encoding.cr
+    ├── example.cr
+    ├── external_docs.cr
+    ├── header.cr
+    ├── info.cr
+    ├── link.cr
+    ├── media_type.cr
+    ├── operation.cr
+    ├── parameter.cr
+    ├── path_item.cr
+    ├── property.cr
+    ├── request_body.cr
+    ├── response.cr
+    ├── schema.cr
+    ├── security_scheme.cr
+    ├── server.cr
+    └── tag.cr
+```
+
+## Running on web
+
+Swagger provids a built-in web server, if you have no idea how to preview it:
+
+###
+```crystal
+require "swagger"
+require "swagger/http/server"
+
+# made your document
+document = builder.built
+
+# Run web server
+Swagger::HTTP::Server.run(builder.built)
+```
+
+## Integrating
+
+Swagger has two HTTP handlers which you can integrate it to mostly Crystal framework (like kemal, amber, lucky etc):
+
+- Swagger::HTTP::APIHandler
+- Swagger::HTTP::WebHandler
 
 ## Examples
 
