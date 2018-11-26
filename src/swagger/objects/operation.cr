@@ -29,7 +29,12 @@ module Swagger::Object
           raise UndefinedParameterLocation.new("Undefined location of parameter `#{parameter.parameter_location}`. avaiabled in #{Parameter::LOCATIOINS}")
         end
 
-        schema = Schema.new(parameter.type, default: parameter.default_value)
+        schema = Schema.new(
+          type: parameter.type,
+          format: parameter.format,
+          default: parameter.default_value
+        )
+
         obj << Parameter.new(parameter.name, parameter.parameter_location, schema,
                              parameter.description, parameter.required, parameter.allow_empty_value,
                              parameter.deprecated, parameter.ref)
@@ -46,8 +51,13 @@ module Swagger::Object
     def self.responses(action)
       return unless responses = action.responses
       responses.each_with_object(Hash(String, Response).new) do |response, obj|
-        reference : String? = nil
-        obj[response.code] = Response.new(response.description)
+        content_type = response.content_type || "application/json"
+        # TODO: missing schema
+        schema = nil
+        response_schema = MediaType.new(schema: schema)
+        obj[response.code] = Response.new(response.description, content: {
+          content_type => response_schema
+        })
       end
     end
 
