@@ -29,7 +29,10 @@ end
 post "/users" do |env|
   env.response.headers["Content-Type"] = "application/json"
   env.response.status_code = 201
-  user.to_json
+  {
+    name: env.params.body["name"],
+    age: env.params.body["age"],
+  }.to_json
 end
 
 get "/users/:id" do |env|
@@ -55,18 +58,34 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
   Swagger::Action.new("get", "/users", "List users", parameters: [
     Swagger::Parameter.new("page", "query", "integer", "Current page", default_value: 1),
     Swagger::Parameter.new("limit", "query", "integer", "How many items to return at one time (max 100)", default_value: 10),
+  ], responses: [
+    Swagger::Response.new("200", "Success response"),
   ]),
   Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user")
   ]),
-  Swagger::Action.new("get", "/user/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+  Swagger::Action.new("post", "/users", "Create a user",
+    request: Swagger::Request.new([
+      Swagger::Property.new("name", required: true, description: "The name of user"),
+      Swagger::Property.new("age", "integer", format: "int32", required: true, description: "The age of user", default_value: 20),
+    ], "Form data", "application/x-www-form-urlencoded"),
+    responses: [
+      Swagger::Response.new("200", "Success response"),
+      Swagger::Response.new("404", "Not found user")
+    ]
+  ),
+  Swagger::Action.new("delete", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user")
-  ], deprecated: true)
+  ]),
 ]))
 
-builder.add(Swagger::Server.new("http://localhost:{port}/", "Development", [
+builder.add(Swagger::Server.new("http://localhost:{port}/", "Alias Name", [
+  Swagger::Server::Variable.new("port", "3030", ["3030", "3000"], "API port")
+]))
+
+builder.add(Swagger::Server.new("http://0.0.0.0:{port}/", "IP Address", [
   Swagger::Server::Variable.new("port", "3030", ["3030", "3000"], "API port")
 ]))
 
