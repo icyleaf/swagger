@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
-  <title>Swagger::HTTP - github.com/icyleaf/swagger</title>
+  <title>Swagger::Property - github.com/icyleaf/swagger</title>
 </head>
 <body>
 
@@ -91,7 +91,7 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger/HTTP" data-name="swagger::http">
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/HTTP" data-name="swagger::http">
       <a href="../Swagger/HTTP.html">HTTP</a>
       
         <ul>
@@ -291,7 +291,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Property" data-name="swagger::property">
+  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Property" data-name="swagger::property">
       <a href="../Swagger/Property.html">Property</a>
       
     </li>
@@ -350,10 +350,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">module</span> Swagger::HTTP
+  <span class="kind">struct</span> Swagger::Property
 
 </h1>
 
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Swagger/Property.html">Swagger::Property</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -374,29 +376,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/http/handler.cr#L4" target="_blank">
-        swagger/http/handler.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/http/handers/api.cr#L3" target="_blank">
-        swagger/http/handers/api.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/http/handers/web.cr#L4" target="_blank">
-        swagger/http/handers/web.cr
-      </a>
-    
-    <br/>
-  
-    
-      <a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/http/server.cr#L4" target="_blank">
-        swagger/http/server.cr
+      <a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L2" target="_blank">
+        swagger/property.cr
       </a>
     
     <br/>
@@ -406,9 +387,54 @@
 
 
 
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28name%3AString%2Ctype%3AString%3D%26quot%3Bstring%26quot%3B%2Cformat%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cdefault_value%3AString%7CInt32%7CInt64%7CFloat64%7CBool%3F%3Dnil%2Cexample%3AString%7CInt32%7CInt64%7CFloat64%7CBool%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, type : String = <span class="s">&quot;string&quot;</span>, format : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, default_value : String | Int32 | Int64 | Float64 | Bool? = <span class="n">nil</span>, example : String | Int32 | Int64 | Float64 | Bool? = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
 
 
 
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#default_value%3ABool%7CFloat64%7CInt32%7CInt64%7CString%7CNil-instance-method" class="signature"><strong>#default_value</strong> : Bool | Float64 | Int32 | Int64 | String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#example%3ABool%7CFloat64%7CInt32%7CInt64%7CString%7CNil-instance-method" class="signature"><strong>#example</strong> : Bool | Float64 | Int32 | Int64 | String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#format%3AString%3F-instance-method" class="signature"><strong>#format</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type%3AString-instance-method" class="signature"><strong>#type</strong> : String</a>
+        
+      </li>
+    
+  </ul>
 
 
 
@@ -416,12 +442,160 @@
 
 <div class="methods-inherited">
   
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
 </div>
 
 
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(name:String,type:String=&amp;quot;string&amp;quot;,format:String?=nil,description:String?=nil,default_value:String|Int32|Int64|Float64|Bool?=nil,example:String|Int32|Int64|Float64|Bool?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(name : String, type : String = <span class="s">&quot;string&quot;</span>, format : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, default_value : String | Int32 | Int64 | Float64 | Bool? = <span class="n">nil</span>, example : String | Int32 | Int64 | Float64 | Bool? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28name%3AString%2Ctype%3AString%3D%26quot%3Bstring%26quot%3B%2Cformat%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cdefault_value%3AString%7CInt32%7CInt64%7CFloat64%7CBool%3F%3Dnil%2Cexample%3AString%7CInt32%7CInt64%7CFloat64%7CBool%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="default_value:Bool|Float64|Int32|Int64|String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>default_value</strong> : Bool | Float64 | Int32 | Int64 | String | Nil
+
+        <a class="method-permalink" href="#default_value%3ABool%7CFloat64%7CInt32%7CInt64%7CString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="description:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>description</strong> : String?
+
+        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="example:Bool|Float64|Int32|Int64|String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>example</strong> : Bool | Float64 | Int32 | Int64 | String | Nil
+
+        <a class="method-permalink" href="#example%3ABool%7CFloat64%7CInt32%7CInt64%7CString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="format:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong> : String?
+
+        <a class="method-permalink" href="#format%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L3" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type:String-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong> : String
+
+        <a class="method-permalink" href="#type%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/4b2994d053f75355586d3a0b4b4b7d4f4c1d9af3/src/swagger/property.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
 
 
 
