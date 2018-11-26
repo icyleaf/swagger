@@ -64,7 +64,7 @@ See more [examples](/examples).
   - [x] PathItem Object
     - [x] Parameter Object
     - [x] RequestBody Object
-    - [ ] Responses Object
+    - [x] Responses Object
     - [x] Security Object
     - [x] Tag Object
 - [x] Tags Object
@@ -72,7 +72,7 @@ See more [examples](/examples).
   - [x] ServerVariables Object
 - [x] Security Object
 - [ ] Components Object
-  - [ ] Schemas Object
+  - [x] Schemas Object
   - [x] SecuritySchemes Object
     - [x] Basic
     - [x] Bearer (include JWT)

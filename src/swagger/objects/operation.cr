@@ -50,13 +50,7 @@ module Swagger::Objects
     def self.responses(action)
       return unless responses = action.responses
       responses.each_with_object(Hash(String, Response).new) do |response, obj|
-        content_type = response.content_type || "application/json"
-        # TODO: missing schema
-        schema = nil
-        response_schema = MediaType.new(schema: schema)
-        obj[response.code] = Response.new(response.description, content: {
-          content_type => response_schema
-        })
+        obj[response.code] = Response.new(response.description, content: response.content)
       end
     end
 

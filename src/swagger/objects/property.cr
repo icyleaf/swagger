@@ -5,11 +5,13 @@ module Swagger::Objects
     getter type : String
     getter description : String? = nil
     getter default : (String | Int32 | Int64 | Float64 | Bool)? = nil
-    getter examples : String? = nil
+    getter example : (String | Int32 | Int64 | Float64 | Bool)? = nil
+    getter required : Bool? = nil
 
     def initialize(@type : String, @description : String? = nil,
                    @default : (String | Int32 | Int64 | Float64 | Bool)? = nil,
-                   @examples : String? = nil)
+                   @example : (String | Int32 | Int64 | Float64 | Bool)? = nil,
+                   @required : Bool? = nil)
     end
   end
 end

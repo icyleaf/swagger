@@ -100,7 +100,11 @@ module Swagger
       schemas = if objects = @objects
         schema = objects.each_with_object(Hash(String, Schema).new) do |object, schemas_obj|
           properties = object.properties.each_with_object(Hash(String, Objects::Property).new) do |property, prop_obj|
-            prop_obj[property.name] = Objects::Property.new(type: property.type, description: property.description, default: property.default_value)
+            prop_obj[property.name] = Objects::Property.new(
+              type: property.type,
+              description: property.description,
+              example: property.example
+            )
           end
 
           schemas_obj[object.name] = Schema.new(type: object.type, properties: properties)
