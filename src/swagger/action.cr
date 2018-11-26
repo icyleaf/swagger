@@ -1,4 +1,12 @@
 module Swagger
+  # Define a action
+  #
+  # ```
+  # Swagger::Action.new("get", "/users", "List Users", [
+  #   Swagger::Parameter.new("page", "query", "integer", "Current page", default_value: 1, format: "int32"),
+  #   Swagger::Parameter.new("limit", "query", "integer", "How many items to return at one time (max 100)", default_value: 50, format: "int32"),
+  # ])
+  # ```
   struct Action
     property method
     property route

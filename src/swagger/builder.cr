@@ -1,6 +1,7 @@
 require "./objects/*"
 
 module Swagger
+  # Swagger Builder
   class Builder
     property info
     property controllers = Array(Controller).new
@@ -124,44 +125,10 @@ module Swagger
     def build_security_schemes
       return unless authorizations = @authorizations
       authorizations.each_with_object(Hash(String, Objects::SecurityScheme).new) do |auth, obj|
-        scheme = case auth.type
-                  when Authorization::Type::Basic
-                    Objects::SecurityScheme.new(
-                      "http",
-                      auth.description,
-                      parameter_location: "header",
-                      scheme: "basic"
-                    )
-                  when Authorization::Type::Bearer
-                    Objects::SecurityScheme.new(
-                      "http",
-                      auth.description,
-                      parameter_location: "header",
-                      scheme: "bearer",
-                      bearer_format: auth.bearer_format
-                    )
-                  when Authorization::Type::APIKey
-                    Objects::SecurityScheme.new(
-                      "apiKey",
-                      auth.description,
-                      name: auth.api_key_name,
-                      parameter_location: auth.parameter_location,
-                      bearer_format: auth.bearer_format
-                    )
-                  end
-        obj[security_name(auth)] = scheme if scheme
-      end
-    end
-
-    def security_name(authorization)
-      Array(String).new.tap do |obj|
-        if authorization.type == Authorization::Type::Bearer && (format = authorization.bearer_format)
-          obj << format.downcase
-        else
-          obj << authorization.name
+        if scheme = Objects::SecurityScheme.new(auth)
+          obj[auth.key] = scheme
         end
-        obj << "auth"
-      end.join("_")
+      end
     end
   end
 end

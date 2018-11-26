@@ -1,4 +1,5 @@
 module Swagger
+  # Use parameter in `Swagger::Action`
   struct Parameter
     property name
     property type
