@@ -357,7 +357,8 @@
 <a href="https://icyleaf.github.io/swagger/" target="_blank"><img src="https://img.shields.io/badge/document-api-brightgreen.svg" alt="Document"/></a>
 <a href="https://circleci.com/gh/icyleaf/swagger" target="_blank"><img src="https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat" alt="Build Status"/></a></p>
 
-<p>Swagger is low-level library which generate output compatible with <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md" target="_blank">Swagger / OpenAPI Spec 3.0.1</a>.</p>
+<p>Swagger is low-level library which generate output compatible with <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md" target="_blank">Swagger / OpenAPI Spec 3.0.1</a>,
+and wrapped many friendly API let developer understand and use it easier.</p>
 
 <h2>Installation</h2>
 
@@ -397,6 +398,68 @@ builder.add(<span class="t">Swagger</span><span class="t">::</span><span class="
 
 document <span class="o">=</span> builder.built
 p document</code></pre>
+
+<h2>Structure</h2>
+
+<pre><code>.
+├── action.cr
+├── authorization.cr
+├── builder.cr
+├── controller.cr
+├── error.cr
+├── object.cr
+├── parameter.cr
+├── property.cr
+├── request.cr
+├── response.cr
+├── server.cr
+├── http                          <span class="c"># HTTP libraries</span>
+│   ├── assets
+│   ├── handers
+│   ├── handler.cr
+│   ├── server.cr
+│   └── views
+└── objects                       <span class="c"># OpenAPI objects</span>
+    ├── components.cr
+    ├── document.cr
+    ├── encoding.cr
+    ├── example.cr
+    ├── external_docs.cr
+    ├── header.cr
+    ├── info.cr
+    ├── link.cr
+    ├── media_type.cr
+    ├── operation.cr
+    ├── parameter.cr
+    ├── path_item.cr
+    ├── property.cr
+    ├── request_body.cr
+    ├── response.cr
+    ├── schema.cr
+    ├── security_scheme.cr
+    ├── server.cr
+    └── tag.cr</code></pre>
+
+<h2>Running on web</h2>
+
+<p>Swagger provids a built-in web server, if you have no idea how to preview it:</p>
+
+<h3></h3>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;swagger&quot;</span>
+<span class="k">require</span> <span class="s">&quot;swagger/http/server&quot;</span>
+
+<span class="c"># made your document</span>
+document <span class="o">=</span> builder.built
+
+<span class="c"># Run web server</span>
+<span class="t">Swagger</span><span class="t">::</span><span class="t">HTTP</span><span class="t">::</span><span class="t">Server</span>.run(builder.built)</code></pre>
+
+<h2>Integrating</h2>
+
+<p>Swagger has two HTTP handlers which you can integrate it to mostly Crystal framework (like kemal, amber, lucky etc):</p>
+
+<ul><li>Swagger::HTTP::APIHandler</li><li>Swagger::HTTP::WebHandler</li></ul>
 
 <h2>Examples</h2>
 
