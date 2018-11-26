@@ -34,6 +34,11 @@ module Swagger
       new(Type::Bearer, description, bearer_format: format)
     end
 
+    # Access with cookie auth.
+    def self.cookie(*, name : String, description : String? = nil)
+      new(Type::APIKey, description, api_key_name: name, parameter_location: "cookie")
+    end
+
     # Access with api key auth.
     def self.api_key(*, name : String, location = "header", description : String? = nil)
       new(Type::APIKey, description, api_key_name: name, parameter_location: location)
@@ -75,16 +80,20 @@ module Swagger
     # Swagger::Authorization.bearer(format: "custom").key # => "custom_auth"
     # Swagger::Authorization.jwt.key.˙ # => "jwt_auth"
     # Swagger::Authorization.api_key.key.˙ # => "api_key_auth"
+    # Swagger::Authorization.cookie(name: "JSESSIONID").key.˙ # => "cookie_auth"
     # ```
     def key
-      Array(String).new.tap do |obj|
-        if type == Authorization::Type::Bearer && (format = bearer_format)
-          obj << format.downcase
+      String.build do |io|
+        if @type == Authorization::Type::Bearer && (format = @bearer_format)
+          io << format.downcase
+        elsif @type == Authorization::Type::APIKey && @parameter_location == "cookie"
+          io << "cookie"
         else
-          obj << name
+          io << @name
         end
-        obj << "auth"
-      end.join("_")
+
+        io << "_auth"
+      end
     end
   end
 end
