@@ -373,7 +373,7 @@
 <a href="https://circleci.com/gh/icyleaf/swagger" target="_blank"><img src="https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat" alt="Build Status"/></a></p>
 
 <p>Swagger is low-level library which generate output compatible with <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md" target="_blank">Swagger / OpenAPI Spec 3.0.1</a>,
-and wrapped many friendly API let developer understand and use it easier.</p>
+and wrapped many friendly APIs let developer understand and use it easier.</p>
 
 <h2>Installation</h2>
 
@@ -416,44 +416,12 @@ p document</code></pre>
 
 <h2>Structure</h2>
 
+<p>Structure in <code>src</code> directory:</p>
+
 <pre><code>.
-├── action.cr
-├── authorization.cr
-├── builder.cr
-├── controller.cr
-├── error.cr
-├── object.cr
-├── parameter.cr
-├── property.cr
-├── request.cr
-├── response.cr
-├── server.cr
-├── http                          <span class="c"># HTTP libraries</span>
-│   ├── assets
-│   ├── handers
-│   ├── handler.cr
-│   ├── server.cr
-│   └── views
-└── objects                       <span class="c"># OpenAPI objects</span>
-    ├── components.cr
-    ├── document.cr
-    ├── encoding.cr
-    ├── example.cr
-    ├── external_docs.cr
-    ├── header.cr
-    ├── info.cr
-    ├── link.cr
-    ├── media_type.cr
-    ├── operation.cr
-    ├── parameter.cr
-    ├── path_item.cr
-    ├── property.cr
-    ├── request_body.cr
-    ├── response.cr
-    ├── schema.cr
-    ├── security_scheme.cr
-    ├── server.cr
-    └── tag.cr</code></pre>
+├── xxx.cr                        <span class="c"># Friendly APIs</span>
+├── http                          <span class="c"># HTTP assets and libraries</span>
+└── objects                       <span class="c"># OpenAPI objects</span></code></pre>
 
 <h2>Running on web</h2>
 
@@ -482,7 +450,7 @@ document <span class="o">=</span> builder.built
 
 <h2>Todo</h2>
 
-<ul><li>[x] openapi</li><li>[x] Info Object</li><li>[x] Paths Object</li><ul><li>[x] PathItem Object</li><li>[x] Parameter Object</li><li>[x] RequestBody Object</li><li>[x] Responses Object</li><li>[x] Security Object</li><li>[x] Tag Object</li></ul><li>[x] Tags Object</li><li>[x] Servers Objec</li><ul><li>[x] ServerVariables Object</li></ul><li>[x] Security Object</li><li>[ ] Components Object</li><ul><li>[x] Schemas Object</li><li>[x] SecuritySchemes Object</li><li>[x] Basic</li><li>[x] Bearer (include JWT)</li><li>[x] APIKey</li><li>[x] OAuth2</li></ul><li>[ ] ExternalDocs Object</li></ul>
+<ul><li>[x] openapi</li><li>[x] Info Object</li><li>[x] Paths Object</li><ul><li>[x] PathItem Object</li><li>[x] Parameter Object</li><li>[x] RequestBody Object</li><li>[x] Responses Object</li><li>[x] Security Object</li><li>[x] Tag Object</li></ul><li>[x] Tags Object</li><li>[x] Servers Objec</li><ul><li>[x] ServerVariables Object</li></ul><li>[x] Security Object</li><li>[x] Components Object</li><ul><li>[x] Schemas Object</li><li>[x] SecuritySchemes Object</li><li>[x] Basic</li><li>[x] Bearer (include JWT)</li><li>[x] APIKey</li><li>[x] OAuth2</li></ul><li>[x] ExternalDocs Object</li></ul>
 
 <h2>Donate</h2>
 
