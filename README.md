@@ -26,9 +26,9 @@ builder = Swagger::Builder.new(
   title: "App API",
   version: "1.0.0",
   description: "This is a sample api for users",
-  terms: URI.parse("http://yourapp.com/terms"),
-  contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", URI.parse("http://icyleaf.com")),
-  license: Swagger::License.new("MIT", URI.parse("https://github.com/icyleaf/swagger/blob/master/LICENSE")),
+  terms: "http://yourapp.com/terms",
+  contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", "http://icyleaf.com"),
+  license: Swagger::License.new("MIT", "https://github.com/icyleaf/swagger/blob/master/LICENSE"),
   authorizations: [
     Swagger::Authorization.jwt(description: "Use JWT Auth"),
   ]
