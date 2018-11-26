@@ -6,7 +6,7 @@ module Swagger
     property external_docs
 
     def initialize(@name : String, @description : String, @actions = [] of Swagger::Action,
-                   @external_docs : String? = nil)
+                   @external_docs : Object::ExternalDocs? = nil)
     end
   end
 end

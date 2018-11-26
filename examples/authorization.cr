@@ -19,7 +19,7 @@ builder = Swagger::Builder.new(
 
 builder.add(Swagger::Controller.new("Auth", "Authorization", [
   Swagger::Action.new("get", "/access_token", "Get Access Token")
-]))
+], external_docs: Swagger::ExternalDocs.new("http://auth.example.com/private_token", "See Details")))
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
   Swagger::Action.new("get", "/users", "List users", parameters: [

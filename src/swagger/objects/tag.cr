@@ -6,9 +6,9 @@ module Swagger::Object
     getter description : String? = nil
 
     @[JSON::Field(key: "externalDocs")]
-    getter external_docs : ExternalDocumentation? = nil
+    getter external_docs : ExternalDocs? = nil
 
-    def initialize(@name : String, @description : String? = nil, @external_docs : ExternalDocumentation? = nil)
+    def initialize(@name : String, @description : String? = nil, @external_docs : ExternalDocs? = nil)
     end
   end
 end

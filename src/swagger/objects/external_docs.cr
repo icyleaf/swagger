@@ -1,5 +1,5 @@
 module Swagger::Object
-  struct ExternalDocumentation
+  struct ExternalDocs
     include JSON::Serializable
 
     getter url : String
@@ -9,3 +9,5 @@ module Swagger::Object
     end
   end
 end
+
+alias Swagger::ExternalDocs = Swagger::Object::ExternalDocs

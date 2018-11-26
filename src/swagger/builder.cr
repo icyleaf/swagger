@@ -70,7 +70,7 @@ module Swagger
 
     private def build_tags
       @controllers.each_with_object(Array(Object::Tag).new) do |controller, obj|
-        obj << Object::Tag.new(controller.name, controller.description)
+        obj << Object::Tag.new(controller.name, controller.description, controller.external_docs)
       end
     end
 
