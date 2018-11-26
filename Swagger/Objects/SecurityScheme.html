@@ -151,6 +151,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/OAuth2Flow" data-name="swagger::oauth2flow">
+      <a href="../../Swagger/OAuth2Flow.html">OAuth2Flow</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Object" data-name="swagger::object">
       <a href="../../Swagger/Object.html">Object</a>
       
@@ -218,6 +223,11 @@
   
   <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/MediaType" data-name="swagger::objects::mediatype">
       <a href="../../Swagger/Objects/MediaType.html">MediaType</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/OAuth2Flow" data-name="swagger::objects::oauth2flow">
+      <a href="../../Swagger/Objects/OAuth2Flow.html">OAuth2Flow</a>
       
     </li>
   
@@ -331,6 +341,11 @@
       
     </li>
   
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/UndefinedOAuth2GrantType" data-name="swagger::undefinedoauth2granttype">
+      <a href="../../Swagger/UndefinedOAuth2GrantType.html">UndefinedOAuth2GrantType</a>
+      
+    </li>
+  
   <li class=" " data-id="github.com/icyleaf/swagger/Swagger/UndefinedParameterLocation" data-name="swagger::undefinedparameterlocation">
       <a href="../../Swagger/UndefinedParameterLocation.html">UndefinedParameterLocation</a>
       
@@ -389,7 +404,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L5" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L5" target="_blank">
         swagger/objects/security_scheme.cr
       </a>
     
@@ -414,7 +429,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28type%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Cscheme%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Copen_id_connect_url%3AString%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(type : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, name : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, scheme : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, open_id_connect_url : String? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)</a>
+        <a href="#new%28type%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Cscheme%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Cflows%3AHash%28String%2COAuth2Flow%29%3F%3Dnil%2Copen_id_connect_url%3AString%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(type : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, name : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, scheme : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, flows : Hash(String, OAuth2Flow)? = <span class="n">nil</span>, open_id_connect_url : String? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -440,6 +455,11 @@
         
       </li>
     
+      <li class="entry-summary">
+        <a href="#oauth2%28flows%3AArray%28Swagger%3A%3AOAuth2Flow%29%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.oauth2</strong>(flows : Array(Swagger::OAuth2Flow), description : String? = <span class="n">nil</span>)</a>
+        
+      </li>
+    
   </ul>
 
 
@@ -454,6 +474,11 @@
     
       <li class="entry-summary">
         <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#flows%3AHash%28String%2COAuth2Flow%29%3F-instance-method" class="signature"><strong>#flows</strong> : Hash(String, OAuth2Flow)?</a>
         
       </li>
     
@@ -551,7 +576,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -567,23 +592,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(type:String?=nil,description:String?=nil,name:String?=nil,parameter_location:String?=nil,scheme:String?=nil,bearer_format:String?=nil,open_id_connect_url:String?=nil,ref:String?=nil)-class-method">
+    <div class="entry-detail" id="new(type:String?=nil,description:String?=nil,name:String?=nil,parameter_location:String?=nil,scheme:String?=nil,bearer_format:String?=nil,flows:Hash(String,OAuth2Flow)?=nil,open_id_connect_url:String?=nil,ref:String?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(type : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, name : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, scheme : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, open_id_connect_url : String? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(type : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, name : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, scheme : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, flows : Hash(String, <a href="../../Swagger/Objects/OAuth2Flow.html">OAuth2Flow</a>)? = <span class="n">nil</span>, open_id_connect_url : String? = <span class="n">nil</span>, ref : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28type%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Cscheme%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Copen_id_connect_url%3AString%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28type%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Cname%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Cscheme%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Cflows%3AHash%28String%2COAuth2Flow%29%3F%3Dnil%2Copen_id_connect_url%3AString%3F%3Dnil%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L51" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L61" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -604,7 +629,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L29" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -620,7 +645,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -636,7 +661,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="oauth2(flows:Array(Swagger::OAuth2Flow),description:String?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>oauth2</strong>(flows : Array(<a href="../../Swagger/OAuth2Flow.html">Swagger::OAuth2Flow</a>), description : String? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#oauth2%28flows%3AArray%28Swagger%3A%3AOAuth2Flow%29%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -657,7 +698,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L41" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -673,7 +714,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="flows:Hash(String,OAuth2Flow)?-instance-method">
+      <div class="signature">
+        
+        def <strong>flows</strong> : Hash(String, <a href="../../Swagger/Objects/OAuth2Flow.html">OAuth2Flow</a>)?
+
+        <a class="method-permalink" href="#flows%3AHash%28String%2COAuth2Flow%29%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -689,7 +746,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -705,7 +762,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L46" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L56" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -721,7 +778,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L46" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -737,7 +794,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -753,7 +810,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -769,7 +826,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/4469400427b8acd94044dcb7bf9b0e59bb6fcfcc/src/swagger/objects/security_scheme.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/objects/security_scheme.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>

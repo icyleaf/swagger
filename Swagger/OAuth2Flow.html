@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
-  <title>Swagger::Controller - github.com/icyleaf/swagger</title>
+  <title>Swagger::OAuth2Flow - github.com/icyleaf/swagger</title>
 </head>
 <body>
 
@@ -71,7 +71,7 @@
       
     </li>
   
-  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Controller" data-name="swagger::controller">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Controller" data-name="swagger::controller">
       <a href="../Swagger/Controller.html">Controller</a>
       
     </li>
@@ -151,7 +151,7 @@
       
     </li>
   
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/OAuth2Flow" data-name="swagger::oauth2flow">
+  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/OAuth2Flow" data-name="swagger::oauth2flow">
       <a href="../Swagger/OAuth2Flow.html">OAuth2Flow</a>
       
     </li>
@@ -365,27 +365,19 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Swagger::Controller
+  <span class="kind">struct</span> Swagger::OAuth2Flow
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Swagger/Controller.html">Swagger::Controller</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Swagger/OAuth2Flow.html">Swagger::OAuth2Flow</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
 
   <h2>Overview</h2>
 
-  <p>Define a controller</p>
-
-<pre><code><span class="t">Swagger</span><span class="t">::</span><span class="t">Controller</span>.<span class="k">new</span>(<span class="s">&quot;Users&quot;</span>, <span class="s">&quot;User APIs&quot;</span>, [
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users&quot;</span>),
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users/{id}&quot;</span>),
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;post&quot;</span>, <span class="s">&quot;/users&quot;</span>),
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;put&quot;</span>, <span class="s">&quot;/users/{id}&quot;</span>),
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;delete&quot;</span>, <span class="s">&quot;/users/{id}&quot;</span>),
-]</code></pre>
+  <p>OAuth2 Flow Object</p>
 
 
 
@@ -403,8 +395,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L13" target="_blank">
-        swagger/controller.cr
+      <a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L3" target="_blank">
+        swagger/oauth2_flow.cr
       </a>
     
     <br/>
@@ -418,7 +410,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28name%3AString%2Cdescription%3AString%2Cactions%3D%5B%5DofSwagger%3A%3AAction%2Cexternal_docs%3AObjects%3A%3AExternalDocs%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, description : String, actions = <span class="o">[]</span> <span class="k">of</span> <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>, external_docs : Objects::ExternalDocs? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AString%2Cauthorization_url%3AString%3F%3Dnil%2Ctoken_url%3AString%3F%3Dnil%2Crefresh_url%3AString%3F%3Dnil%2Cscopes%3AHash%28String%2CString%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, authorization_url : String? = <span class="n">nil</span>, token_url : String? = <span class="n">nil</span>, refresh_url : String? = <span class="n">nil</span>, scopes : Hash(String, String)? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -432,32 +424,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#actions%3AArray%28Swagger%3A%3AAction%29-instance-method" class="signature"><strong>#actions</strong> : Array(Swagger::Action)</a>
+        <a href="#authorization_url%3AString%3F-instance-method" class="signature"><strong>#authorization_url</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#actions%3D%28actions%29-instance-method" class="signature"><strong>#actions=</strong>(actions)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#description%3AString-instance-method" class="signature"><strong>#description</strong> : String</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#description%3D%28description%29-instance-method" class="signature"><strong>#description=</strong>(description)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#external_docs%3ASwagger%3A%3AObjects%3A%3AExternalDocs%3F-instance-method" class="signature"><strong>#external_docs</strong> : Swagger::Objects::ExternalDocs?</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#external_docs%3D%28external_docs%29-instance-method" class="signature"><strong>#external_docs=</strong>(external_docs)</a>
+        <a href="#authorization_url%3D%28authorization_url%29-instance-method" class="signature"><strong>#authorization_url=</strong>(authorization_url)</a>
         
       </li>
     
@@ -468,6 +440,36 @@
     
       <li class="entry-summary">
         <a href="#name%3D%28name%29-instance-method" class="signature"><strong>#name=</strong>(name)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#refresh_url%3AString%3F-instance-method" class="signature"><strong>#refresh_url</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#refresh_url%3D%28refresh_url%29-instance-method" class="signature"><strong>#refresh_url=</strong>(refresh_url)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scopes%3AHash%28String%2CString%29%3F-instance-method" class="signature"><strong>#scopes</strong> : Hash(String, String)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scopes%3D%28scopes%29-instance-method" class="signature"><strong>#scopes=</strong>(scopes)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#token_url%3AString%3F-instance-method" class="signature"><strong>#token_url</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#token_url%3D%28token_url%29-instance-method" class="signature"><strong>#token_url=</strong>(token_url)</a>
         
       </li>
     
@@ -514,18 +516,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(name:String,description:String,actions=[]ofSwagger::Action,external_docs:Objects::ExternalDocs?=nil)-class-method">
+    <div class="entry-detail" id="new(name:String,authorization_url:String?=nil,token_url:String?=nil,refresh_url:String?=nil,scopes:Hash(String,String)?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : String, description : String, actions = <span class="o">[]</span> <span class="k">of</span> <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>, external_docs : <a href="../Swagger/Objects/ExternalDocs.html">Objects::ExternalDocs</a>? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(name : String, authorization_url : String? = <span class="n">nil</span>, token_url : String? = <span class="n">nil</span>, refresh_url : String? = <span class="n">nil</span>, scopes : Hash(String, String)? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28name%3AString%2Cdescription%3AString%2Cactions%3D%5B%5DofSwagger%3A%3AAction%2Cexternal_docs%3AObjects%3A%3AExternalDocs%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cauthorization_url%3AString%3F%3Dnil%2Ctoken_url%3AString%3F%3Dnil%2Crefresh_url%3AString%3F%3Dnil%2Cscopes%3AHash%28String%2CString%29%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -537,98 +539,34 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="actions:Array(Swagger::Action)-instance-method">
+    <div class="entry-detail" id="authorization_url:String?-instance-method">
       <div class="signature">
         
-        def <strong>actions</strong> : Array(<a href="../Swagger/Action.html">Swagger::Action</a>)
+        def <strong>authorization_url</strong> : String?
 
-        <a class="method-permalink" href="#actions%3AArray%28Swagger%3A%3AAction%29-instance-method">#</a>
+        <a class="method-permalink" href="#authorization_url%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="actions=(actions)-instance-method">
+    <div class="entry-detail" id="authorization_url=(authorization_url)-instance-method">
       <div class="signature">
         
-        def <strong>actions=</strong>(actions)
+        def <strong>authorization_url=</strong>(authorization_url)
 
-        <a class="method-permalink" href="#actions%3D%28actions%29-instance-method">#</a>
+        <a class="method-permalink" href="#authorization_url%3D%28authorization_url%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L16" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="description:String-instance-method">
-      <div class="signature">
-        
-        def <strong>description</strong> : String
-
-        <a class="method-permalink" href="#description%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L15" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="description=(description)-instance-method">
-      <div class="signature">
-        
-        def <strong>description=</strong>(description)
-
-        <a class="method-permalink" href="#description%3D%28description%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L15" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="external_docs:Swagger::Objects::ExternalDocs?-instance-method">
-      <div class="signature">
-        
-        def <strong>external_docs</strong> : <a href="../Swagger/Objects/ExternalDocs.html">Swagger::Objects::ExternalDocs</a>?
-
-        <a class="method-permalink" href="#external_docs%3ASwagger%3A%3AObjects%3A%3AExternalDocs%3F-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L17" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="external_docs=(external_docs)-instance-method">
-      <div class="signature">
-        
-        def <strong>external_docs=</strong>(external_docs)
-
-        <a class="method-permalink" href="#external_docs%3D%28external_docs%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -644,7 +582,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -660,7 +598,103 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/controller.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="refresh_url:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>refresh_url</strong> : String?
+
+        <a class="method-permalink" href="#refresh_url%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="refresh_url=(refresh_url)-instance-method">
+      <div class="signature">
+        
+        def <strong>refresh_url=</strong>(refresh_url)
+
+        <a class="method-permalink" href="#refresh_url%3D%28refresh_url%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scopes:Hash(String,String)?-instance-method">
+      <div class="signature">
+        
+        def <strong>scopes</strong> : Hash(String, String)?
+
+        <a class="method-permalink" href="#scopes%3AHash%28String%2CString%29%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scopes=(scopes)-instance-method">
+      <div class="signature">
+        
+        def <strong>scopes=</strong>(scopes)
+
+        <a class="method-permalink" href="#scopes%3D%28scopes%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="token_url:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>token_url</strong> : String?
+
+        <a class="method-permalink" href="#token_url%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="token_url=(token_url)-instance-method">
+      <div class="signature">
+        
+        def <strong>token_url=</strong>(token_url)
+
+        <a class="method-permalink" href="#token_url%3D%28token_url%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/b55989d6a90eec36bdb2ee4bb487cf3271ed8242/src/swagger/oauth2_flow.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
