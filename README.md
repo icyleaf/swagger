@@ -8,7 +8,7 @@
 [![Build Status](https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat)](https://circleci.com/gh/icyleaf/swagger)
 
 Swagger is low-level library which generate output compatible with [Swagger / OpenAPI Spec 3.0.1](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md),
-and wrapped many friendly API let developer understand and use it easier.
+and wrapped many friendly APIs let developer understand and use it easier.
 
 ## Installation
 
@@ -55,45 +55,13 @@ p document
 
 ## Structure
 
+Structure in `src` directory:
+
 ```
 .
-├── action.cr
-├── authorization.cr
-├── builder.cr
-├── controller.cr
-├── error.cr
-├── object.cr
-├── parameter.cr
-├── property.cr
-├── request.cr
-├── response.cr
-├── server.cr
-├── http                          # HTTP libraries
-│   ├── assets
-│   ├── handers
-│   ├── handler.cr
-│   ├── server.cr
-│   └── views
+├── xxx.cr                        # Friendly APIs
+├── http                          # HTTP assets and libraries
 └── objects                       # OpenAPI objects
-    ├── components.cr
-    ├── document.cr
-    ├── encoding.cr
-    ├── example.cr
-    ├── external_docs.cr
-    ├── header.cr
-    ├── info.cr
-    ├── link.cr
-    ├── media_type.cr
-    ├── operation.cr
-    ├── parameter.cr
-    ├── path_item.cr
-    ├── property.cr
-    ├── request_body.cr
-    ├── response.cr
-    ├── schema.cr
-    ├── security_scheme.cr
-    ├── server.cr
-    └── tag.cr
 ```
 
 ## Running on web
@@ -138,14 +106,14 @@ See more [examples](/examples).
 - [x] Servers Objec
   - [x] ServerVariables Object
 - [x] Security Object
-- [ ] Components Object
+- [x] Components Object
   - [x] Schemas Object
   - [x] SecuritySchemes Object
     - [x] Basic
     - [x] Bearer (include JWT)
     - [x] APIKey
     - [x] OAuth2
-- [ ] ExternalDocs Object
+- [x] ExternalDocs Object
 
 ## Donate
 
