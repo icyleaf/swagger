@@ -1,4 +1,4 @@
-module Swagger
+module Swagger::Object
   struct Document
     include JSON::Serializable
 

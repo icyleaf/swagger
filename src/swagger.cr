@@ -7,7 +7,9 @@ module Swagger
   OPENAPI_MAJAR_VERSION = "3"
   OPENAPI_VERSION = "3.0.1"
 
-  alias ExternalDocs = Object::ExternalDocs
+  alias Document = Object::Document
+  alias Info = Object::Info
   alias Contact = Object::Info::Contact
   alias License = Object::Info::License
+  alias ExternalDocs = Object::ExternalDocs
 end

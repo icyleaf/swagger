@@ -1,16 +1,25 @@
 module Swagger
   class Builder
-    @controllers = Array(Controller).new
-    @servers = Array(Server).new
-    @objects = Array(Structure).new
+    property info
+    property controllers = Array(Controller).new
+    property servers = Array(Server).new
+    # property objects = Array(Structure).new
 
-    def initialize(@title : String, @version : String, @description : String? = nil,
-                   @terms_url : String? = nil, @license : Object::Info::License? = nil, @contact : Object::Info::Contact? = nil,
-                   @authorizations : Array(Authorization)? = nil)
+    def self.new(title : String, version : String, description : String? = nil,
+                 terms_url : String? = nil, license : License? = nil, contact : Contact? = nil,
+                 authorizations : Array(Authorization)? = nil)
+      new(Info.new(title, version, description, terms_url, license, contact), authorizations)
     end
 
-    def add(controller name : String, description : String, actions : Array(Action))
-      add(Controller.new(name, description, actions))
+    def initialize(@info : Info, @authorizations : Array(Authorization)? = nil)
+    end
+
+    def add(*, controller name : String, description : String, actions : Array(Action), external_docs : Object::ExternalDocs? = nil)
+      add(Controller.new(name, description, actions, external_docs))
+    end
+
+    def add(*, server name : String, description : String? = nil, variables : Array(Variable)? = nil)
+      add(Server.new(name, description, variables))
     end
 
     def add(controller : Controller)
@@ -29,13 +38,13 @@ module Swagger
       add(server)
     end
 
-    def add(object : Structure)
-      @objects << object
-    end
+    # def add(object : Structure)
+    #   @objects << object
+    # end
 
-    def <<(object : Structure)
-      add(object)
-    end
+    # def <<(object : Structure)
+    #   add(object)
+    # end
 
     def built
       security_schemes = build_security_schemes
@@ -44,16 +53,12 @@ module Swagger
       paths = build_paths(security)
 
       Document.new(
-        info: build_info,
+        info: @info,
         servers: build_servers,
         tags: build_tags,
         paths: paths,
         components: components,
       )
-    end
-
-    private def build_info
-      Object::Info.new(@title, @version, @description, @terms_url, @license, @contact)
     end
 
     private def build_servers
