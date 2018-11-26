@@ -12,5 +12,3 @@ module Swagger::Object
     end
   end
 end
-
-alias Swagger::ExternalDocs = Swagger::Object::ExternalDocs

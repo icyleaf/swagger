@@ -60,6 +60,3 @@ module Swagger::Object
     end
   end
 end
-
-alias Swagger::Contact = Swagger::Object::Info::Contact
-alias Swagger::License = Swagger::Object::Info::License
