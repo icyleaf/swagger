@@ -1,9 +1,11 @@
-module Swagger::Object
+module Swagger::Objects
   # Parameter Object
   #
   # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#parameterObject
   struct Parameter
     include JSON::Serializable
+
+    LOCATIOINS = %w(path query header cookie)
 
     getter name : String
     getter schema : Schema

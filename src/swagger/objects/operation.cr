@@ -1,4 +1,4 @@
-module Swagger::Object
+module Swagger::Objects
   # Operation Object
   #
   # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#operationObject
@@ -25,7 +25,16 @@ module Swagger::Object
     def self.parameters(action)
       return unless parameters = action.parameters
       parameters.each_with_object(Array(Parameter).new) do |parameter, obj|
-        schema = Schema.new(parameter.type, default: parameter.default_value)
+        unless Parameter::LOCATIOINS.includes?(parameter.parameter_location)
+          raise UndefinedParameterLocation.new("Undefined location of parameter `#{parameter.parameter_location}`. avaiabled in #{Parameter::LOCATIOINS}")
+        end
+
+        schema = Schema.new(
+          type: parameter.type,
+          format: parameter.format,
+          default: parameter.default_value
+        )
+
         obj << Parameter.new(parameter.name, parameter.parameter_location, schema,
                              parameter.description, parameter.required, parameter.allow_empty_value,
                              parameter.deprecated, parameter.ref)
@@ -34,16 +43,14 @@ module Swagger::Object
 
     def self.request_body(action)
       return unless request = action.request
-      media_type = MediaType.schema_reference(request.name)
       content_type = request.content_type || "application/json"
-      RequestBody.new(request.description, {content_type => media_type})
+      RequestBody.new(request.description, {content_type => request.media_type})
     end
 
     def self.responses(action)
       return unless responses = action.responses
       responses.each_with_object(Hash(String, Response).new) do |response, obj|
-        reference : String? = nil
-        obj[response.code] = Response.new(response.description)
+        obj[response.code] = Response.new(response.description, content: response.content)
       end
     end
 

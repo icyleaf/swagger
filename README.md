@@ -26,9 +26,9 @@ builder = Swagger::Builder.new(
   title: "App API",
   version: "1.0.0",
   description: "This is a sample api for users",
-  terms: URI.parse("http://yourapp.com/terms"),
-  contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", URI.parse("http://icyleaf.com")),
-  license: Swagger::License.new("MIT", URI.parse("https://github.com/icyleaf/swagger/blob/master/LICENSE")),
+  terms: "http://yourapp.com/terms",
+  contact: Swagger::Contact.new("icyleaf", "icyleaf.cn@gmail.com", "http://icyleaf.com"),
+  license: Swagger::License.new("MIT", "https://github.com/icyleaf/swagger/blob/master/LICENSE"),
   authorizations: [
     Swagger::Authorization.jwt(description: "Use JWT Auth"),
   ]
@@ -62,17 +62,17 @@ See more [examples](/examples).
 - [x] Info Object
 - [x] Paths Object
   - [x] PathItem Object
-    - [ ] Parameter Object
-    - [ ] RequestBody Object
-    - [ ] Responses Object
-    - [ ] Security Object
+    - [x] Parameter Object
+    - [x] RequestBody Object
+    - [x] Responses Object
+    - [x] Security Object
     - [x] Tag Object
 - [x] Tags Object
 - [x] Servers Objec
   - [x] ServerVariables Object
 - [x] Security Object
 - [ ] Components Object
-  - [ ] Schemas Object
+  - [x] Schemas Object
   - [x] SecuritySchemes Object
     - [x] Basic
     - [x] Bearer (include JWT)

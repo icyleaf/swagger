@@ -1,20 +1,22 @@
-module Swagger::Object
+module Swagger::Objects
   # Path Item Object
   #
   # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#pathItemObject
   struct PathItem
     include JSON::Serializable
 
+    METHODS = %w(get put post delete options head patch trace)
+
     getter summary : String? = nil
     getter description : String? = nil
-    getter get : Object::Operation?
-    getter put : Object::Operation?
-    getter post : Object::Operation?
-    getter delete : Object::Operation?
-    getter options : Object::Operation?
-    getter head : Object::Operation?
-    getter patch : Object::Operation?
-    getter trace : Object::Operation?
+    getter get : Objects::Operation?
+    getter put : Objects::Operation?
+    getter post : Objects::Operation?
+    getter delete : Objects::Operation?
+    getter options : Objects::Operation?
+    getter head : Objects::Operation?
+    getter patch : Objects::Operation?
+    getter trace : Objects::Operation?
 
     @[JSON::Field(key: "$ref")]
     getter ref : String? = nil

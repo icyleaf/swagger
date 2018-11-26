@@ -1,9 +1,9 @@
 require "../../spec_helper"
 
-describe Swagger::Object::Info::Contact do
+describe Swagger::Objects::Info::Contact do
   describe "use alias" do
     it "should equal with alias" do
-      a = Swagger::Object::Info::Contact.new("foo", "foo@example.com", "http://example.com")
+      a = Swagger::Objects::Info::Contact.new("foo", "foo@example.com", "http://example.com")
       b = Swagger::Contact.new("foo", "foo@example.com", "http://example.com")
       a.should eq b
     end
@@ -38,10 +38,10 @@ describe Swagger::Object::Info::Contact do
   end
 end
 
-describe Swagger::Object::Info::License do
+describe Swagger::Objects::Info::License do
   describe "use alias" do
     it "should equal with alias" do
-      a = Swagger::Object::Info::License.new("MIT", "http://example.com")
+      a = Swagger::Objects::Info::License.new("MIT", "http://example.com")
       b = Swagger::License.new("MIT", "http://example.com")
       a.should eq b
     end
@@ -83,10 +83,10 @@ describe Swagger::Object::Info::License do
   # end
 end
 
-describe Swagger::Object::Info do
+describe Swagger::Objects::Info do
   describe "#new" do
     it "should works" do
-      raw = Swagger::Object::Info.new("API", "1.0.0", "Example API document")
+      raw = Swagger::Objects::Info.new("API", "1.0.0", "Example API document")
       raw.title.should eq "API"
       raw.version.should eq "1.0.0"
       raw.description.should eq "Example API document"
@@ -96,7 +96,7 @@ describe Swagger::Object::Info do
     end
 
     it "should accept pass argument by namedtupled style" do
-      raw = Swagger::Object::Info.new("API", "1.0.0", "Example API document", license: Swagger::License.new("MIT"))
+      raw = Swagger::Objects::Info.new("API", "1.0.0", "Example API document", license: Swagger::License.new("MIT"))
       raw.title.should eq "API"
       raw.version.should eq "1.0.0"
       raw.description.should eq "Example API document"
@@ -107,7 +107,7 @@ describe Swagger::Object::Info do
   end
 
   describe "#to_json" do
-    raw = Swagger::Object::Info.new("API", "1.0.0", "Example API document", license: nil)
+    raw = Swagger::Objects::Info.new("API", "1.0.0", "Example API document", license: nil)
     raw.to_json.should eq %Q{{"title":"API","version":"1.0.0","description":"Example API document"}}
   end
 end
