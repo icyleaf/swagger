@@ -5,6 +5,8 @@ module Swagger::Object
   struct Parameter
     include JSON::Serializable
 
+    LOCATIOINS = %w(path query header cookie)
+
     getter name : String
     getter schema : Schema
 

@@ -5,6 +5,8 @@ module Swagger::Object
   struct PathItem
     include JSON::Serializable
 
+    METHODS = %w(get put post delete options head patch trace)
+
     getter summary : String? = nil
     getter description : String? = nil
     getter get : Object::Operation?
