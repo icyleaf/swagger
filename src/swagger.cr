@@ -5,7 +5,7 @@ module Swagger
   VERSION = "0.1.0"
 
   OPENAPI_MAJAR_VERSION = "3"
-  OPENAPI_VERSION = "3.0.1"
+  OPENAPI_VERSION       = "3.0.1"
 
   alias Document = Objects::Document
   alias Info = Objects::Info

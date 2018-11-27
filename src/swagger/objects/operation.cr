@@ -18,11 +18,11 @@ module Swagger::Objects
       )
     end
 
-    def self.tags(name)
+    private def self.tags(name)
       [name] if name
     end
 
-    def self.parameters(action)
+    private def self.parameters(action)
       return unless parameters = action.parameters
       parameters.each_with_object(Array(Parameter).new) do |parameter, obj|
         unless Parameter::LOCATIOINS.includes?(parameter.parameter_location)
@@ -36,25 +36,25 @@ module Swagger::Objects
         )
 
         obj << Parameter.new(parameter.name, parameter.parameter_location, schema,
-                             parameter.description, parameter.required, parameter.allow_empty_value,
-                             parameter.deprecated, parameter.ref)
+          parameter.description, parameter.required, parameter.allow_empty_value,
+          parameter.deprecated, parameter.ref)
       end
     end
 
-    def self.request_body(action)
+    private def self.request_body(action)
       return unless request = action.request
       content_type = request.content_type || "application/json"
       RequestBody.new(request.description, {content_type => request.media_type})
     end
 
-    def self.responses(action)
+    private def self.responses(action)
       return unless responses = action.responses
       responses.each_with_object(Hash(String, Response).new) do |response, obj|
         obj[response.code] = Response.new(response.description, content: response.content)
       end
     end
 
-    def self.security(action, security)
+    private def self.security(action, security)
       [security] if action.authorization && security
     end
 

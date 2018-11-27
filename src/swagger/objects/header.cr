@@ -22,7 +22,7 @@ module Swagger::Objects
     getter ref : String? = nil
 
     def initialize(@name : String, @parameter_location : String, @description : String? = nil,
-                    @required = false, @deprecated = false, @allow_empty_value = false)
+                   @required = false, @deprecated = false, @allow_empty_value = false)
     end
   end
 end

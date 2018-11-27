@@ -22,7 +22,7 @@ module Swagger
       return unless media_type = @media_type
 
       {
-        @content_type => media_type
+        @content_type => media_type,
       }
     end
   end

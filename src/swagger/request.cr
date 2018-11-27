@@ -1,6 +1,5 @@
 module Swagger
   struct Request
-
     # Returns request with scheme reference
     #
     # ```

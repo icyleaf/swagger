@@ -17,7 +17,6 @@ module Swagger::Objects
 
     def initialize(@summary : String? = nil, @description : String? = nil, @value : String? = nil,
                    @external_value : String? = nil, @ref : String? = nil)
-
     end
   end
 end

@@ -87,11 +87,11 @@ module Swagger
     # Transform name to unique key name
     #
     # ```
-    # Swagger::Authorization.basic.key # => "basic_auth"
-    # Swagger::Authorization.bearer.key # => "bearer_auth"
-    # Swagger::Authorization.bearer(format: "custom").key # => "custom_auth"
-    # Swagger::Authorization.jwt.key.˙ # => "jwt_auth"
-    # Swagger::Authorization.api_key.key.˙ # => "api_key_auth"
+    # Swagger::Authorization.basic.key                        # => "basic_auth"
+    # Swagger::Authorization.bearer.key                       # => "bearer_auth"
+    # Swagger::Authorization.bearer(format: "custom").key     # => "custom_auth"
+    # Swagger::Authorization.jwt.key.˙                        # => "jwt_auth"
+    # Swagger::Authorization.api_key.key.˙                    # => "api_key_auth"
     # Swagger::Authorization.cookie(name: "JSESSIONID").key.˙ # => "cookie_auth"
     # ```
     def key

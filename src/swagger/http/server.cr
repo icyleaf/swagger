@@ -28,6 +28,7 @@ module Swagger::HTTP
     end
 
     @server_endpoint : String?
+
     def server_endpoint
       @server_endpoint ||= "http://#{@host}:#{@port}#{@swagger_uri}"
       @server_endpoint.not_nil!

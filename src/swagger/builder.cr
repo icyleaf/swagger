@@ -67,10 +67,10 @@ module Swagger
     private def build_servers
       @servers.each_with_object(Array(Objects::Server).new) do |server, obj|
         variables = if vars = server.variables
-          vars.each_with_object(Hash(String, Objects::Server::Variable).new) do |var, obj|
-            obj[var.name] = Objects::Server::Variable.new(var.default_value, var.enum_values, var.description)
-          end
-        end
+                      vars.each_with_object(Hash(String, Objects::Server::Variable).new) do |var, obj|
+                        obj[var.name] = Objects::Server::Variable.new(var.default_value, var.enum_values, var.description)
+                      end
+                    end
 
         obj << Objects::Server.new(server.url, server.description, variables)
       end
@@ -99,18 +99,18 @@ module Swagger
 
     private def build_components(security_schemes)
       schemas = if objects = @objects
-        schema = objects.each_with_object(Hash(String, Schema).new) do |object, schemas_obj|
-          properties = object.properties.each_with_object(Hash(String, Objects::Property).new) do |property, prop_obj|
-            prop_obj[property.name] = Objects::Property.new(
-              type: property.type,
-              description: property.description,
-              example: property.example
-            )
-          end
+                  schema = objects.each_with_object(Hash(String, Schema).new) do |object, schemas_obj|
+                    properties = object.properties.each_with_object(Hash(String, Objects::Property).new) do |property, prop_obj|
+                      prop_obj[property.name] = Objects::Property.new(
+                        type: property.type,
+                        description: property.description,
+                        example: property.example
+                      )
+                    end
 
-          schemas_obj[object.name] = Schema.new(type: object.type, properties: properties)
-        end
-      end
+                    schemas_obj[object.name] = Schema.new(type: object.type, properties: properties)
+                  end
+                end
 
       Objects::Components.new(security_schemes: security_schemes, schemas: schemas)
     end

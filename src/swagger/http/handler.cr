@@ -1,6 +1,7 @@
 require "ecr/macros"
 require "json"
 require "http/server/handler"
+
 module Swagger::HTTP::Handler
   macro included
     include ::HTTP::Handler

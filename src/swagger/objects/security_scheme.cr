@@ -7,15 +7,15 @@ module Swagger::Objects
 
     def self.new(auth : Authorization)
       scheme = case auth.type
-      when Authorization::Type::Basic
-        basic(auth.description)
-      when Authorization::Type::Bearer
-        bearer(auth.description, auth.bearer_format)
-      when Authorization::Type::APIKey
-        api_key(auth.api_key_name.not_nil!, auth.parameter_location.not_nil!, auth.description)
-      when Authorization::Type::OAuth2
-        oauth2(auth.oauth2_flows.not_nil!, auth.description)
-      end
+               when Authorization::Type::Basic
+                 basic(auth.description)
+               when Authorization::Type::Bearer
+                 bearer(auth.description, auth.bearer_format)
+               when Authorization::Type::APIKey
+                 api_key(auth.api_key_name.not_nil!, auth.parameter_location.not_nil!, auth.description)
+               when Authorization::Type::OAuth2
+                 oauth2(auth.oauth2_flows.not_nil!, auth.description)
+               end
     end
 
     def self.basic(description : String? = nil)

@@ -22,8 +22,8 @@ module Swagger::Objects
     getter ref : String? = nil
 
     def initialize(@operation_ref : String? = nil, @operation_id : String? = nil,
-                  @parameters : Hash(String, String)? = nil, @request_body : String? = nil,
-                  @description : String? = nil, @server : Server? = nil, @ref : String? = nil)
+                   @parameters : Hash(String, String)? = nil, @request_body : String? = nil,
+                   @description : String? = nil, @server : Server? = nil, @ref : String? = nil)
     end
   end
 end

@@ -7,7 +7,7 @@ module Swagger::HTTP
     include Swagger::HTTP::Handler
 
     SWAGGER_WEB_URI = "/swagger"
-    DEMO_API_URL = "https://petstore.swagger.io/v2/swagger.json"
+    DEMO_API_URL    = "https://petstore.swagger.io/v2/swagger.json"
 
     def initialize(@route = SWAGGER_WEB_URI, @api_url : String = DEMO_API_URL, @asset_dir : String = assets_path)
       @static_file_handler = ::HTTP::StaticFileHandler.new(assets_path, directory_listing: false)
