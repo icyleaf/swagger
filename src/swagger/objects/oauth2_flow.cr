@@ -3,8 +3,6 @@ module Swagger::Objects
   struct OAuth2Flow
     include JSON::Serializable
 
-    GRANT_TYPES = %w(authorizationCode implicit password clientCredentials)
-
     @[JSON::Field(key: "authorizationUrl")]
     getter authorization_url : String? = nil
 
