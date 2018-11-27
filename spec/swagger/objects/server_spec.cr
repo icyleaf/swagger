@@ -15,20 +15,15 @@ describe Swagger::Objects::Server do
       raw.description.should be_nil
       raw.variables.should be_nil
     end
-
-  #   it "should accept pass argument by namedtupled style" do
-  #     raw = Swagger::Contact.new(name: "foo", url: URI.parse("http://example.com"))
-  #     raw.name.should eq "foo"
-  #     raw.email.should be_nil
-  #     raw.url.to_s.should eq "http://example.com"
-  #   end
   end
 
   describe "#to_json" do
-    raw = Swagger::Objects::Server.new("http://example.com", "Production")
-    raw.to_json.should eq %Q{{"url":"http://example.com","description":"Production"}}
+    it "should works" do
+      raw = Swagger::Objects::Server.new("http://example.com", "Production")
+      raw.to_json.should eq %Q{{"url":"http://example.com","description":"Production"}}
 
-    raw = Swagger::Objects::Server.new("http://example.com")
-    raw.to_json.should eq %Q{{"url":"http://example.com"}}
+      raw = Swagger::Objects::Server.new("http://example.com")
+      raw.to_json.should eq %Q{{"url":"http://example.com"}}
+    end
   end
 end

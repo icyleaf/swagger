@@ -33,8 +33,10 @@ describe Swagger::Objects::Info::Contact do
   end
 
   describe "#to_json" do
-    raw = Swagger::Contact.new("foo", "foo@example.com", "http://example.com")
-    raw.to_json.should eq %Q{{"name":"foo","email":"foo@example.com","url":"http://example.com"}}
+    it "should works" do
+      raw = Swagger::Contact.new("foo", "foo@example.com", "http://example.com")
+      raw.to_json.should eq %Q{{"name":"foo","email":"foo@example.com","url":"http://example.com"}}
+    end
   end
 end
 
@@ -68,19 +70,11 @@ describe Swagger::Objects::Info::License do
   end
 
   describe "#to_json" do
-    raw = Swagger::Contact.new(name: "GPL v3", url: "http://example.com")
-    raw.to_json.should eq %Q{{"name":"GPL v3","url":"http://example.com"}}
+    it "should works" do
+      raw = Swagger::Contact.new(name: "GPL v3", url: "http://example.com")
+      raw.to_json.should eq %Q{{"name":"GPL v3","url":"http://example.com"}}
+    end
   end
-
-  # describe "use shortcuts" do
-  #   {% for ivar, iurl in Swagger::License::KNOWN_LICENSES %}
-  #     it ".{{ ivar.id }}" do
-  #       raw = Swagger::License.{{ ivar.id }}
-  #       raw.name.should eq {{ ivar.id.upcase.stringify }}
-  #       raw.url.to_s.should eq {{ iurl.id.stringify }}
-  #     end
-  #   {% end %}
-  # end
 end
 
 describe Swagger::Objects::Info do
@@ -107,7 +101,9 @@ describe Swagger::Objects::Info do
   end
 
   describe "#to_json" do
-    raw = Swagger::Objects::Info.new("API", "1.0.0", "Example API document", license: nil)
-    raw.to_json.should eq %Q{{"title":"API","version":"1.0.0","description":"Example API document"}}
+    it "should works" do
+      raw = Swagger::Objects::Info.new("API", "1.0.0", "Example API document", license: nil)
+      raw.to_json.should eq %Q{{"title":"API","version":"1.0.0","description":"Example API document"}}
+    end
   end
 end
