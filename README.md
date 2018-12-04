@@ -1,6 +1,5 @@
 # Swagger
 
-![Project Status](https://img.shields.io/badge/status-WIP-yellow.svg)
 [![Language](https://img.shields.io/badge/language-crystal-776791.svg)](https://github.com/crystal-lang/crystal)
 [![Tag](https://img.shields.io/github/tag/icyleaf/swagger.svg)](https://github.com/icyleaf/swagger/blob/master/CHANGELOG.md)
 [![Source](https://img.shields.io/badge/source-github-brightgreen.svg)](https://github.com/icyleaf/swagger/)
