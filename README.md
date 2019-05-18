@@ -81,7 +81,7 @@ Swagger::HTTP::Server.run(builder.built)
 
 ## Integrating
 
-Swagger has two HTTP handlers which you can integrate it to mostly Crystal framework (like kemal, amber, lucky etc):
+Swagger has two HTTP handlers which you can integrate it to bult-in HTTP Server and mostly frameworks (like kemal, amber, lucky etc):
 
 - Swagger::HTTP::APIHandler
 - Swagger::HTTP::WebHandler
