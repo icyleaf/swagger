@@ -403,11 +403,11 @@ builder.add(<span class="t">Swagger</span><span class="t">::</span><span class="
   ], responses: [
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;200&quot;</span>, <span class="s">&quot;Success response&quot;</span>),
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;404&quot;</span>, <span class="s">&quot;Not found user&quot;</span>)
-  ]),
+  ], authorization: <span class="n">true</span>),
   <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;post&quot;</span>, <span class="s">&quot;/users&quot;</span>, <span class="s">&quot;Create User&quot;</span>, responses: [
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;201&quot;</span>, <span class="s">&quot;Return user resource after created&quot;</span>),
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;401&quot;</span>, <span class="s">&quot;Unauthorizated&quot;</span>)
-  ])
+  ], authorization: <span class="n">false</span>)
 ]))
 
 document <span class="o">=</span> builder.built
