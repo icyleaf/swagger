@@ -4,6 +4,6 @@ version: 0.1.0
 authors:
   - icyleaf <icyleaf.cn@gmail.com>
 
-crystal: 0.30.0
+crystal: 0.31.0
 
 license: MIT
