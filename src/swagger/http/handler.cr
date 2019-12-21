@@ -35,4 +35,4 @@ module Swagger::HTTP::Handler
   end
 end
 
-require "./handers/*"
+require "./handlers/*"
