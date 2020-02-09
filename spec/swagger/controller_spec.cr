@@ -12,7 +12,7 @@ describe Swagger::Controller do
 
     it "should works with actions" do
       raw = Swagger::Controller.new("Users", "User APIs", [
-        Swagger::Action.new("get", "/users", "List Users")
+        Swagger::Action.new("get", "/users", "List Users"),
       ])
       raw.name.should eq "Users"
       raw.description.should eq "User APIs"

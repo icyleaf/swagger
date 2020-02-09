@@ -4,7 +4,7 @@ require "../../src/swagger/http/handler"
 
 user = {
   name: "foo",
-  age: 30,
+  age:  30,
 }
 
 get "/users" do |env|
@@ -20,9 +20,9 @@ get "/users" do |env|
 
   env.response.headers["Content-Type"] = "application/json"
   {
-    total: total_pages,
+    total:        total_pages,
     current_page: page,
-    entry: entry
+    entry:        entry,
   }.to_json
 end
 
@@ -31,7 +31,7 @@ post "/users" do |env|
   env.response.status_code = 201
   {
     name: env.params.body["name"],
-    age: env.params.body["age"],
+    age:  env.params.body["age"],
   }.to_json
 end
 
@@ -63,7 +63,7 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
   ]),
   Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
+    Swagger::Response.new("404", "Not found user"),
   ]),
   Swagger::Action.new("post", "/users", "Create a user",
     request: Swagger::Request.new([
@@ -72,21 +72,21 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
     ], "Form data", "application/x-www-form-urlencoded"),
     responses: [
       Swagger::Response.new("200", "Success response"),
-      Swagger::Response.new("404", "Not found user")
+      Swagger::Response.new("404", "Not found user"),
     ]
   ),
   Swagger::Action.new("delete", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
+    Swagger::Response.new("404", "Not found user"),
   ]),
 ]))
 
 builder.add(Swagger::Server.new("http://localhost:{port}/", "Alias Name", [
-  Swagger::Server::Variable.new("port", "3030", ["3030", "3000"], "API port")
+  Swagger::Server::Variable.new("port", "3030", ["3030", "3000"], "API port"),
 ]))
 
 builder.add(Swagger::Server.new("http://0.0.0.0:{port}/", "IP Address", [
-  Swagger::Server::Variable.new("port", "3030", ["3030", "3000"], "API port")
+  Swagger::Server::Variable.new("port", "3030", ["3030", "3000"], "API port"),
 ]))
 
 swagger_api_endpoint = "http://localhost:3030"

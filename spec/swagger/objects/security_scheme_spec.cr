@@ -49,7 +49,7 @@ describe Swagger::Objects::SecurityScheme do
   describe ".oauth2" do
     it "should works" do
       raw = Swagger::Objects::SecurityScheme.oauth2([
-        Swagger::OAuth2Flow.new("authorizationCode")
+        Swagger::OAuth2Flow.new("authorizationCode"),
       ])
 
       raw.type.should eq "oauth2"
@@ -79,7 +79,6 @@ describe Swagger::Objects::SecurityScheme do
     end
 
     pending "should works with Swagger::Authorization" do
-
     end
   end
 
