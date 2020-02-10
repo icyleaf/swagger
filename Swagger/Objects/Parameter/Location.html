@@ -14,7 +14,7 @@
 </script>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
-  <title>Swagger::Objects::Info::Contact - github.com/icyleaf/swagger</title>
+  <title>Swagger::Objects::Parameter::Location - github.com/icyleaf/swagger</title>
 </head>
 <body>
 
@@ -126,7 +126,7 @@
       
         <ul>
   
-  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
       <a href="../../../Swagger/Objects/Info/Contact.html">Contact</a>
       
     </li>
@@ -196,12 +196,12 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Info" data-name="swagger::objects::info">
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info" data-name="swagger::objects::info">
       <a href="../../../Swagger/Objects/Info.html">Info</a>
       
         <ul>
   
-  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
       <a href="../../../Swagger/Objects/Info/Contact.html">Contact</a>
       
     </li>
@@ -236,12 +236,12 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
+  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
       <a href="../../../Swagger/Objects/Parameter.html">Parameter</a>
       
         <ul>
   
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
+  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
       <a href="../../../Swagger/Objects/Parameter/Location.html">Location</a>
       
     </li>
@@ -375,32 +375,21 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Swagger::Objects::Info::Contact
+  <span class="kind">enum</span> Swagger::Objects::Parameter::Location
 
 </h1>
 
-
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../../Swagger/Objects/Info/Contact.html">Swagger::Objects::Info::Contact</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
 
   <h2>Overview</h2>
 
-  <p>Contact Object</p>
-
-<p>See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#contactObject</p>
+  <p>See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#parameter-locations</p>
 
 
 
 
-
-  <h2>Included Modules</h2>
-  <ul class="other-types-list">
-  
-    <li class="other-type">JSON::Serializable</li>
-  
-  </ul>
 
 
 
@@ -414,8 +403,8 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/info.cr#L25" target="_blank">
-        swagger/objects/info.cr
+      <a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/parameter.cr#L9" target="_blank">
+        swagger/objects/parameter.cr
       </a>
     
     <br/>
@@ -423,22 +412,34 @@
 
 
 
+  
+    <h2>Enum Members</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Path">
+        <strong>Path</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Query">
+        <strong>Query</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Header">
+        <strong>Header</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Cookie">
+        <strong>Cookie</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+  </dl>
 
 
-  <h2>Constructors</h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#new%28name%3AString%2Cemail%3AString%3F%3Dnil%2Curl%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, email : String? = <span class="n">nil</span>, url : String? = <span class="n">nil</span>)</a>
-        
-      </li>
-    
-  </ul>
 
 
 
@@ -448,17 +449,27 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#email%3AString%3F-instance-method" class="signature"><strong>#email</strong> : String?</a>
+        <a href="#cookie%3F-instance-method" class="signature"><strong>#cookie?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        <a href="#header%3F-instance-method" class="signature"><strong>#header?</strong></a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#url%3AString%3F-instance-method" class="signature"><strong>#url</strong> : String?</a>
+        <a href="#path%3F-instance-method" class="signature"><strong>#path?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#query%3F-instance-method" class="signature"><strong>#query?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28builder%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(builder : JSON::Builder)</a>
         
       </li>
     
@@ -513,91 +524,88 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
-  
-    <div class="entry-detail" id="new(pull:JSON::PullParser)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(pull : JSON::PullParser)
-
-        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/info.cr#L26" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(name:String,email:String?=nil,url:String?=nil)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(name : String, email : String? = <span class="n">nil</span>, url : String? = <span class="n">nil</span>)
-
-        <a class="method-permalink" href="#new%28name%3AString%2Cemail%3AString%3F%3Dnil%2Curl%3AString%3F%3Dnil%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/info.cr#L32" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-
 
 
 
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="email:String?-instance-method">
+    <div class="entry-detail" id="cookie?-instance-method">
       <div class="signature">
         
-        def <strong>email</strong> : String?
+        def <strong>cookie?</strong>
 
-        <a class="method-permalink" href="#email%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#cookie%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/info.cr#L29" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/parameter.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="name:String-instance-method">
+    <div class="entry-detail" id="header?-instance-method">
       <div class="signature">
         
-        def <strong>name</strong> : String
+        def <strong>header?</strong>
 
-        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#header%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/info.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/parameter.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="url:String?-instance-method">
+    <div class="entry-detail" id="path?-instance-method">
       <div class="signature">
         
-        def <strong>url</strong> : String?
+        def <strong>path?</strong>
 
-        <a class="method-permalink" href="#url%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#path%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/info.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/parameter.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="query?-instance-method">
+      <div class="signature">
+        
+        def <strong>query?</strong>
+
+        <a class="method-permalink" href="#query%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/parameter.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(builder:JSON::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(builder : JSON::Builder)
+
+        <a class="method-permalink" href="#to_json%28builder%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/d5c7b5f5a23c84d526e317fb6394488857a698c7/src/swagger/objects/parameter.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
