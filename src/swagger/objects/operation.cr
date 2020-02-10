@@ -25,10 +25,6 @@ module Swagger::Objects
     private def self.parameters(action)
       return unless parameters = action.parameters
       parameters.each_with_object(Array(Parameter).new) do |parameter, obj|
-        unless Parameter::LOCATIOINS.includes?(parameter.parameter_location)
-          raise UndefinedParameterLocation.new("Undefined location of parameter `#{parameter.parameter_location}`. avaiabled in #{Parameter::LOCATIOINS}")
-        end
-
         schema = Schema.new(
           type: parameter.type,
           format: parameter.format,

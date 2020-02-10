@@ -11,11 +11,11 @@ builder = Swagger::Builder.new(
 )
 
 builder.add(Swagger::Object.new("User", "object", [
-    Swagger::Property.new("id", "integer", "int32", example: 1),
-    Swagger::Property.new("nickname", example: "icyleaf wang"),
-    Swagger::Property.new("username", example: "icyleaf"),
-    Swagger::Property.new("email", example: "icyleaf.cn@gmail.com"),
-    Swagger::Property.new("bio", "Personal bio"),
+  Swagger::Property.new("id", "integer", "int32", example: 1),
+  Swagger::Property.new("nickname", example: "icyleaf wang"),
+  Swagger::Property.new("username", example: "icyleaf"),
+  Swagger::Property.new("email", example: "icyleaf.cn@gmail.com"),
+  Swagger::Property.new("bio", "Personal bio"),
 ]))
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
@@ -25,7 +25,7 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
   ]),
   Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
+    Swagger::Response.new("404", "Not found user"),
   ], request: Swagger::Request.new("User")),
   Swagger::Action.new("post", "/users", "Create user",
     request: Swagger::Request.new([
@@ -37,13 +37,13 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
     ], "Form data", "application/x-www-form-urlencoded"),
     responses: [
       Swagger::Response.new("200", "Success response", "User"),
-      Swagger::Response.new("404", "Not found user")
+      Swagger::Response.new("404", "Not found user"),
     ]
   ),
   Swagger::Action.new("get", "/user/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
-  ], deprecated: true)
+    Swagger::Response.new("404", "Not found user"),
+  ], deprecated: true),
 ]))
 
 builder.add(Swagger::Server.new("http://swagger.dev:{port}/{version}/api", "Development", [

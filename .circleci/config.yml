@@ -17,6 +17,9 @@ jobs:
           name: "Crystal Version"
           command: crystal version
       - run:
+          name: "Format"
+          command: crystal tool format --check
+      - run:
           name: "Specs"
           command: crystal spec
       - run:

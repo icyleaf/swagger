@@ -22,7 +22,7 @@ describe Swagger::Objects::Components do
       raw.to_json.should eq %Q{{}}
 
       raw = Swagger::Objects::Components.new(schemas: {
-        "user" => Swagger::Objects::Schema.use_reference("UserInfo")
+        "user" => Swagger::Objects::Schema.use_reference("UserInfo"),
       })
       raw.to_json.should eq %Q{{"schemas":{"user":{"$ref":"#/components/schemas/UserInfo"}}}}
     end
