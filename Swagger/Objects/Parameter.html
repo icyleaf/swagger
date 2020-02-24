@@ -236,18 +236,8 @@
       
     </li>
   
-  <li class="parent open current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
+  <li class=" current" data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
       <a href="../../Swagger/Objects/Parameter.html">Parameter</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
-      <a href="../../Swagger/Objects/Parameter/Location.html">Location</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -414,7 +404,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L5" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L5" target="_blank">
         swagger/objects/parameter.cr
       </a>
     
@@ -423,13 +413,25 @@
 
 
 
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="LOCATIOINS">
+        <strong>LOCATIOINS</strong> = <code>[<span class="s">&quot;path&quot;</span>, <span class="s">&quot;query&quot;</span>, <span class="s">&quot;header&quot;</span>, <span class="s">&quot;cookie&quot;</span>] <span class="k">of</span> <span class="t">::</span><span class="t">String</span></code>
+      </dt>
+      
+    
+  </dl>
+
 
 
   <h2>Constructors</h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28name%3AString%2Cparameter_location%3ALocation%2Cschema%3ASchema%2Cdescription%3AString%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, parameter_location : Location, schema : Schema, description : String? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AString%2Cparameter_location%3AString%2Cschema%3ASchema%2Cdescription%3AString%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, parameter_location : String, schema : Schema, description : String? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -468,7 +470,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#parameter_location%3ALocation-instance-method" class="signature"><strong>#parameter_location</strong> : Location</a>
+        <a href="#parameter_location%3AString-instance-method" class="signature"><strong>#parameter_location</strong> : String</a>
         
       </li>
     
@@ -540,18 +542,18 @@
 
   <h2>Constructor Detail</h2>
   
-    <div class="entry-detail" id="new(name:String,parameter_location:Location,schema:Schema,description:String?=nil,required=false,allow_empty_value=false,deprecated=false,ref:String?=nil)-class-method">
+    <div class="entry-detail" id="new(name:String,parameter_location:String,schema:Schema,description:String?=nil,required=false,allow_empty_value=false,deprecated=false,ref:String?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : String, parameter_location : <a href="../../Swagger/Objects/Parameter/Location.html">Location</a>, schema : <a href="../../Swagger/Objects/Schema.html">Schema</a>, description : String? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(name : String, parameter_location : String, schema : <a href="../../Swagger/Objects/Schema.html">Schema</a>, description : String? = <span class="n">nil</span>, required = <span class="n">false</span>, allow_empty_value = <span class="n">false</span>, deprecated = <span class="n">false</span>, ref : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28name%3AString%2Cparameter_location%3ALocation%2Cschema%3ASchema%2Cdescription%3AString%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cparameter_location%3AString%2Cschema%3ASchema%2Cdescription%3AString%3F%3Dnil%2Crequired%3Dfalse%2Callow_empty_value%3Dfalse%2Cdeprecated%3Dfalse%2Cref%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -567,7 +569,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -590,7 +592,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L30" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -606,7 +608,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L32" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -622,7 +624,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -638,23 +640,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="parameter_location:Location-instance-method">
+    <div class="entry-detail" id="parameter_location:String-instance-method">
       <div class="signature">
         
-        def <strong>parameter_location</strong> : <a href="../../Swagger/Objects/Parameter/Location.html">Location</a>
+        def <strong>parameter_location</strong> : String
 
-        <a class="method-permalink" href="#parameter_location%3ALocation-instance-method">#</a>
+        <a class="method-permalink" href="#parameter_location%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -670,7 +672,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L35" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -686,7 +688,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -702,7 +704,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/c95a70c4c3bfd4e4e60a34beb43f6a3c0c02e3d4/src/swagger/objects/parameter.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/484e0fe0532e909ba55c483cafe7891ce8f2c646/src/swagger/objects/parameter.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
