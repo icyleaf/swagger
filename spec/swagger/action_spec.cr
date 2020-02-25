@@ -1,28 +1,30 @@
 require "../spec_helper"
 
 describe Swagger::Action do
+  ok_response = [Swagger::Response.new "200", "OK"]
+
   describe "#new" do
     it "should works" do
-      raw = Swagger::Action.new("get", "/users")
+      raw = Swagger::Action.new("get", "/users", ok_response)
       raw.method.should eq "get"
       raw.route.should eq "/users"
+      raw.responses.should eq ok_response
       raw.summary.should be_nil
       raw.description.should be_nil
       raw.parameters.should be_nil
       raw.request.should be_nil
-      raw.responses.should be_nil
       raw.authorization.should be_false
       raw.deprecated.should be_false
     end
 
     it "should stored downcase method" do
-      raw = Swagger::Action.new("GET", "/users")
+      raw = Swagger::Action.new("GET", "/users", ok_response)
       raw.method.should eq "get"
     end
 
     {% for ivar in Swagger::Objects::PathItem::METHODS %}
       it "should define {{ ivar.id }} method" do
-        raw = Swagger::Action.new("{{ ivar.id }}", "/users")
+        raw = Swagger::Action.new("{{ ivar.id }}", "/users", ok_response)
         raw.method.should eq "{{ ivar.id }}"
         raw.route.should eq "/users"
       end
@@ -30,7 +32,7 @@ describe Swagger::Action do
 
     it "throws an exception with undefined method" do
       expect_raises Swagger::UndefinedMethod do
-        Swagger::Action.new("fake", "/users")
+        Swagger::Action.new("fake", "/users", ok_response)
       end
     end
   end

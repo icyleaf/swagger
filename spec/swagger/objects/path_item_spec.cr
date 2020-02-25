@@ -1,6 +1,8 @@
 require "../../spec_helper"
 
 describe Swagger::Objects::PathItem do
+  swagger_ok_response = {"200" => Swagger::Objects::Response.new "OK"}
+
   describe "#new" do
     it "should works" do
       raw = Swagger::Objects::PathItem.new
@@ -21,10 +23,10 @@ describe Swagger::Objects::PathItem do
   describe "#add" do
     it "should works" do
       raw = Swagger::Objects::PathItem.new
-      raw.add("get", Swagger::Objects::Operation.new)
+      raw.add("get", Swagger::Objects::Operation.new swagger_ok_response)
       raw.summary.should be_nil
       raw.description.should be_nil
-      raw.get.should eq Swagger::Objects::Operation.new
+      raw.get.should eq Swagger::Objects::Operation.new swagger_ok_response
       raw.put.should be_nil
       raw.post.should be_nil
       raw.delete.should be_nil

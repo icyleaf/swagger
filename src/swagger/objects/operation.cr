@@ -64,11 +64,12 @@ module Swagger::Objects
     @[JSON::Field(key: "requestBody")]
     getter request_body : RequestBody? = nil
 
-    getter responses : Hash(String, Response)? = nil
+    # List of possible responses as they are returned from executing this operation.
+    getter responses : Hash(String, Response)
     getter deprecated : Bool = false
     getter security : Array(Hash(String, Array(String)))? = nil
 
-    # TODO: Add instace vars to initialize
+    # TODO: Add instance vars to initialize
     getter servers : Array(Server)? = nil
 
     @[JSON::Field(key: "externalDocs")]
@@ -77,8 +78,8 @@ module Swagger::Objects
     @[JSON::Field(key: "operationId")]
     getter operation_id : String? = nil
 
-    def initialize(@summary : String? = nil, @description : String? = nil, @tags : Array(String)? = nil,
-                   @parameters : Array(Parameter)? = nil, @request_body : RequestBody? = nil, @responses : Hash(String, Response)? = nil,
+    def initialize(@responses : Hash(String, Response), @summary : String? = nil, @description : String? = nil, @tags : Array(String)? = nil,
+                   @parameters : Array(Parameter)? = nil, @request_body : RequestBody? = nil,
                    @deprecated : Bool = false, @security : Array(Hash(String, Array(String)))? = nil)
     end
   end
