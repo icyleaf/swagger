@@ -25,13 +25,15 @@ jobs:
       - deploy:
           name: "Upload to gh-page"
           command: |
-            git config --global user.name "$GIT_USER"
-            git config --global user.email "$GIT_EMAIL"
-            cd "${DOCS_PATH}"
-            git init
-            git remote add origin $GIT_REPO
-            git fetch origin
-            if ! [ -z `git branch -r | grep gh-pages` ]; then git reset origin/gh-pages; fi
-            git add -A .
-            git commit --allow-empty -m "Updating documents"
-            git push origin HEAD:gh-pages
+            if [ "${CIRCLE_BRANCH}" == "master" ] && [ ! "${CIRCLE_PR_NUMBER}" ]; then
+              git config --global user.name "$GIT_USER"
+              git config --global user.email "$GIT_EMAIL"
+              cd "${DOCS_PATH}"
+              git init
+              git remote add origin $GIT_REPO
+              git fetch origin
+              if ! [ -z `git branch -r | grep gh-pages` ]; then git reset origin/gh-pages; fi
+              git add -A .
+              git commit --allow-empty -m "Updating documents"
+              git push origin HEAD:gh-pages
+            fi
