@@ -31,9 +31,11 @@ module Swagger::Objects
           default: parameter.default_value
         )
 
-        obj << Parameter.new(parameter.name, parameter.parameter_location, schema,
-          parameter.description, parameter.required, parameter.allow_empty_value,
-          parameter.deprecated, parameter.ref)
+        obj << Parameter.new(
+          parameter.name, Parameter::Location.parse(parameter.parameter_location),
+          schema, parameter.description, parameter.required, parameter.allow_empty_value,
+          parameter.deprecated, parameter.ref
+        )
       end
     end
 
