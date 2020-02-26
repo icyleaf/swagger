@@ -55,13 +55,13 @@ builder = Swagger::Builder.new(
 )
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
-  Swagger::Action.new("get", "/users", "List users", parameters: [
+  Swagger::Action.new("get", "/users", description: "List users", parameters: [
     Swagger::Parameter.new("page", "query", "integer", "Current page", default_value: 1),
     Swagger::Parameter.new("limit", "query", "integer", "How many items to return at one time (max 100)", default_value: 10),
   ], responses: [
     Swagger::Response.new("200", "Success response"),
   ]),
-  Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+  Swagger::Action.new("get", "/users/{id}", description: "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user"),
   ]),
@@ -75,7 +75,7 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
       Swagger::Response.new("404", "Not found user"),
     ]
   ),
-  Swagger::Action.new("delete", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+  Swagger::Action.new("delete", "/users/{id}", description: "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user"),
   ]),

@@ -23,15 +23,15 @@ builder = Swagger::Builder.new(
 )
 
 builder.add(Swagger::Controller.new("Auth", "Authorization", [
-  Swagger::Action.new("get", "/access_token", "Get Access Token"),
+  Swagger::Action.new("get", "/access_token", [Swagger::Response.new("200", "Success response")], "Get Access Token"),
 ], external_docs: Swagger::ExternalDocs.new("http://auth.example.com/private_token", "See Details")))
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
-  Swagger::Action.new("get", "/users", "List users", parameters: [
+  Swagger::Action.new("get", "/users", [Swagger::Response.new("200", "Success response")], "List users", parameters: [
     Swagger::Parameter.new("page", "query", "integer", "Current page"),
     Swagger::Parameter.new("limit", "query", "integer", "How many items to return at one time (max 100)"),
   ], authorization: true),
-  Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+  Swagger::Action.new("get", "/users/{id}", description: "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user"),
   ], authorization: true),

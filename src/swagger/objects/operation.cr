@@ -46,8 +46,7 @@ module Swagger::Objects
     end
 
     private def self.responses(action)
-      return unless responses = action.responses
-      responses.each_with_object(Hash(String, Response).new) do |response, obj|
+      action.responses.each_with_object(Hash(String, Response).new) do |response, obj|
         obj[response.code] = Response.new(response.description, content: response.content)
       end
     end
