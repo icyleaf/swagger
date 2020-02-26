@@ -1,3 +1,7 @@
+require "json"
+
+require "./media_type"
+
 module Swagger::Objects
   # Request Body Object
   #

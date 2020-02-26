@@ -1,8 +1,7 @@
-require "../spec_helper"
+require "./action_helper"
+require "../../src/swagger/controller"
 
 describe Swagger::Controller do
-  ok_response = [Swagger::Response.new "200", "OK"]
-
   describe "#new" do
     it "should works without any action" do
       raw = Swagger::Controller.new("Users", "User APIs")
@@ -14,11 +13,11 @@ describe Swagger::Controller do
 
     it "should works with actions" do
       raw = Swagger::Controller.new("Users", "User APIs", [
-        Swagger::Action.new("get", "/users", ok_response, "List Users"),
+        Swagger::Action.new("get", "/users", OK_RESPONSE, "List Users"),
       ])
       raw.name.should eq "Users"
       raw.description.should eq "User APIs"
-      raw.actions.should eq([Swagger::Action.new("get", "/users", ok_response, "List Users")])
+      raw.actions.should eq([Swagger::Action.new("get", "/users", OK_RESPONSE, "List Users")])
       raw.external_docs.should be_nil
     end
   end

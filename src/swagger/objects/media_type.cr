@@ -1,3 +1,8 @@
+require "json"
+
+require "./example"
+require "./encoding"
+
 module Swagger::Objects
   # Media Type Object
   #

@@ -1,3 +1,6 @@
+require "json"
+require "./operation"
+
 module Swagger::Objects
   # Path Item Object
   #

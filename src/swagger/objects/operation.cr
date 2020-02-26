@@ -1,3 +1,10 @@
+require "json"
+
+require "./parameter"
+require "./request_body"
+require "./response"
+require "./server"
+
 module Swagger::Objects
   # Operation Object
   #
