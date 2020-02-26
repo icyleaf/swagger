@@ -1,5 +1,6 @@
 require "json"
 
+require "./schema"
 require "./example"
 require "./encoding"
 
