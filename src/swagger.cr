@@ -2,8 +2,6 @@ require "json"
 require "./swagger/*"
 
 module Swagger
-  VERSION = "0.1.1"
-
   alias Document = Objects::Document
   alias Info = Objects::Info
   alias Contact = Objects::Info::Contact
