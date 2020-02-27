@@ -5,11 +5,11 @@ require "./schema"
 module Swagger::Objects
   # Parameter Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#parameterObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#parameterObject
   struct Parameter
     include JSON::Serializable
 
-    # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#parameter-locations
+    # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#parameter-locations
     enum Location
       Path
       Query

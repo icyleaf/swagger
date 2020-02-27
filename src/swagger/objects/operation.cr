@@ -8,7 +8,7 @@ require "./server"
 module Swagger::Objects
   # Operation Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#operationObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#operationObject
   struct Operation
     include JSON::Serializable
 
