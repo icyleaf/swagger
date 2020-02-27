@@ -7,7 +7,7 @@ require "./encoding"
 module Swagger::Objects
   # Media Type Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#mediaTypeObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#mediaTypeObject
   struct MediaType
     include JSON::Serializable
 

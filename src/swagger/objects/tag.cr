@@ -1,7 +1,7 @@
 module Swagger::Objects
   # Tag Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#tagObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#tagObject
   struct Tag
     include JSON::Serializable
 
