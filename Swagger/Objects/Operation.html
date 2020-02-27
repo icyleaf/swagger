@@ -414,7 +414,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L5" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L12" target="_blank">
         swagger/objects/operation.cr
       </a>
     
@@ -434,7 +434,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28summary%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Ctags%3AArray%28String%29%3F%3Dnil%2Cparameters%3AArray%28Parameter%29%3F%3Dnil%2Crequest_body%3ARequestBody%3F%3Dnil%2Cresponses%3AHash%28String%2CResponse%29%3F%3Dnil%2Cdeprecated%3ABool%3Dfalse%2Csecurity%3AArray%28Hash%28String%2CArray%28String%29%29%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(summary : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, tags : Array(String)? = <span class="n">nil</span>, parameters : Array(Parameter)? = <span class="n">nil</span>, request_body : RequestBody? = <span class="n">nil</span>, responses : Hash(String, Response)? = <span class="n">nil</span>, deprecated : Bool = <span class="n">false</span>, security : Array(Hash(String, Array(String)))? = <span class="n">nil</span>)</a>
+        <a href="#new%28responses%3AHash%28String%2CResponse%29%2Csummary%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Ctags%3AArray%28String%29%3F%3Dnil%2Cparameters%3AArray%28Parameter%29%3F%3Dnil%2Crequest_body%3ARequestBody%3F%3Dnil%2Cdeprecated%3ABool%3Dfalse%2Csecurity%3AArray%28Hash%28String%2CArray%28String%29%29%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(responses : Hash(String, Response), summary : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, tags : Array(String)? = <span class="n">nil</span>, parameters : Array(Parameter)? = <span class="n">nil</span>, request_body : RequestBody? = <span class="n">nil</span>, deprecated : Bool = <span class="n">false</span>, security : Array(Hash(String, Array(String)))? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -488,7 +488,9 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#responses%3AHash%28String%2CResponse%29%3F-instance-method" class="signature"><strong>#responses</strong> : Hash(String, Response)?</a>
+        <a href="#responses%3AHash%28String%2CResponse%29-instance-method" class="signature"><strong>#responses</strong> : Hash(String, Response)</a>
+        
+          <div class="summary"><p>List of possible responses as they are returned from executing this operation.</p></div>
         
       </li>
     
@@ -500,7 +502,7 @@
       <li class="entry-summary">
         <a href="#servers%3AArray%28Server%29%3F-instance-method" class="signature"><strong>#servers</strong> : Array(Server)?</a>
         
-          <div class="summary"><p><span class="flag orange">TODO</span>  Add instace vars to initialize</p></div>
+          <div class="summary"><p><span class="flag orange">TODO</span>  Add instance vars to initialize</p></div>
         
       </li>
     
@@ -578,23 +580,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(summary:String?=nil,description:String?=nil,tags:Array(String)?=nil,parameters:Array(Parameter)?=nil,request_body:RequestBody?=nil,responses:Hash(String,Response)?=nil,deprecated:Bool=false,security:Array(Hash(String,Array(String)))?=nil)-class-method">
+    <div class="entry-detail" id="new(responses:Hash(String,Response),summary:String?=nil,description:String?=nil,tags:Array(String)?=nil,parameters:Array(Parameter)?=nil,request_body:RequestBody?=nil,deprecated:Bool=false,security:Array(Hash(String,Array(String)))?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(summary : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, tags : Array(String)? = <span class="n">nil</span>, parameters : Array(<a href="../../Swagger/Objects/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, request_body : <a href="../../Swagger/Objects/RequestBody.html">RequestBody</a>? = <span class="n">nil</span>, responses : Hash(String, <a href="../../Swagger/Objects/Response.html">Response</a>)? = <span class="n">nil</span>, deprecated : Bool = <span class="n">false</span>, security : Array(Hash(String, Array(String)))? = <span class="n">nil</span>)
+        def self.<strong>new</strong>(responses : Hash(String, <a href="../../Swagger/Objects/Response.html">Response</a>), summary : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, tags : Array(String)? = <span class="n">nil</span>, parameters : Array(<a href="../../Swagger/Objects/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, request_body : <a href="../../Swagger/Objects/RequestBody.html">RequestBody</a>? = <span class="n">nil</span>, deprecated : Bool = <span class="n">false</span>, security : Array(Hash(String, Array(String)))? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28summary%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Ctags%3AArray%28String%29%3F%3Dnil%2Cparameters%3AArray%28Parameter%29%3F%3Dnil%2Crequest_body%3ARequestBody%3F%3Dnil%2Cresponses%3AHash%28String%2CResponse%29%3F%3Dnil%2Cdeprecated%3ABool%3Dfalse%2Csecurity%3AArray%28Hash%28String%2CArray%28String%29%29%29%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28responses%3AHash%28String%2CResponse%29%2Csummary%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Ctags%3AArray%28String%29%3F%3Dnil%2Cparameters%3AArray%28Parameter%29%3F%3Dnil%2Crequest_body%3ARequestBody%3F%3Dnil%2Cdeprecated%3ABool%3Dfalse%2Csecurity%3AArray%28Hash%28String%2CArray%28String%29%29%29%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L80" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L87" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -615,7 +617,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -636,7 +638,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L75" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -652,7 +654,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L60" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L66" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -668,7 +670,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L75" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -684,7 +686,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L85" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -700,7 +702,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -716,23 +718,25 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="responses:Hash(String,Response)?-instance-method">
+    <div class="entry-detail" id="responses:Hash(String,Response)-instance-method">
       <div class="signature">
         
-        def <strong>responses</strong> : Hash(String, <a href="../../Swagger/Objects/Response.html">Response</a>)?
+        def <strong>responses</strong> : Hash(String, <a href="../../Swagger/Objects/Response.html">Response</a>)
 
-        <a class="method-permalink" href="#responses%3AHash%28String%2CResponse%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#responses%3AHash%28String%2CResponse%29-instance-method">#</a>
       </div>
+      
+        <div class="doc"><p>List of possible responses as they are returned from executing this operation.</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L74" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -748,7 +752,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L76" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -761,12 +765,12 @@
         <a class="method-permalink" href="#servers%3AArray%28Server%29%3F-instance-method">#</a>
       </div>
       
-        <div class="doc"><p><span class="flag orange">TODO</span>  Add instace vars to initialize</p></div>
+        <div class="doc"><p><span class="flag orange">TODO</span>  Add instance vars to initialize</p></div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L72" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L79" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -782,7 +786,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L59" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L65" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -798,7 +802,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/894e11a3c44a8ae1683a9d0b24082d8a394a5da7/src/swagger/objects/operation.cr#L61" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3cf01a7e107747e1db856290e6f7440a5aa9c445/src/swagger/objects/operation.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
