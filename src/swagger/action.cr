@@ -1,3 +1,8 @@
+require "./objects/path_item"
+require "./request"
+require "./response"
+require "./error"
+
 module Swagger
   # Define a action
   #
@@ -18,8 +23,12 @@ module Swagger
     property authorization
     property deprecated
 
-    def initialize(@method : String, @route : String, @summary : String? = nil, @parameters : Array(Parameter)? = nil,
-                   @description : String? = nil, @request : Request? = nil, @responses : Array(Response)? = nil,
+    def initialize(@method : String,
+                   @route : String,
+                   @responses : Array(Response),
+                   @summary : String? = nil,
+                   @parameters : Array(Parameter)? = nil,
+                   @description : String? = nil, @request : Request? = nil,
                    @authorization = false, @deprecated = false)
       unless Objects::PathItem::METHODS.includes?(@method.downcase)
         raise UndefinedMethod.new("Undefined method `#{@method}`, avaiabled in #{Objects::PathItem::METHODS}.")

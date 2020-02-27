@@ -1,3 +1,9 @@
+require "json"
+
+require "./header"
+require "./media_type"
+require "./link"
+
 module Swagger::Objects
   # Response Object
   #

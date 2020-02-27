@@ -1,3 +1,7 @@
+require "json"
+
+require "./schema"
+
 module Swagger::Objects
   # Parameter Object
   #

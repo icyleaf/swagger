@@ -1,3 +1,7 @@
+require "json"
+
+require "./property"
+
 module Swagger::Objects
   # Schema Object
   #

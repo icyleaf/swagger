@@ -1,3 +1,7 @@
+require "json"
+
+require "./header"
+
 module Swagger::Objects
   # Encoding Object
   #
