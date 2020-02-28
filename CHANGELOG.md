@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- (**breaking-change**) Add operation's `responses` is indicated as **REQUIRED**. [#7](https://github.com/icyleaf/swagger/pull/7)
+- (**breaking-change**) Make operation's `responses` as **REQUIRED**, to match the specification. [#7](https://github.com/icyleaf/swagger/pull/7)
 - Update OpenAPI version to 3.0.3. [#11](https://github.com/icyleaf/swagger/pull/11)
 
 ### Changed
