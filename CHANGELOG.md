@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Change location to `Swagger::Objects::Parameter::Location` enum. [#5](https://github.com/icyleaf/swagger/pull/5)
-- Use jsdelivr cdn source instead of local swagger-ui assets. [#9](https://github.com/icyleaf/swagger/pull/9)
+- Use JSDelivr CDN source instead of local swagger-ui assets. [#9](https://github.com/icyleaf/swagger/pull/9)
 - Move OpenAPI version to `Swagger::Document`. [#10](https://github.com/icyleaf/swagger/pull/10)
 
 ## [0.1.1] (2019-12-27)
