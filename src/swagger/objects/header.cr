@@ -1,7 +1,7 @@
 module Swagger::Objects
   # Header Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#headerObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#headerObject
   struct Header
     include JSON::Serializable
 

@@ -1,7 +1,7 @@
 module Swagger::Objects
   # Components Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#componentsObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#componentsObject
   struct Components
     include JSON::Serializable
 

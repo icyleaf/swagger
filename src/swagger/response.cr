@@ -1,3 +1,5 @@
+require "./objects/media_type"
+
 module Swagger
   struct Response
     def self.new(code : String, description : String, reference name : String, content_type : String? = nil)
@@ -14,7 +16,7 @@ module Swagger
     property media_type
     property content_type : String
 
-    def initialize(@code : String, @description : String, @media_type : MediaType? = nil, content_type : String? = nil)
+    def initialize(@code : String, @description : String, @media_type : Objects::MediaType? = nil, content_type : String? = nil)
       @content_type = content_type || "application/json"
     end
 
