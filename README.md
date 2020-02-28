@@ -6,7 +6,7 @@
 [![Document](https://img.shields.io/badge/document-api-brightgreen.svg)](https://icyleaf.github.io/swagger/)
 [![Build Status](https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat)](https://circleci.com/gh/icyleaf/swagger)
 
-Swagger is low-level library which generate output compatible with [Swagger / OpenAPI Spec 3.0.3](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md),
+Swagger is a low-level library which generates a document compatible with [Swagger / OpenAPI Spec 3.0.3](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md),
 and wrapped many friendly APIs let developer understand and use it easier.
 
 ## Installation
