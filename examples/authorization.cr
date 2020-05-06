@@ -16,14 +16,14 @@ builder = Swagger::Builder.new(
     Swagger::Authorization.api_key(name: "api_key", location: "query", description: "API Key Auth"),
     Swagger::Authorization.cookie(name: "JSESSIONID", description: "Cookie Auth"),
     Swagger::Authorization.oauth2(grant_type: "implicit", authorization_url: "/oauth/authorize", scopes: {
-      "read_users" => "Read users in your account",
-      "write_users" => "modify users in your account"
-    }, description: "OAuth 2 Auth")
+      "read_users"  => "Read users in your account",
+      "write_users" => "modify users in your account",
+    }, description: "OAuth 2 Auth"),
   ]
 )
 
 builder.add(Swagger::Controller.new("Auth", "Authorization", [
-  Swagger::Action.new("get", "/access_token", "Get Access Token")
+  Swagger::Action.new("get", "/access_token", "Get Access Token"),
 ], external_docs: Swagger::ExternalDocs.new("http://auth.example.com/private_token", "See Details")))
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
@@ -33,8 +33,8 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
   ], authorization: true),
   Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
-  ], authorization: true)
+    Swagger::Response.new("404", "Not found user"),
+  ], authorization: true),
 ]))
 
 Swagger::HTTP::Server.run(builder.built)
