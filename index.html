@@ -399,7 +399,7 @@ builder <span class="o">=</span> <span class="t">Swagger</span><span class="t">:
   title: <span class="s">&quot;App API&quot;</span>,
   version: <span class="s">&quot;1.0.0&quot;</span>,
   description: <span class="s">&quot;This is a sample api for users&quot;</span>,
-  terms: <span class="s">&quot;http://yourapp.com/terms&quot;</span>,
+  terms_url: <span class="s">&quot;http://yourapp.com/terms&quot;</span>,
   contact: <span class="t">Swagger</span><span class="t">::</span><span class="t">Contact</span>.<span class="k">new</span>(<span class="s">&quot;icyleaf&quot;</span>, <span class="s">&quot;icyleaf.cn@gmail.com&quot;</span>, <span class="s">&quot;http://icyleaf.com&quot;</span>),
   license: <span class="t">Swagger</span><span class="t">::</span><span class="t">License</span>.<span class="k">new</span>(<span class="s">&quot;MIT&quot;</span>, <span class="s">&quot;https://github.com/icyleaf/swagger/blob/master/LICENSE&quot;</span>),
   authorizations: [
@@ -408,21 +408,23 @@ builder <span class="o">=</span> <span class="t">Swagger</span><span class="t">:
 )
 
 builder.add(<span class="t">Swagger</span><span class="t">::</span><span class="t">Controller</span>.<span class="k">new</span>(<span class="s">&quot;Users&quot;</span>, <span class="s">&quot;User resources&quot;</span>, [
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users&quot;</span>, <span class="s">&quot;All users&quot;</span>),
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users/{id}&quot;</span>, <span class="s">&quot;Get user by id&quot;</span>, parameters: [
+  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users&quot;</span>, description: <span class="s">&quot;All users&quot;</span>, responses: [
+    <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;200&quot;</span>, <span class="s">&quot;Success response&quot;</span>)
+  ]),
+  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users/{id}&quot;</span>, description: <span class="s">&quot;Get user by id&quot;</span>, parameters: [
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Parameter</span>.<span class="k">new</span>(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;path&quot;</span>)
   ], responses: [
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;200&quot;</span>, <span class="s">&quot;Success response&quot;</span>),
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;404&quot;</span>, <span class="s">&quot;Not found user&quot;</span>)
   ], authorization: <span class="n">true</span>),
-  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;post&quot;</span>, <span class="s">&quot;/users&quot;</span>, <span class="s">&quot;Create User&quot;</span>, responses: [
+  <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;post&quot;</span>, <span class="s">&quot;/users&quot;</span>, description: <span class="s">&quot;Create User&quot;</span>, responses: [
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;201&quot;</span>, <span class="s">&quot;Return user resource after created&quot;</span>),
     <span class="t">Swagger</span><span class="t">::</span><span class="t">Response</span>.<span class="k">new</span>(<span class="s">&quot;401&quot;</span>, <span class="s">&quot;Unauthorizated&quot;</span>)
   ], authorization: <span class="n">false</span>)
 ]))
 
 document <span class="o">=</span> builder.built
-p document</code></pre>
+puts document.to_json</code></pre>
 
 <h2><a id="structure" class="anchor" href="#structure">
   <svg class="octicon-link" aria-hidden="true">
