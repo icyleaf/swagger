@@ -15,6 +15,8 @@ module Swagger::Objects
                  api_key(auth.api_key_name.not_nil!, auth.parameter_location.not_nil!, auth.description)
                when Authorization::Type::OAuth2
                  oauth2(auth.oauth2_flows.not_nil!, auth.description)
+               else
+                 nil
                end
     end
 
