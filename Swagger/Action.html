@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.0">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
   <title>Swagger::Action - github.com/icyleaf/swagger</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
@@ -121,23 +125,8 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
       <a href="../Swagger/Info.html">Info</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
-      <a href="../Swagger/Objects/Info/Contact.html">Contact</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/License" data-name="swagger::objects::info::license">
-      <a href="../Swagger/Objects/Info/License.html">License</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -236,18 +225,8 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
       <a href="../Swagger/Objects/Parameter.html">Parameter</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
-      <a href="../Swagger/Objects/Parameter/Location.html">Location</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -385,7 +364,14 @@
 
 
 
-  <h2>Overview</h2>
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
 
   <p>Define a action</p>
 
@@ -407,10 +393,17 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L15" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L10" target="_blank">
         swagger/action.cr
       </a>
     
@@ -421,11 +414,18 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28method%3AString%2Croute%3AString%2Cresponses%3AArray%28Response%29%2Csummary%3AString%3F%3Dnil%2Cparameters%3AArray%28Parameter%29%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Crequest%3ARequest%3F%3Dnil%2Cauthorization%3Dfalse%2Cdeprecated%3Dfalse%29-class-method" class="signature"><strong>.new</strong>(method : String, route : String, responses : Array(Response), summary : String? = <span class="n">nil</span>, parameters : Array(Parameter)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : Request? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)</a>
+        <a href="#new(method:String,route:String,summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,responses:Array(Response)?=nil,authorization=false,deprecated=false)-class-method" class="signature"><strong>.new</strong>(method : String, route : String, summary : String? = <span class="n">nil</span>, parameters : Array(Parameter)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : Request? = <span class="n">nil</span>, responses : Array(Response)? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)</a>
         
       </li>
     
@@ -435,96 +435,103 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#authorization%3ABool-instance-method" class="signature"><strong>#authorization</strong> : Bool</a>
+        <a href="#authorization:Bool-instance-method" class="signature"><strong>#authorization</strong> : Bool</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#authorization%3D%28authorization%29-instance-method" class="signature"><strong>#authorization=</strong>(authorization)</a>
+        <a href="#authorization=(authorization)-instance-method" class="signature"><strong>#authorization=</strong>(authorization)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#deprecated%3ABool-instance-method" class="signature"><strong>#deprecated</strong> : Bool</a>
+        <a href="#deprecated:Bool-instance-method" class="signature"><strong>#deprecated</strong> : Bool</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#deprecated%3D%28deprecated%29-instance-method" class="signature"><strong>#deprecated=</strong>(deprecated)</a>
+        <a href="#deprecated=(deprecated)-instance-method" class="signature"><strong>#deprecated=</strong>(deprecated)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description:String?-instance-method" class="signature"><strong>#description</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3D%28description%29-instance-method" class="signature"><strong>#description=</strong>(description)</a>
+        <a href="#description=(description)-instance-method" class="signature"><strong>#description=</strong>(description)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#method%3AString-instance-method" class="signature"><strong>#method</strong> : String</a>
+        <a href="#method:String-instance-method" class="signature"><strong>#method</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#method%3D%28method%29-instance-method" class="signature"><strong>#method=</strong>(method)</a>
+        <a href="#method=(method)-instance-method" class="signature"><strong>#method=</strong>(method)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parameters%3AArray%28Swagger%3A%3AParameter%29%3F-instance-method" class="signature"><strong>#parameters</strong> : Array(Swagger::Parameter)?</a>
+        <a href="#parameters:Array(Swagger::Parameter)?-instance-method" class="signature"><strong>#parameters</strong> : Array(Swagger::Parameter)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parameters%3D%28parameters%29-instance-method" class="signature"><strong>#parameters=</strong>(parameters)</a>
+        <a href="#parameters=(parameters)-instance-method" class="signature"><strong>#parameters=</strong>(parameters)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#request%3ASwagger%3A%3ARequest%3F-instance-method" class="signature"><strong>#request</strong> : Swagger::Request?</a>
+        <a href="#request:Swagger::Request?-instance-method" class="signature"><strong>#request</strong> : Swagger::Request?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#request%3D%28request%29-instance-method" class="signature"><strong>#request=</strong>(request)</a>
+        <a href="#request=(request)-instance-method" class="signature"><strong>#request=</strong>(request)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#responses%3AArray%28Swagger%3A%3AResponse%29-instance-method" class="signature"><strong>#responses</strong> : Array(Swagger::Response)</a>
+        <a href="#responses:Array(Swagger::Response)?-instance-method" class="signature"><strong>#responses</strong> : Array(Swagger::Response)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#responses%3D%28responses%29-instance-method" class="signature"><strong>#responses=</strong>(responses)</a>
+        <a href="#responses=(responses)-instance-method" class="signature"><strong>#responses=</strong>(responses)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#route%3AString-instance-method" class="signature"><strong>#route</strong> : String</a>
+        <a href="#route:String-instance-method" class="signature"><strong>#route</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#route%3D%28route%29-instance-method" class="signature"><strong>#route=</strong>(route)</a>
+        <a href="#route=(route)-instance-method" class="signature"><strong>#route=</strong>(route)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#summary%3AString%3F-instance-method" class="signature"><strong>#summary</strong> : String?</a>
+        <a href="#summary:String?-instance-method" class="signature"><strong>#summary</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#summary%3D%28summary%29-instance-method" class="signature"><strong>#summary=</strong>(summary)</a>
+        <a href="#summary=(summary)-instance-method" class="signature"><strong>#summary=</strong>(summary)</a>
         
       </li>
     
@@ -569,20 +576,27 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
-    <div class="entry-detail" id="new(method:String,route:String,responses:Array(Response),summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,authorization=false,deprecated=false)-class-method">
+    <div class="entry-detail" id="new(method:String,route:String,summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,responses:Array(Response)?=nil,authorization=false,deprecated=false)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(method : String, route : String, responses : Array(<a href="../Swagger/Response.html">Response</a>), summary : String? = <span class="n">nil</span>, parameters : Array(<a href="../Swagger/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : <a href="../Swagger/Request.html">Request</a>? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)
+        def self.<strong>new</strong>(method : String, route : String, summary : String? = <span class="n">nil</span>, parameters : Array(<a href="../Swagger/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : <a href="../Swagger/Request.html">Request</a>? = <span class="n">nil</span>, responses : Array(<a href="../Swagger/Response.html">Response</a>)? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#new%28method%3AString%2Croute%3AString%2Cresponses%3AArray%28Response%29%2Csummary%3AString%3F%3Dnil%2Cparameters%3AArray%28Parameter%29%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%2Crequest%3ARequest%3F%3Dnil%2Cauthorization%3Dfalse%2Cdeprecated%3Dfalse%29-class-method">#</a>
+        <a class="method-permalink" href="#new(method:String,route:String,summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,responses:Array(Response)?=nil,authorization=false,deprecated=false)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L26" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -592,20 +606,27 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="authorization:Bool-instance-method">
       <div class="signature">
         
         def <strong>authorization</strong> : Bool
 
-        <a class="method-permalink" href="#authorization%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#authorization:Bool-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -615,13 +636,13 @@
         
         def <strong>authorization=</strong>(authorization)
 
-        <a class="method-permalink" href="#authorization%3D%28authorization%29-instance-method">#</a>
+        <a class="method-permalink" href="#authorization=(authorization)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -631,13 +652,13 @@
         
         def <strong>deprecated</strong> : Bool
 
-        <a class="method-permalink" href="#deprecated%3ABool-instance-method">#</a>
+        <a class="method-permalink" href="#deprecated:Bool-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -647,13 +668,13 @@
         
         def <strong>deprecated=</strong>(deprecated)
 
-        <a class="method-permalink" href="#deprecated%3D%28deprecated%29-instance-method">#</a>
+        <a class="method-permalink" href="#deprecated=(deprecated)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L24" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -663,13 +684,13 @@
         
         def <strong>description</strong> : String?
 
-        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#description:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -679,13 +700,13 @@
         
         def <strong>description=</strong>(description)
 
-        <a class="method-permalink" href="#description%3D%28description%29-instance-method">#</a>
+        <a class="method-permalink" href="#description=(description)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -695,13 +716,13 @@
         
         def <strong>method</strong> : String
 
-        <a class="method-permalink" href="#method%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#method:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -711,13 +732,13 @@
         
         def <strong>method=</strong>(method)
 
-        <a class="method-permalink" href="#method%3D%28method%29-instance-method">#</a>
+        <a class="method-permalink" href="#method=(method)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -727,13 +748,13 @@
         
         def <strong>parameters</strong> : Array(<a href="../Swagger/Parameter.html">Swagger::Parameter</a>)?
 
-        <a class="method-permalink" href="#parameters%3AArray%28Swagger%3A%3AParameter%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#parameters:Array(Swagger::Parameter)?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -743,13 +764,13 @@
         
         def <strong>parameters=</strong>(parameters)
 
-        <a class="method-permalink" href="#parameters%3D%28parameters%29-instance-method">#</a>
+        <a class="method-permalink" href="#parameters=(parameters)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -759,13 +780,13 @@
         
         def <strong>request</strong> : <a href="../Swagger/Request.html">Swagger::Request</a>?
 
-        <a class="method-permalink" href="#request%3ASwagger%3A%3ARequest%3F-instance-method">#</a>
+        <a class="method-permalink" href="#request:Swagger::Request?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -775,29 +796,29 @@
         
         def <strong>request=</strong>(request)
 
-        <a class="method-permalink" href="#request%3D%28request%29-instance-method">#</a>
+        <a class="method-permalink" href="#request=(request)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="responses:Array(Swagger::Response)-instance-method">
+    <div class="entry-detail" id="responses:Array(Swagger::Response)?-instance-method">
       <div class="signature">
         
-        def <strong>responses</strong> : Array(<a href="../Swagger/Response.html">Swagger::Response</a>)
+        def <strong>responses</strong> : Array(<a href="../Swagger/Response.html">Swagger::Response</a>)?
 
-        <a class="method-permalink" href="#responses%3AArray%28Swagger%3A%3AResponse%29-instance-method">#</a>
+        <a class="method-permalink" href="#responses:Array(Swagger::Response)?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -807,13 +828,13 @@
         
         def <strong>responses=</strong>(responses)
 
-        <a class="method-permalink" href="#responses%3D%28responses%29-instance-method">#</a>
+        <a class="method-permalink" href="#responses=(responses)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -823,13 +844,13 @@
         
         def <strong>route</strong> : String
 
-        <a class="method-permalink" href="#route%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#route:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -839,13 +860,13 @@
         
         def <strong>route=</strong>(route)
 
-        <a class="method-permalink" href="#route%3D%28route%29-instance-method">#</a>
+        <a class="method-permalink" href="#route=(route)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -855,13 +876,13 @@
         
         def <strong>summary</strong> : String?
 
-        <a class="method-permalink" href="#summary%3AString%3F-instance-method">#</a>
+        <a class="method-permalink" href="#summary:String?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -871,13 +892,13 @@
         
         def <strong>summary=</strong>(summary)
 
-        <a class="method-permalink" href="#summary%3D%28summary%29-instance-method">#</a>
+        <a class="method-permalink" href="#summary=(summary)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/action.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.0">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
-
-<link href="../../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
   <title>Swagger::Objects::Document - github.com/icyleaf/swagger</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../../";
+  </script>
 </head>
 <body>
 
@@ -121,23 +125,8 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
       <a href="../../Swagger/Info.html">Info</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
-      <a href="../../Swagger/Objects/Info/Contact.html">Contact</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/License" data-name="swagger::objects::info::license">
-      <a href="../../Swagger/Objects/Info/License.html">License</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -236,18 +225,8 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
       <a href="../../Swagger/Objects/Parameter.html">Parameter</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
-      <a href="../../Swagger/Objects/Parameter/Location.html">Location</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -389,11 +368,18 @@
 
 
 
-  <h2>Included Modules</h2>
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
   <ul class="other-types-list">
-  
-    <li class="other-type">JSON::Serializable</li>
-  
+    
+      <li class="other-type">JSON::Serializable</li>
+    
   </ul>
 
 
@@ -405,10 +391,17 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L2" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L2" target="_blank">
         swagger/objects/document.cr
       </a>
     
@@ -419,16 +412,23 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28info%3AObjects%3A%3AInfo%2Cpaths%3AHash%28String%2CObjects%3A%3APathItem%29%2Cservers%3AArray%28Objects%3A%3AServer%29%3F%3Dnil%2Ctags%3AArray%28Objects%3A%3ATag%29%3F%3Dnil%2Csecurity%3AHash%28String%2CArray%28String%29%29%3F%3Dnil%2Ccomponents%3AObjects%3A%3AComponents%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(info : Objects::Info, paths : Hash(String, Objects::PathItem), servers : Array(Objects::Server)? = <span class="n">nil</span>, tags : Array(Objects::Tag)? = <span class="n">nil</span>, security : Hash(String, Array(String))? = <span class="n">nil</span>, components : Objects::Components? = <span class="n">nil</span>)</a>
+        <a href="#new(info:Objects::Info,paths:Hash(String,Objects::PathItem),servers:Array(Objects::Server)?=nil,tags:Array(Objects::Tag)?=nil,security:Hash(String,Array(String))?=nil,components:Objects::Components?=nil)-class-method" class="signature"><strong>.new</strong>(info : Objects::Info, paths : Hash(String, Objects::PathItem), servers : Array(Objects::Server)? = <span class="n">nil</span>, tags : Array(Objects::Tag)? = <span class="n">nil</span>, security : Hash(String, Array(String))? = <span class="n">nil</span>, components : Objects::Components? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28pull%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
+        <a href="#new(pull:JSON::PullParser)-class-method" class="signature"><strong>.new</strong>(pull : JSON::PullParser)</a>
         
       </li>
     
@@ -438,76 +438,83 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#components%3AObjects%3A%3AComponents%3F-instance-method" class="signature"><strong>#components</strong> : Objects::Components?</a>
+        <a href="#components:Objects::Components?-instance-method" class="signature"><strong>#components</strong> : Objects::Components?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#components%3D%28components%3AObjects%3A%3AComponents%3F%29-instance-method" class="signature"><strong>#components=</strong>(components : Objects::Components?)</a>
+        <a href="#components=(components:Objects::Components?)-instance-method" class="signature"><strong>#components=</strong>(components : Objects::Components?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#info%3AObjects%3A%3AInfo-instance-method" class="signature"><strong>#info</strong> : Objects::Info</a>
+        <a href="#info:Objects::Info-instance-method" class="signature"><strong>#info</strong> : Objects::Info</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#info%3D%28info%3AObjects%3A%3AInfo%29-instance-method" class="signature"><strong>#info=</strong>(info : Objects::Info)</a>
+        <a href="#info=(info:Objects::Info)-instance-method" class="signature"><strong>#info=</strong>(info : Objects::Info)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#openapi_version%3AString-instance-method" class="signature"><strong>#openapi_version</strong> : String</a>
+        <a href="#openapi:String-instance-method" class="signature"><strong>#openapi</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#openapi_version%3D%28openapi_version%3AString%29-instance-method" class="signature"><strong>#openapi_version=</strong>(openapi_version : String)</a>
+        <a href="#openapi=(openapi)-instance-method" class="signature"><strong>#openapi=</strong>(openapi)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#paths%3AHash%28String%2CObjects%3A%3APathItem%29-instance-method" class="signature"><strong>#paths</strong> : Hash(String, Objects::PathItem)</a>
+        <a href="#paths:Hash(String,Objects::PathItem)-instance-method" class="signature"><strong>#paths</strong> : Hash(String, Objects::PathItem)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#paths%3D%28paths%3AHash%28String%2CObjects%3A%3APathItem%29%29-instance-method" class="signature"><strong>#paths=</strong>(paths : Hash(String, Objects::PathItem))</a>
+        <a href="#paths=(paths:Hash(String,Objects::PathItem))-instance-method" class="signature"><strong>#paths=</strong>(paths : Hash(String, Objects::PathItem))</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#security%3AHash%28String%2CArray%28String%29%29%3F-instance-method" class="signature"><strong>#security</strong> : Hash(String, Array(String))?</a>
+        <a href="#security:Hash(String,Array(String))?-instance-method" class="signature"><strong>#security</strong> : Hash(String, Array(String))?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#security%3D%28security%3AHash%28String%2CArray%28String%29%29%3F%29-instance-method" class="signature"><strong>#security=</strong>(security : Hash(String, Array(String))?)</a>
+        <a href="#security=(security:Hash(String,Array(String))?)-instance-method" class="signature"><strong>#security=</strong>(security : Hash(String, Array(String))?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#servers%3AArray%28Objects%3A%3AServer%29%3F-instance-method" class="signature"><strong>#servers</strong> : Array(Objects::Server)?</a>
+        <a href="#servers:Array(Objects::Server)?-instance-method" class="signature"><strong>#servers</strong> : Array(Objects::Server)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#servers%3D%28servers%3AArray%28Objects%3A%3AServer%29%3F%29-instance-method" class="signature"><strong>#servers=</strong>(servers : Array(Objects::Server)?)</a>
+        <a href="#servers=(servers:Array(Objects::Server)?)-instance-method" class="signature"><strong>#servers=</strong>(servers : Array(Objects::Server)?)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#tags%3AArray%28Objects%3A%3ATag%29%3F-instance-method" class="signature"><strong>#tags</strong> : Array(Objects::Tag)?</a>
+        <a href="#tags:Array(Objects::Tag)?-instance-method" class="signature"><strong>#tags</strong> : Array(Objects::Tag)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#tags%3D%28tags%3AArray%28Objects%3A%3ATag%29%3F%29-instance-method" class="signature"><strong>#tags=</strong>(tags : Array(Objects::Tag)?)</a>
+        <a href="#tags=(tags:Array(Objects::Tag)?)-instance-method" class="signature"><strong>#tags=</strong>(tags : Array(Objects::Tag)?)</a>
         
       </li>
     
@@ -562,20 +569,27 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(info:Objects::Info,paths:Hash(String,Objects::PathItem),servers:Array(Objects::Server)?=nil,tags:Array(Objects::Tag)?=nil,security:Hash(String,Array(String))?=nil,components:Objects::Components?=nil)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(info : <a href="../../Swagger/Objects/Info.html">Objects::Info</a>, paths : Hash(String, <a href="../../Swagger/Objects/PathItem.html">Objects::PathItem</a>), servers : Array(<a href="../../Swagger/Objects/Server.html">Objects::Server</a>)? = <span class="n">nil</span>, tags : Array(<a href="../../Swagger/Objects/Tag.html">Objects::Tag</a>)? = <span class="n">nil</span>, security : Hash(String, Array(String))? = <span class="n">nil</span>, components : <a href="../../Swagger/Objects/Components.html">Objects::Components</a>? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28info%3AObjects%3A%3AInfo%2Cpaths%3AHash%28String%2CObjects%3A%3APathItem%29%2Cservers%3AArray%28Objects%3A%3AServer%29%3F%3Dnil%2Ctags%3AArray%28Objects%3A%3ATag%29%3F%3Dnil%2Csecurity%3AHash%28String%2CArray%28String%29%29%3F%3Dnil%2Ccomponents%3AObjects%3A%3AComponents%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new(info:Objects::Info,paths:Hash(String,Objects::PathItem),servers:Array(Objects::Server)?=nil,tags:Array(Objects::Tag)?=nil,security:Hash(String,Array(String))?=nil,components:Objects::Components?=nil)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -585,13 +599,13 @@
         
         def self.<strong>new</strong>(pull : JSON::PullParser)
 
-        <a class="method-permalink" href="#new%28pull%3AJSON%3A%3APullParser%29-class-method">#</a>
+        <a class="method-permalink" href="#new(pull:JSON::PullParser)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L3" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -601,20 +615,27 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="components:Objects::Components?-instance-method">
       <div class="signature">
         
         def <strong>components</strong> : <a href="../../Swagger/Objects/Components.html">Objects::Components</a>?
 
-        <a class="method-permalink" href="#components%3AObjects%3A%3AComponents%3F-instance-method">#</a>
+        <a class="method-permalink" href="#components:Objects::Components?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -624,13 +645,13 @@
         
         def <strong>components=</strong>(components : <a href="../../Swagger/Objects/Components.html">Objects::Components</a>?)
 
-        <a class="method-permalink" href="#components%3D%28components%3AObjects%3A%3AComponents%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#components=(components:Objects::Components?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L11" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -640,13 +661,13 @@
         
         def <strong>info</strong> : <a href="../../Swagger/Objects/Info.html">Objects::Info</a>
 
-        <a class="method-permalink" href="#info%3AObjects%3A%3AInfo-instance-method">#</a>
+        <a class="method-permalink" href="#info:Objects::Info-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -656,45 +677,45 @@
         
         def <strong>info=</strong>(info : <a href="../../Swagger/Objects/Info.html">Objects::Info</a>)
 
-        <a class="method-permalink" href="#info%3D%28info%3AObjects%3A%3AInfo%29-instance-method">#</a>
+        <a class="method-permalink" href="#info=(info:Objects::Info)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L7" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="openapi_version:String-instance-method">
+    <div class="entry-detail" id="openapi:String-instance-method">
       <div class="signature">
         
-        def <strong>openapi_version</strong> : String
+        def <strong>openapi</strong> : String
 
-        <a class="method-permalink" href="#openapi_version%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#openapi:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="openapi_version=(openapi_version:String)-instance-method">
+    <div class="entry-detail" id="openapi=(openapi)-instance-method">
       <div class="signature">
         
-        def <strong>openapi_version=</strong>(openapi_version : String)
+        def <strong>openapi=</strong>(openapi)
 
-        <a class="method-permalink" href="#openapi_version%3D%28openapi_version%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#openapi=(openapi)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L6" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -704,13 +725,13 @@
         
         def <strong>paths</strong> : Hash(String, <a href="../../Swagger/Objects/PathItem.html">Objects::PathItem</a>)
 
-        <a class="method-permalink" href="#paths%3AHash%28String%2CObjects%3A%3APathItem%29-instance-method">#</a>
+        <a class="method-permalink" href="#paths:Hash(String,Objects::PathItem)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -720,13 +741,13 @@
         
         def <strong>paths=</strong>(paths : Hash(String, <a href="../../Swagger/Objects/PathItem.html">Objects::PathItem</a>))
 
-        <a class="method-permalink" href="#paths%3D%28paths%3AHash%28String%2CObjects%3A%3APathItem%29%29-instance-method">#</a>
+        <a class="method-permalink" href="#paths=(paths:Hash(String,Objects::PathItem))-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L8" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -736,13 +757,13 @@
         
         def <strong>security</strong> : Hash(String, Array(String))?
 
-        <a class="method-permalink" href="#security%3AHash%28String%2CArray%28String%29%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#security:Hash(String,Array(String))?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -752,13 +773,13 @@
         
         def <strong>security=</strong>(security : Hash(String, Array(String))?)
 
-        <a class="method-permalink" href="#security%3D%28security%3AHash%28String%2CArray%28String%29%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#security=(security:Hash(String,Array(String))?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L10" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -768,13 +789,13 @@
         
         def <strong>servers</strong> : Array(<a href="../../Swagger/Objects/Server.html">Objects::Server</a>)?
 
-        <a class="method-permalink" href="#servers%3AArray%28Objects%3A%3AServer%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#servers:Array(Objects::Server)?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -784,13 +805,13 @@
         
         def <strong>servers=</strong>(servers : Array(<a href="../../Swagger/Objects/Server.html">Objects::Server</a>)?)
 
-        <a class="method-permalink" href="#servers%3D%28servers%3AArray%28Objects%3A%3AServer%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#servers=(servers:Array(Objects::Server)?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -800,13 +821,13 @@
         
         def <strong>tags</strong> : Array(<a href="../../Swagger/Objects/Tag.html">Objects::Tag</a>)?
 
-        <a class="method-permalink" href="#tags%3AArray%28Objects%3A%3ATag%29%3F-instance-method">#</a>
+        <a class="method-permalink" href="#tags:Array(Objects::Tag)?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -816,13 +837,13 @@
         
         def <strong>tags=</strong>(tags : Array(<a href="../../Swagger/Objects/Tag.html">Objects::Tag</a>)?)
 
-        <a class="method-permalink" href="#tags%3D%28tags%3AArray%28Objects%3A%3ATag%29%3F%29-instance-method">#</a>
+        <a class="method-permalink" href="#tags=(tags:Array(Objects::Tag)?)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/objects/document.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/objects/document.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>

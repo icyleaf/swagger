@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.27.0">
+<meta name="generator" content="Crystal Docs 0.33.0">
 
-
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../js/doc.js"></script>
-<script type="text/javascript">
-  CrystalDoc.base_path = "../";
-</script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
 
   <meta id="repository-name" content="github.com/icyleaf/swagger">
   <title>Swagger::Response - github.com/icyleaf/swagger</title>
+  <script type="text/javascript">
+    CrystalDoc.base_path = "../";
+  </script>
 </head>
 <body>
 
@@ -121,23 +125,8 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Info" data-name="swagger::info">
       <a href="../Swagger/Info.html">Info</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/Contact" data-name="swagger::objects::info::contact">
-      <a href="../Swagger/Objects/Info/Contact.html">Contact</a>
-      
-    </li>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Info/License" data-name="swagger::objects::info::license">
-      <a href="../Swagger/Objects/Info/License.html">License</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -236,18 +225,8 @@
       
     </li>
   
-  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
       <a href="../Swagger/Objects/Parameter.html">Parameter</a>
-      
-        <ul>
-  
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
-      <a href="../Swagger/Objects/Parameter/Location.html">Location</a>
-      
-    </li>
-  
-</ul>
-
       
     </li>
   
@@ -398,10 +377,17 @@
 
 
 
-  <h2>Defined in:</h2>
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L4" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L2" target="_blank">
         swagger/response.cr
       </a>
     
@@ -412,21 +398,28 @@
 
 
 
-  <h2>Constructors</h2>
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28code%3AString%2Cdescription%3AString%2Creferencename%3AString%2Ccontent_type%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(code : String, description : String, reference name : String, content_type : String? = <span class="n">nil</span>)</a>
+        <a href="#new(code:String,description:String,referencename:String,content_type:String?=nil)-class-method" class="signature"><strong>.new</strong>(code : String, description : String, reference name : String, content_type : String? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28code%3AString%2Cdescription%3AString%2Cmedia_type%3AObjects%3A%3AMediaType%3F%3Dnil%2Ccontent_type%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(code : String, description : String, media_type : Objects::MediaType? = <span class="n">nil</span>, content_type : String? = <span class="n">nil</span>)</a>
+        <a href="#new(code:String,description:String,schema:Schema,content_type:String?=nil)-class-method" class="signature"><strong>.new</strong>(code : String, description : String, schema : Schema, content_type : String? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28code%3AString%2Cdescription%3AString%2Cschema%3ASchema%2Ccontent_type%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(code : String, description : String, schema : Schema, content_type : String? = <span class="n">nil</span>)</a>
+        <a href="#new(code:String,description:String,media_type:MediaType?=nil,content_type:String?=nil)-class-method" class="signature"><strong>.new</strong>(code : String, description : String, media_type : MediaType? = <span class="n">nil</span>, content_type : String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -436,16 +429,23 @@
 
 
 
-  <h2>Instance Method Summary</h2>
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#code%3AString-instance-method" class="signature"><strong>#code</strong> : String</a>
+        <a href="#code:String-instance-method" class="signature"><strong>#code</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#code%3D%28code%29-instance-method" class="signature"><strong>#code=</strong>(code)</a>
+        <a href="#code=(code)-instance-method" class="signature"><strong>#code=</strong>(code)</a>
         
       </li>
     
@@ -455,32 +455,32 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#content_type%3AString-instance-method" class="signature"><strong>#content_type</strong> : String</a>
+        <a href="#content_type:String-instance-method" class="signature"><strong>#content_type</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#content_type%3D%28content_type%3AString%29-instance-method" class="signature"><strong>#content_type=</strong>(content_type : String)</a>
+        <a href="#content_type=(content_type:String)-instance-method" class="signature"><strong>#content_type=</strong>(content_type : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3AString-instance-method" class="signature"><strong>#description</strong> : String</a>
+        <a href="#description:String-instance-method" class="signature"><strong>#description</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description%3D%28description%29-instance-method" class="signature"><strong>#description=</strong>(description)</a>
+        <a href="#description=(description)-instance-method" class="signature"><strong>#description=</strong>(description)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#media_type%3ASwagger%3A%3AObjects%3A%3AMediaType%3F-instance-method" class="signature"><strong>#media_type</strong> : Swagger::Objects::MediaType?</a>
+        <a href="#media_type:Swagger::Objects::MediaType?-instance-method" class="signature"><strong>#media_type</strong> : Swagger::Objects::MediaType?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#media_type%3D%28media_type%29-instance-method" class="signature"><strong>#media_type=</strong>(media_type)</a>
+        <a href="#media_type=(media_type)-instance-method" class="signature"><strong>#media_type=</strong>(media_type)</a>
         
       </li>
     
@@ -525,36 +525,27 @@
 </div>
 
 
-  <h2>Constructor Detail</h2>
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
   
     <div class="entry-detail" id="new(code:String,description:String,referencename:String,content_type:String?=nil)-class-method">
       <div class="signature">
         
         def self.<strong>new</strong>(code : String, description : String, reference name : String, content_type : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28code%3AString%2Cdescription%3AString%2Creferencename%3AString%2Ccontent_type%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new(code:String,description:String,referencename:String,content_type:String?=nil)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L5" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="new(code:String,description:String,media_type:Objects::MediaType?=nil,content_type:String?=nil)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(code : String, description : String, media_type : <a href="../Swagger/Objects/MediaType.html">Objects::MediaType</a>? = <span class="n">nil</span>, content_type : String? = <span class="n">nil</span>)
-
-        <a class="method-permalink" href="#new%28code%3AString%2Cdescription%3AString%2Cmedia_type%3AObjects%3A%3AMediaType%3F%3Dnil%2Ccontent_type%3AString%3F%3Dnil%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L3" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -564,13 +555,29 @@
         
         def self.<strong>new</strong>(code : String, description : String, schema : <a href="../Swagger/Schema.html">Schema</a>, content_type : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28code%3AString%2Cdescription%3AString%2Cschema%3ASchema%2Ccontent_type%3AString%3F%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new(code:String,description:String,schema:Schema,content_type:String?=nil)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L10" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(code:String,description:String,media_type:MediaType?=nil,content_type:String?=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(code : String, description : String, media_type : <a href="../Swagger/MediaType.html">MediaType</a>? = <span class="n">nil</span>, content_type : String? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new(code:String,description:String,media_type:MediaType?=nil,content_type:String?=nil)-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -580,20 +587,27 @@
 
 
 
-  <h2>Instance Method Detail</h2>
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
   
     <div class="entry-detail" id="code:String-instance-method">
       <div class="signature">
         
         def <strong>code</strong> : String
 
-        <a class="method-permalink" href="#code%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#code:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -603,13 +617,13 @@
         
         def <strong>code=</strong>(code)
 
-        <a class="method-permalink" href="#code%3D%28code%29-instance-method">#</a>
+        <a class="method-permalink" href="#code=(code)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -625,7 +639,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -635,13 +649,13 @@
         
         def <strong>content_type</strong> : String
 
-        <a class="method-permalink" href="#content_type%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#content_type:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -651,13 +665,13 @@
         
         def <strong>content_type=</strong>(content_type : String)
 
-        <a class="method-permalink" href="#content_type%3D%28content_type%3AString%29-instance-method">#</a>
+        <a class="method-permalink" href="#content_type=(content_type:String)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -667,13 +681,13 @@
         
         def <strong>description</strong> : String
 
-        <a class="method-permalink" href="#description%3AString-instance-method">#</a>
+        <a class="method-permalink" href="#description:String-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -683,13 +697,13 @@
         
         def <strong>description=</strong>(description)
 
-        <a class="method-permalink" href="#description%3D%28description%29-instance-method">#</a>
+        <a class="method-permalink" href="#description=(description)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L13" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -699,13 +713,13 @@
         
         def <strong>media_type</strong> : <a href="../Swagger/Objects/MediaType.html">Swagger::Objects::MediaType</a>?
 
-        <a class="method-permalink" href="#media_type%3ASwagger%3A%3AObjects%3A%3AMediaType%3F-instance-method">#</a>
+        <a class="method-permalink" href="#media_type:Swagger::Objects::MediaType?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -715,13 +729,13 @@
         
         def <strong>media_type=</strong>(media_type)
 
-        <a class="method-permalink" href="#media_type%3D%28media_type%29-instance-method">#</a>
+        <a class="method-permalink" href="#media_type=(media_type)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/d0e001e1a7f6f1ea238cc328097cb96d47d9e7ea/src/swagger/response.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/response.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
