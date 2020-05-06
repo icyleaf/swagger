@@ -11,23 +11,23 @@ builder = Swagger::Builder.new(
 )
 
 builder.add(Swagger::Object.new("User", "object", [
-    Swagger::Property.new("id", "integer", "int32", example: 1),
-    Swagger::Property.new("nickname", example: "icyleaf wang"),
-    Swagger::Property.new("username", example: "icyleaf"),
-    Swagger::Property.new("email", example: "icyleaf.cn@gmail.com"),
-    Swagger::Property.new("bio", "Personal bio"),
+  Swagger::Property.new("id", "integer", "int32", example: 1),
+  Swagger::Property.new("nickname", example: "icyleaf wang"),
+  Swagger::Property.new("username", example: "icyleaf"),
+  Swagger::Property.new("email", example: "icyleaf.cn@gmail.com"),
+  Swagger::Property.new("bio", "Personal bio"),
 ]))
 
 builder.add(Swagger::Controller.new("Users", "User Resources", [
-  Swagger::Action.new("get", "/users", "List users", parameters: [
+  Swagger::Action.new("get", "/users", [Swagger::Response.new("200", "Success response")], "List users", parameters: [
     Swagger::Parameter.new("page", "query", "integer", "Current page", default_value: 1, format: "int32"),
     Swagger::Parameter.new("limit", "query", "integer", "How many items to return at one time (max 100)", default_value: 50, format: "int32"),
   ]),
-  Swagger::Action.new("get", "/users/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+  Swagger::Action.new("get", "/users/{id}", description: "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
+    Swagger::Response.new("404", "Not found user"),
   ], request: Swagger::Request.new("User")),
-  Swagger::Action.new("post", "/users", "Create user",
+  Swagger::Action.new("post", "/users", description: "Create user",
     request: Swagger::Request.new([
       Swagger::Property.new("username", required: true, description: "The name of user"),
       Swagger::Property.new("email", "string", required: true, description: "Email"),
@@ -37,13 +37,13 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
     ], "Form data", "application/x-www-form-urlencoded"),
     responses: [
       Swagger::Response.new("200", "Success response", "User"),
-      Swagger::Response.new("404", "Not found user")
+      Swagger::Response.new("404", "Not found user"),
     ]
   ),
-  Swagger::Action.new("get", "/user/{id}", "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
+  Swagger::Action.new("get", "/user/{id}", description: "Get user by id", parameters: [Swagger::Parameter.new("id", "path")], responses: [
     Swagger::Response.new("200", "Success response"),
-    Swagger::Response.new("404", "Not found user")
-  ], deprecated: true)
+    Swagger::Response.new("404", "Not found user"),
+  ], deprecated: true),
 ]))
 
 builder.add(Swagger::Server.new("http://swagger.dev:{port}/{version}/api", "Development", [

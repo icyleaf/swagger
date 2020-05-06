@@ -1,7 +1,10 @@
+require "json"
+require "./operation"
+
 module Swagger::Objects
   # Path Item Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#pathItemObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#pathItemObject
   struct PathItem
     include JSON::Serializable
 

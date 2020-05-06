@@ -1,4 +1,5 @@
-require "../../spec_helper"
+require "./response_helper"
+require "../../../src/swagger/objects/path_item"
 
 describe Swagger::Objects::PathItem do
   describe "#new" do
@@ -21,10 +22,10 @@ describe Swagger::Objects::PathItem do
   describe "#add" do
     it "should works" do
       raw = Swagger::Objects::PathItem.new
-      raw.add("get", Swagger::Objects::Operation.new)
+      raw.add("get", Swagger::Objects::Operation.new SWAGGER_OK_RESPONSE)
       raw.summary.should be_nil
       raw.description.should be_nil
-      raw.get.should eq Swagger::Objects::Operation.new
+      raw.get.should eq Swagger::Objects::Operation.new SWAGGER_OK_RESPONSE
       raw.put.should be_nil
       raw.post.should be_nil
       raw.delete.should be_nil
