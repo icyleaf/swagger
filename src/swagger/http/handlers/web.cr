@@ -36,7 +36,7 @@ module Swagger::HTTP
     private def asset_uri?(context)
       original_path = context.request.path.not_nil!
       is_dir_path = original_path.ends_with?("/")
-      request_path = self.request_path(URI.decode(original_path))
+      request_path = self.request_path(URI.decode_www_form(original_path))
 
       expanded_path = File.expand_path(request_path, "/")
       if is_dir_path && !expanded_path.ends_with? "/"

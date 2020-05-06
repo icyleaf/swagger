@@ -4,7 +4,9 @@ require "semantic_version"
 module Swagger::HTTP
   class APIHandler
     include Swagger::HTTP::Handler
-
+    
+    @json : String
+    
     def initialize(document : Document, @endpoint : String, @debug_mode = true)
       major = SemanticVersion.parse(document.openapi_version).major
       @swagger_path = "/v#{major}/swagger.json"
