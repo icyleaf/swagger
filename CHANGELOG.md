@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 > List all changes before release a new version.
 
+## [0.2.1] (2020-05-06)
+
+### Fixed
+
+- Fixed code usage in README. [#13](https://github.com/icyleaf/swagger/pull/13) (thanks @[lribeiro](https://github.com/lribeiro))
+- Fixed missing define @json variable in Swagger HTTP web handler. [#13](https://github.com/icyleaf/swagger/pull/13) (thanks @[lribeiro](https://github.com/lribeiro))
+- Compatibility with Crystal 0.34.0
+
 ## [0.2.0] (2020-02-28)
 
 ### Added
@@ -32,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - First beta version.
 
-[Unreleased]: https://github.com/icyleaf/swagger/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/icyleaf/swagger/compare/v0.2.1...HEAD
+[0.2.0]: https://github.com/icyleaf/swagger/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/icyleaf/swagger/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/icyleaf/swagger/compare/v0.1.0...v0.1.1
