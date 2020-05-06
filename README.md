@@ -74,7 +74,7 @@ Swagger provids a built-in web server, if you have no idea how to preview it:
 require "swagger"
 require "swagger/http/server"
 
-# made your document (See `builder` usage below)
+# made your document (See `builder` code example above)
 document = builder.built
 
 # Run web server
