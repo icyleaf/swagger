@@ -1,7 +1,13 @@
+require "json"
+
+require "./header"
+require "./media_type"
+require "./link"
+
 module Swagger::Objects
   # Response Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#responsesObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#responsesObject
   struct Response
     include JSON::Serializable
 

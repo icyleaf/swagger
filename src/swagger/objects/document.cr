@@ -2,7 +2,8 @@ module Swagger::Objects
   struct Document
     include JSON::Serializable
 
-    property openapi = Swagger::OPENAPI_VERSION
+    @[JSON::Field(key: "openapi")]
+    property openapi_version : String = "3.0.3"
     property info : Objects::Info
     property paths : Hash(String, Objects::PathItem)
     property servers : Array(Objects::Server)? = nil

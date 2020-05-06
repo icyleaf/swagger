@@ -1,7 +1,11 @@
+require "json"
+
+require "./header"
+
 module Swagger::Objects
   # Encoding Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#encodingObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#encodingObject
   struct Encoding
     include JSON::Serializable
 

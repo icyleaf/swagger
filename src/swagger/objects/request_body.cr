@@ -1,7 +1,11 @@
+require "json"
+
+require "./media_type"
+
 module Swagger::Objects
   # Request Body Object
   #
-  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.1.md#requestBodyObject
+  # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#requestBodyObject
   struct RequestBody
     include JSON::Serializable
 

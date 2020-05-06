@@ -1,3 +1,6 @@
+require "./action"
+require "./objects/external_docs"
+
 module Swagger
   # Define a controller
   #
