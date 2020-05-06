@@ -225,8 +225,18 @@
       
     </li>
   
-  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
+  <li class="parent " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter" data-name="swagger::objects::parameter">
       <a href="../Swagger/Objects/Parameter.html">Parameter</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/icyleaf/swagger/Swagger/Objects/Parameter/Location" data-name="swagger::objects::parameter::location">
+      <a href="../Swagger/Objects/Parameter/Location.html">Location</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -403,7 +413,7 @@
   </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L10" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L15" target="_blank">
         swagger/action.cr
       </a>
     
@@ -425,7 +435,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(method:String,route:String,summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,responses:Array(Response)?=nil,authorization=false,deprecated=false)-class-method" class="signature"><strong>.new</strong>(method : String, route : String, summary : String? = <span class="n">nil</span>, parameters : Array(Parameter)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : Request? = <span class="n">nil</span>, responses : Array(Response)? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)</a>
+        <a href="#new(method:String,route:String,responses:Array(Response),summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,authorization=false,deprecated=false)-class-method" class="signature"><strong>.new</strong>(method : String, route : String, responses : Array(Response), summary : String? = <span class="n">nil</span>, parameters : Array(Parameter)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : Request? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)</a>
         
       </li>
     
@@ -506,7 +516,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#responses:Array(Swagger::Response)?-instance-method" class="signature"><strong>#responses</strong> : Array(Swagger::Response)?</a>
+        <a href="#responses:Array(Swagger::Response)-instance-method" class="signature"><strong>#responses</strong> : Array(Swagger::Response)</a>
         
       </li>
     
@@ -585,18 +595,18 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(method:String,route:String,summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,responses:Array(Response)?=nil,authorization=false,deprecated=false)-class-method">
+    <div class="entry-detail" id="new(method:String,route:String,responses:Array(Response),summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,authorization=false,deprecated=false)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(method : String, route : String, summary : String? = <span class="n">nil</span>, parameters : Array(<a href="../Swagger/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : <a href="../Swagger/Request.html">Request</a>? = <span class="n">nil</span>, responses : Array(<a href="../Swagger/Response.html">Response</a>)? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)
+        def self.<strong>new</strong>(method : String, route : String, responses : Array(<a href="../Swagger/Response.html">Response</a>), summary : String? = <span class="n">nil</span>, parameters : Array(<a href="../Swagger/Parameter.html">Parameter</a>)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>, request : <a href="../Swagger/Request.html">Request</a>? = <span class="n">nil</span>, authorization = <span class="n">false</span>, deprecated = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#new(method:String,route:String,summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,responses:Array(Response)?=nil,authorization=false,deprecated=false)-class-method">#</a>
+        <a class="method-permalink" href="#new(method:String,route:String,responses:Array(Response),summary:String?=nil,parameters:Array(Parameter)?=nil,description:String?=nil,request:Request?=nil,authorization=false,deprecated=false)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L21" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L26" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -626,7 +636,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -642,7 +652,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -658,7 +668,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -674,7 +684,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L24" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -690,7 +700,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -706,7 +716,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -722,7 +732,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -738,7 +748,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L11" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -754,7 +764,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -770,7 +780,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -786,7 +796,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -802,23 +812,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="responses:Array(Swagger::Response)?-instance-method">
+    <div class="entry-detail" id="responses:Array(Swagger::Response)-instance-method">
       <div class="signature">
         
-        def <strong>responses</strong> : Array(<a href="../Swagger/Response.html">Swagger::Response</a>)?
+        def <strong>responses</strong> : Array(<a href="../Swagger/Response.html">Swagger::Response</a>)
 
-        <a class="method-permalink" href="#responses:Array(Swagger::Response)?-instance-method">#</a>
+        <a class="method-permalink" href="#responses:Array(Swagger::Response)-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -834,7 +844,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -850,7 +860,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -866,7 +876,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -882,7 +892,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -898,7 +908,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7b15848c1774ff09afde80c393de818e97219dd5/src/swagger/action.cr#L13" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/3d07d71e6e3bec6e4ac7587585d3bf5d0f7c56e8/src/swagger/action.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
