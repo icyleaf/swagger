@@ -5,11 +5,14 @@ module Swagger::HTTP
   class APIHandler
     include Swagger::HTTP::Handler
 
+    @swagger_path : String
     @json : String
 
-    def initialize(document : Document, @endpoint : String, @debug_mode = true)
+    def initialize(document : Document, @endpoint : String, @debug_mode = false, swagger_path : String? = nil)
       major = SemanticVersion.parse(document.openapi_version).major
-      @swagger_path = "/v#{major}/swagger.json"
+
+      @swagger_path = swagger_path.is_a?(String) ? swagger_path : "/v#{major}/swagger.json"
+
       @json = document.to_json
     end
 
