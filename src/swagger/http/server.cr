@@ -3,11 +3,11 @@ require "./handler"
 
 module Swagger::HTTP
   class Server
-    def self.run(document : Document, swagger_uri = HTTP::WebHandler::SWAGGER_WEB_URI, host = "127.0.0.1", port = 8080)
-      new(host, port, swagger_uri).run(document)
+    def self.run(document : Document, swagger_uri = HTTP::WebHandler::SWAGGER_WEB_URI, host = "127.0.0.1", port = 8080, debug_mode = false)
+      new(host, port, swagger_uri, debug_mode).run(document)
     end
 
-    def initialize(@host : String, @port : Int32, @swagger_uri : String)
+    def initialize(@host : String, @port : Int32, @swagger_uri : String, @debug_mode = false)
       @swagger_uri = fix_uri(@swagger_uri)
     end
 
@@ -17,7 +17,7 @@ module Swagger::HTTP
     end
 
     def server(document)
-      api_handler = HTTP::APIHandler.new(document, server_endpoint)
+      api_handler = HTTP::APIHandler.new(document, server_endpoint, debug_mode: @debug_mode)
 
       server = ::HTTP::Server.new([
         api_handler,

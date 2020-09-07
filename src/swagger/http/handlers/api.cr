@@ -8,12 +8,13 @@ module Swagger::HTTP
     @swagger_path : String
     @json : String
 
-    def initialize(document : Document, @endpoint : String, @debug_mode = false, swagger_path : String? = nil)
+    def initialize(document : Document, @endpoint : String, swagger_path : String? = nil, @debug_mode = false)
       major = SemanticVersion.parse(document.openapi_version).major
 
       @swagger_path = swagger_path.is_a?(String) ? swagger_path : "/v#{major}/swagger.json"
-
       @json = document.to_json
+
+      puts "[WARN] Swagger APIHandler debug mode was enabled" if @debug_mode
     end
 
     def call(context)

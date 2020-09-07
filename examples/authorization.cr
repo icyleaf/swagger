@@ -37,4 +37,4 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
   ], authorization: true),
 ]))
 
-Swagger::HTTP::Server.run(builder.built)
+Swagger::HTTP::Server.run(builder.built, debug_mode: true)

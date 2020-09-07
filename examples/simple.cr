@@ -52,4 +52,4 @@ builder.add(Swagger::Server.new("http://swagger.dev:{port}/{version}/api", "Deve
 ]))
 builder.add(Swagger::Server.new("http://example.com/api", "Production"))
 
-Swagger::HTTP::Server.run(builder.built)
+Swagger::HTTP::Server.run(builder.built, debug_mode: true)
