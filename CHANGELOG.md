@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 > List all changes before release a new version.
 
+## [0.2.2] (2020-10-14)
+
+### Added
+
+- Customize `swagger_path` and add debug mode (defaults to `false`). [#16](https://github.com/icyleaf/swagger/pull/16)
+
+### Fixed
+
+- Fix bearer security_scheme with a incorrect value. [#19](https://github.com/icyleaf/swagger/pull/19) (thanks @[grkek](https://github.com/grkek))
+
 ## [0.2.1] (2020-05-06)
 
 ### Fixed
@@ -40,7 +50,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - First beta version.
 
-[Unreleased]: https://github.com/icyleaf/swagger/compare/v0.2.1...HEAD
-[0.2.0]: https://github.com/icyleaf/swagger/compare/v0.2.0...v0.2.1
+[Unreleased]: https://github.com/icyleaf/swagger/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/icyleaf/swagger/compare/v0.2.1...v0.2.2
+[0.2.1]: https://github.com/icyleaf/swagger/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/icyleaf/swagger/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/icyleaf/swagger/compare/v0.1.0...v0.1.1
