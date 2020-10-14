@@ -25,7 +25,7 @@ module Swagger::Objects
     end
 
     def self.bearer(description : String? = nil, format : String? = nil)
-      new("http", description, parameter_location: "header", scheme: "basic", bearer_format: format)
+      new("http", description, parameter_location: "header", scheme: "bearer", bearer_format: format)
     end
 
     def self.api_key(name : String, location : String, description : String? = nil)
