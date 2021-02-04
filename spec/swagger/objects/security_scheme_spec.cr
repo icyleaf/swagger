@@ -23,7 +23,7 @@ describe Swagger::Objects::SecurityScheme do
       raw.description.should eq "Bearer Auth"
       raw.name.should be_nil
       raw.parameter_location.should eq "header"
-      raw.scheme.should eq "basic"
+      raw.scheme.should eq "bearer"
       raw.bearer_format.should eq "JWT"
       raw.flows.should be_nil
       raw.open_id_connect_url.should be_nil
