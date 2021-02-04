@@ -1,0 +1,31 @@
+name: Deploy API documents
+on:
+  push:
+    paths-ignore:
+      - "benchmarks/**"
+    branches:
+      - "master"
+    tags:
+      - "v*"
+
+env:
+  DOCS_PATH: docs
+  GH_REF: https://github.com/icyleaf/swagger
+  GH_URL: https://icyleaf.github.io/swagger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: oprypin/install-crystal@v1
+    - name: Generate
+      id: generate
+      run: crystal docs --output="${DOCS_PATH}" --project-version="${{ github.ref }}"
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ${{ env.DOCS_PATH }}
+
+
