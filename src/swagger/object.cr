@@ -12,12 +12,14 @@ module Swagger
   #   Swagger::Property.new("bio", "Personal bio"),
   # ])
   # ```
-  struct Object
+  class Object
     property name
     property type
     property properties
+    property items
 
-    def initialize(@name : String, @type : String, @properties : Array(Property))
+    def initialize(@name : String, @type : String, @properties : Array(Property)? = nil,
+                   @items : (self | String)? = nil)
     end
   end
 end
