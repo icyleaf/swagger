@@ -6,7 +6,7 @@ module Swagger::Objects
   # Schema Object
   #
   # See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md#schemaObject
-  struct Schema
+  class Schema
     include JSON::Serializable
 
     def self.use_reference(name : String)
@@ -19,13 +19,22 @@ module Swagger::Objects
     getter required : Array(String)? = nil
     getter default : (String | Int32 | Int64 | Float64 | Bool)? = nil
     getter properties : Hash(String, Property)? = nil
+    getter items : Schema? = nil
 
     @[JSON::Field(key: "$ref")]
     getter ref : String? = nil
 
     def initialize(@type : String? = nil, @format : String? = nil, @required : Array(String)? = nil,
                    @default : (String | Int32 | Int64 | Float64 | Bool)? = nil,
-                   @properties : Hash(String, Property)? = nil, @ref : String? = nil)
+                   @properties : Hash(String, Property)? = nil, @ref : String? = nil,
+                   @items : self? = nil)
+    end
+
+    def ==(other : self)
+      {% for ivar in @type.instance_vars %}
+        return false unless @{{ivar.id}} == other.{{ivar.id}}
+      {% end %}
+      return true
     end
   end
 end
