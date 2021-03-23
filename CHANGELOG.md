@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 > List all changes before release a new version.
 
+## [0.3.0] (2021-03-23)
+
+- Compatibility with Crystal 1.0.
+
 ## [0.2.2] (2020-10-14)
 
 ### Added
