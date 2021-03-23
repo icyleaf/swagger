@@ -65,7 +65,7 @@ builder.add(Swagger::Controller.new("Users", "User Resources", [
     Swagger::Response.new("200", "Success response"),
     Swagger::Response.new("404", "Not found user"),
   ]),
-  Swagger::Action.new("post", "/users", "Create a user",
+  Swagger::Action.new("post", "/users", description: "Create a user",
     request: Swagger::Request.new([
       Swagger::Property.new("name", required: true, description: "The name of user"),
       Swagger::Property.new("age", "integer", format: "int32", required: true, description: "The age of user", default_value: 20),
