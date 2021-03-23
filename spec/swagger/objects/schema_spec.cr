@@ -18,6 +18,16 @@ describe Swagger::Objects::Schema do
       raw.properties.should be_nil
       raw.ref.should be_nil
     end
+
+    it "supports array" do
+      raw = Swagger::Objects::Schema.new(
+        type: "array",
+        items: Swagger::Objects::Schema.use_reference("SomeSchema")
+      )
+      raw.type.should eq("array")
+      raw.items.should_not be_nil
+      raw.items.try &.ref.should eq("#/components/schemas/SomeSchema")
+    end
   end
 
   describe "#to_json" do
