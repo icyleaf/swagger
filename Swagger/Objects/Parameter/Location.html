@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.35.1">
+<meta name="generator" content="Crystal Docs 0.36.1">
 <meta name="crystal_docs.project_version" content="refs/heads/master">
 <meta name="crystal_docs.project_name" content="swagger">
 
@@ -417,7 +417,7 @@
   </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/fc2985bf9a6f0a78819828fb585d05b818d1d129/src/swagger/objects/parameter.cr#L13" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/61356d71d75914751a9c96dcdc24742fe0b6cb83/src/swagger/objects/parameter.cr#L13" target="_blank">
         swagger/objects/parameter.cr
       </a>
     
@@ -499,6 +499,8 @@
       <li class="entry-summary">
         <a href="#to_json(builder:JSON::Builder)-instance-method" class="signature"><strong>#to_json</strong>(builder : JSON::Builder)</a>
         
+          <div class="summary"><p>Serializes this enum member by name.</p></div>
+        
       </li>
     
   </ul>
@@ -576,7 +578,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/fc2985bf9a6f0a78819828fb585d05b818d1d129/src/swagger/objects/parameter.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/61356d71d75914751a9c96dcdc24742fe0b6cb83/src/swagger/objects/parameter.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -592,7 +594,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/fc2985bf9a6f0a78819828fb585d05b818d1d129/src/swagger/objects/parameter.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/61356d71d75914751a9c96dcdc24742fe0b6cb83/src/swagger/objects/parameter.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -608,7 +610,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/fc2985bf9a6f0a78819828fb585d05b818d1d129/src/swagger/objects/parameter.cr#L14" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/61356d71d75914751a9c96dcdc24742fe0b6cb83/src/swagger/objects/parameter.cr#L14" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -624,7 +626,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/fc2985bf9a6f0a78819828fb585d05b818d1d129/src/swagger/objects/parameter.cr#L15" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/61356d71d75914751a9c96dcdc24742fe0b6cb83/src/swagger/objects/parameter.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -637,10 +639,49 @@
         <a class="method-permalink" href="#to_json(builder:JSON::Builder)-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Enum
+            </div>
+          
+          <p>Serializes this enum member by name.</p>
+
+<p>For non-flags enums, the serialization is a JSON string. The value is the
+member name (see <code>#to_s</code>) transformed with <code>String#underscore</code>.</p>
+
+<pre><code class="language-crystal"><span class="k">enum</span> <span class="t">Stages</span>
+  <span class="t">INITIAL</span>
+  <span class="t">SECOND_STAGE</span>
+<span class="k">end</span>
+
+<span class="t">Stages</span><span class="t">::</span><span class="t">INITIAL</span>.to_json      <span class="c"># =&gt; %(&quot;initial&quot;)</span>
+<span class="t">Stages</span><span class="t">::</span><span class="t">SECOND_STAGE</span>.to_json <span class="c"># =&gt; %(&quot;second_stage&quot;)</span></code></pre>
+
+<p>For flags enums, the serialization is a JSON array including every flagged
+member individually serialized in the same way as a member of a non-flags enum.
+<code>None</code> is serialized as an empty array, <code>All</code> as an array containing
+all members.</p>
+
+<pre><code class="language-crystal">@[<span class="t">Flags</span>]
+<span class="k">enum</span> <span class="t">Sides</span>
+  <span class="t">LEFT</span>
+  <span class="t">RIGHT</span>
+<span class="k">end</span>
+
+<span class="t">Sides</span><span class="t">::</span><span class="t">LEFT</span>.to_json                  <span class="c"># =&gt; %([&quot;left&quot;])</span>
+(<span class="t">Sides</span><span class="t">::</span><span class="t">LEFT</span> <span class="o">|</span> <span class="t">Sides</span><span class="t">::</span><span class="t">RIGHT</span>).to_json <span class="c"># =&gt; %([&quot;left&quot;,&quot;right&quot;])</span>
+<span class="t">Sides</span><span class="t">::</span><span class="t">All</span>.to_json                   <span class="c"># =&gt; %([&quot;left&quot;,&quot;right&quot;])</span>
+<span class="t">Sides</span><span class="t">::</span><span class="t">None</span>.to_json                  <span class="c"># =&gt; %([])</span></code></pre>
+
+<p><code>ValueConverter.to_json</code> offers a different serialization strategy based on the
+member value.</p>
+        </div>
+      
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/fc2985bf9a6f0a78819828fb585d05b818d1d129/src/swagger/objects/parameter.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/61356d71d75914751a9c96dcdc24742fe0b6cb83/src/swagger/objects/parameter.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
