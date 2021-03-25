@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 0.36.1">
-<meta name="crystal_docs.project_version" content="refs/tags/v0.3.0">
+<meta name="crystal_docs.project_version" content="refs/heads/master">
 <meta name="crystal_docs.project_name" content="swagger">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="swagger">
-  <title>Swagger::Object - swagger refs/tags/v0.3.0</title>
+  <title>Swagger::Object - swagger refs/heads/master</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        refs/tags/v0.3.0
+        refs/heads/master
       </span>
     </div>
   </div>
@@ -375,12 +375,12 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> Swagger::Object
+  <span class="kind">class</span> Swagger::Object
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Swagger/Object.html">Swagger::Object</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Swagger/Object.html">Swagger::Object</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -429,7 +429,7 @@
   </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L15" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L15" target="_blank">
         swagger/object.cr
       </a>
     
@@ -451,7 +451,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(name:String,type:String,properties:Array(Property))-class-method" class="signature"><strong>.new</strong>(name : String, type : String, properties : Array(Property))</a>
+        <a href="#new(name:String,type:String,properties:Array(Property)?=nil,items:self%7CString?=nil)-class-method" class="signature"><strong>.new</strong>(name : String, type : String, properties : Array(Property)? = <span class="n">nil</span>, items : <span class="k">self</span> | String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -472,6 +472,16 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#items:String%7CSwagger::Object%7CNil-instance-method" class="signature"><strong>#items</strong> : String | Swagger::Object | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#items=(items)-instance-method" class="signature"><strong>#items=</strong>(items)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#name:String-instance-method" class="signature"><strong>#name</strong> : String</a>
         
       </li>
@@ -482,7 +492,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#properties:Array(Swagger::Property)-instance-method" class="signature"><strong>#properties</strong> : Array(Swagger::Property)</a>
+        <a href="#properties:Array(Swagger::Property)?-instance-method" class="signature"><strong>#properties</strong> : Array(Swagger::Property)?</a>
         
       </li>
     
@@ -529,16 +539,6 @@
 
 
   
-    
-
-
-    
-
-
-    
-
-
-  
 </div>
 
 
@@ -551,18 +551,18 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(name:String,type:String,properties:Array(Property))-class-method">
+    <div class="entry-detail" id="new(name:String,type:String,properties:Array(Property)?=nil,items:self|String?=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(name : String, type : String, properties : Array(<a href="../Swagger/Property.html">Property</a>))
+        def self.<strong>new</strong>(name : String, type : String, properties : Array(<a href="../Swagger/Property.html">Property</a>)? = <span class="n">nil</span>, items : <span class="k">self</span> | String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new(name:String,type:String,properties:Array(Property))-class-method">#</a>
+        <a class="method-permalink" href="#new(name:String,type:String,properties:Array(Property)?=nil,items:self%7CString?=nil)-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L21" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -581,6 +581,38 @@
     Instance Method Detail
   </h2>
   
+    <div class="entry-detail" id="items:String|Swagger::Object|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>items</strong> : String | <a href="../Swagger/Object.html">Swagger::Object</a> | Nil
+
+        <a class="method-permalink" href="#items:String%7CSwagger::Object%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="items=(items)-instance-method">
+      <div class="signature">
+        
+        def <strong>items=</strong>(items)
+
+        <a class="method-permalink" href="#items=(items)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
     <div class="entry-detail" id="name:String-instance-method">
       <div class="signature">
         
@@ -592,7 +624,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -608,23 +640,23 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L16" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="properties:Array(Swagger::Property)-instance-method">
+    <div class="entry-detail" id="properties:Array(Swagger::Property)?-instance-method">
       <div class="signature">
         
-        def <strong>properties</strong> : Array(<a href="../Swagger/Property.html">Swagger::Property</a>)
+        def <strong>properties</strong> : Array(<a href="../Swagger/Property.html">Swagger::Property</a>)?
 
-        <a class="method-permalink" href="#properties:Array(Swagger::Property)-instance-method">#</a>
+        <a class="method-permalink" href="#properties:Array(Swagger::Property)?-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -640,7 +672,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -656,7 +688,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -672,7 +704,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/v0.3.0/src/swagger/object.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/object.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
