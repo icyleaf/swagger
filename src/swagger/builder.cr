@@ -100,19 +100,59 @@ module Swagger
     private def build_components(security_schemes)
       schemas = if objects = @objects
                   schema = objects.each_with_object(Hash(String, Schema).new) do |object, schemas_obj|
-                    properties = object.properties.each_with_object(Hash(String, Objects::Property).new) do |property, prop_obj|
-                      prop_obj[property.name] = Objects::Property.new(
-                        type: property.type,
-                        description: property.description,
-                        example: property.example
-                      )
-                    end
-
-                    schemas_obj[object.name] = Schema.new(type: object.type, properties: properties)
+                    schemas_obj[object.name.not_nil!] = build_schema(object)
                   end
                 end
 
       Objects::Components.new(security_schemes: security_schemes, schemas: schemas)
+    end
+
+    private def build_schema(object : Object) : Objects::Schema
+      if object.type == "array"
+        if items = object.items
+          if items.is_a?(String)
+            schema_items = Objects::Schema.use_reference(items)
+          else
+            schema_items = build_schema(items)
+          end
+
+          Objects::Schema.new(type: object.type, items: schema_items)
+        else
+          raise %(OpenAPI v3 requires "items" to be specified when the type is "array")
+        end
+      else
+        properties = object.properties.try &.each_with_object(Hash(String, Objects::Property).new) do |property, prop_obj|
+          prop_obj[property.name] = build_property(property)
+        end
+        Objects::Schema.new(type: object.type, properties: properties)
+      end
+    end
+
+    private def build_property(property : Property) : Objects::Property
+      if property.type == "array"
+        if items = property.items
+          if items.is_a?(String)
+            prop_items = Objects::Schema.use_reference(items)
+          else
+            prop_items = build_schema(items)
+          end
+
+          Objects::Property.new(
+            type: property.type,
+            description: property.description,
+            example: property.example,
+            items: prop_items,
+          )
+        else
+          raise %(OpenAPI v3 requires "items" to be specified when the type is "array")
+        end
+      else
+        Objects::Property.new(
+          type: property.type,
+          description: property.description,
+          example: property.example,
+        )
+      end
     end
 
     def build_security(security_schemes)

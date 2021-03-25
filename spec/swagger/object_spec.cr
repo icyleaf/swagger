@@ -13,7 +13,33 @@ describe Swagger::Object do
       raw = Swagger::Object.new("User", "object", properties)
       raw.name.should eq "User"
       raw.type.should eq "object"
-      raw.properties.size.should eq 5
+      raw.properties.should_not be_nil
+      raw.properties.try &.size.should eq 5
+    end
+
+    it "should supports the type array with items as an object" do
+      raw = Swagger::Object.new(
+        "CommentList",
+        "array",
+        items: Swagger::Object.new(
+          "Comment",
+          "object",
+        )
+      )
+      raw.type.should eq("array")
+      raw.properties.should be_nil
+      raw.items.class.should eq(Swagger::Object)
+    end
+
+    it "should supports the type array with items as a ref" do
+      raw = Swagger::Object.new(
+        "CommentList",
+        "array",
+        items: "Comment",
+      )
+      raw.type.should eq("array")
+      raw.properties.should be_nil
+      raw.items.should eq("Comment")
     end
   end
 end
