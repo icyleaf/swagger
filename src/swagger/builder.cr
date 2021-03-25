@@ -129,7 +129,9 @@ module Swagger
     end
 
     private def build_property(property : Property) : Objects::Property
-      if property.type == "array"
+      if ref = property.ref
+        Objects::Property.use_reference(ref)
+      elsif property.type == "array"
         if items = property.items
           if items.is_a?(String)
             prop_items = Objects::Schema.use_reference(items)
