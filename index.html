@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="refs/heads/master">
 <meta name="crystal_docs.project_name" content="swagger">
 
@@ -373,37 +373,30 @@
 
 
 <div class="main-content">
-<h1><a id="swagger" class="anchor" href="#swagger">
-  <svg class="octicon-link" aria-hidden="true">
+<h1><a id="swagger" class="anchor" href="#swagger">  <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Swagger</h1>
-
-<p><a href="https://github.com/crystal-lang/crystal"><img src="https://img.shields.io/badge/language-crystal-776791.svg" alt="Language"/></a>
-<a href="https://github.com/icyleaf/swagger/blob/master/CHANGELOG.md"><img src="https://img.shields.io/github/tag/icyleaf/swagger.svg" alt="Tag"/></a>
-<a href="https://github.com/icyleaf/swagger/"><img src="https://img.shields.io/badge/source-github-brightgreen.svg" alt="Source"/></a>
-<a href="https://icyleaf.github.io/swagger/"><img src="https://img.shields.io/badge/document-api-brightgreen.svg" alt="Document"/></a>
-<a href="https://circleci.com/gh/icyleaf/swagger"><img src="https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat" alt="Build Status"/></a></p>
-
+<p><a href="https://github.com/crystal-lang/crystal"><img src="https://img.shields.io/badge/language-crystal-776791.svg" alt="Language" /></a>
+<a href="https://github.com/icyleaf/swagger/blob/master/CHANGELOG.md"><img src="https://img.shields.io/github/tag/icyleaf/swagger.svg" alt="Tag" /></a>
+<a href="https://github.com/icyleaf/swagger/"><img src="https://img.shields.io/badge/source-github-brightgreen.svg" alt="Source" /></a>
+<a href="https://icyleaf.github.io/swagger/"><img src="https://img.shields.io/badge/document-api-brightgreen.svg" alt="Document" /></a>
+<a href="https://circleci.com/gh/icyleaf/swagger"><img src="https://img.shields.io/circleci/project/github/icyleaf/swagger/master.svg?style=flat" alt="Build Status" /></a></p>
 <p>Swagger is a low-level library which generates a document compatible with <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md">Swagger / OpenAPI Spec 3.0.3</a>,
 and wrapped many friendly APIs let developer understand and use it easier.</p>
-
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Installation</h2>
-
 <pre><code class="language-yaml">dependencies:
   swagger:
     github: icyleaf/swagger</code></pre>
-
 <h2><a id="quick-look" class="anchor" href="#quick-look">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Quick look</h2>
-
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;swagger&quot;</span>
 
 builder <span class="o">=</span> <span class="t">Swagger</span><span class="t">::</span><span class="t">Builder</span>.<span class="k">new</span>(
@@ -436,34 +429,27 @@ builder.add(<span class="t">Swagger</span><span class="t">::</span><span class="
 
 document <span class="o">=</span> builder.built
 puts document.to_json</code></pre>
-
 <h2><a id="structure" class="anchor" href="#structure">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Structure</h2>
-
 <p>Structure in <code>src</code> directory:</p>
-
 <pre><code class="language-crystal">.
 ├── xxx.cr                        <span class="c"># Friendly APIs</span>
 ├── http                          <span class="c"># HTTP assets and libraries</span>
 └── objects                       <span class="c"># OpenAPI objects</span></code></pre>
-
 <h2><a id="running-on-web" class="anchor" href="#running-on-web">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Running on web</h2>
-
 <p>Swagger provids a built-in web server, if you have no idea how to preview it:</p>
-
 <h3><a id="" class="anchor" href="#">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a></h3>
-
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;swagger&quot;</span>
 <span class="k">require</span> <span class="s">&quot;swagger/http/server&quot;</span>
 
@@ -472,71 +458,91 @@ document <span class="o">=</span> builder.built
 
 <span class="c"># Run web server</span>
 <span class="t">Swagger</span><span class="t">::</span><span class="t">HTTP</span><span class="t">::</span><span class="t">Server</span>.run(document)</code></pre>
-
 <h2><a id="integrating" class="anchor" href="#integrating">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Integrating</h2>
-
 <p>Swagger has two HTTP handlers which you can integrate it to bult-in HTTP Server and mostly frameworks (like kemal, amber, lucky etc):</p>
-
-<ul><li>Swagger::HTTP::APIHandler</li><li>Swagger::HTTP::WebHandler</li></ul>
-
+<ul>
+<li>Swagger::HTTP::APIHandler</li>
+<li>Swagger::HTTP::WebHandler</li>
+</ul>
 <h2><a id="examples" class="anchor" href="#examples">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Examples</h2>
-
 <p>See more <a href="/examples">examples</a>.</p>
-
 <h2><a id="todo" class="anchor" href="#todo">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Todo</h2>
-
-<ul><li>[x] openapi</li><li>[x] Info Object</li><li>[x] Paths Object</li><ul><li>[x] PathItem Object</li><li>[x] Parameter Object</li><li>[x] RequestBody Object</li><li>[x] Responses Object</li><li>[x] Security Object</li><li>[x] Tag Object</li></ul><li>[x] Tags Object</li><li>[x] Servers Objec</li><ul><li>[x] ServerVariables Object</li></ul><li>[x] Security Object</li><li>[x] Components Object</li><ul><li>[x] Schemas Object</li><li>[x] SecuritySchemes Object</li><li>[x] Basic</li><li>[x] Bearer (include JWT)</li><li>[x] APIKey</li><li>[x] OAuth2</li></ul><li>[x] ExternalDocs Object</li></ul>
-
-<h2><a id="donate" class="anchor" href="#donate">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Donate</h2>
-
-<p>Swagger is a open source, collaboratively funded project. If you run a business and are using Swagger in a revenue-generating product,
-it would make business sense to sponsor Swagger development. Individual users are also welcome to make a one time donation
-if Swagger has helped you in your work or personal projects.</p>
-
-<p>You can donate via <a href="https://www.paypal.me/icyleaf/5">Paypal</a>.</p>
-
+<ul>
+<li>[x] openapi</li>
+<li>[x] Info Object</li>
+<li>[x] Paths Object
+<ul>
+<li>[x] PathItem Object
+<ul>
+<li>[x] Parameter Object</li>
+<li>[x] RequestBody Object</li>
+<li>[x] Responses Object</li>
+<li>[x] Security Object</li>
+<li>[x] Tag Object</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[x] Tags Object</li>
+<li>[x] Servers Objec
+<ul>
+<li>[x] ServerVariables Object</li>
+</ul>
+</li>
+<li>[x] Security Object</li>
+<li>[x] Components Object
+<ul>
+<li>[x] Schemas Object</li>
+<li>[x] SecuritySchemes Object
+<ul>
+<li>[x] Basic</li>
+<li>[x] Bearer (include JWT)</li>
+<li>[x] APIKey</li>
+<li>[x] OAuth2</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[x] ExternalDocs Object</li>
+</ul>
 <h2><a id="how-to-contribute" class="anchor" href="#how-to-contribute">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>How to Contribute</h2>
-
 <p>Your contributions are always welcome! Please submit a pull request or create an issue to add a new question, bug or feature to the list.</p>
-
 <p>Here is a throughput graph of the repository for the last few weeks:</p>
-
 <p>All <a href="https://github.com/icyleaf/swagger/graphs/contributors">Contributors</a> are on the wall.</p>
-
 <h2><a id="you-may-also-like" class="anchor" href="#you-may-also-like">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>You may also like</h2>
-
-<ul><li><a href="https://github.com/icyleaf/halite">halite</a> - HTTP Requests Client with a chainable REST API, built-in sessions and middlewares.</li><li><a href="https://github.com/icyleaf/totem">totem</a> - Load and parse a configuration file or string in JSON, YAML, dotenv formats.</li><li><a href="https://github.com/icyleaf/markd">markd</a> - Yet another markdown parser built for speed, Compliant to CommonMark specification.</li><li><a href="https://github.com/icyleaf/poncho">poncho</a> - A .env parser/loader improved for performance.</li><li><a href="https://github.com/icyleaf/popcorn">popcorn</a> - Easy and Safe casting from one type to another.</li><li><a href="https://github.com/icyleaf/fast-crystal">fast-crystal</a> - 💨 Writing Fast Crystal 😍 -- Collect Common Crystal idioms.</li></ul>
-
+<ul>
+<li><a href="https://github.com/icyleaf/halite">halite</a> - HTTP Requests Client with a chainable REST API, built-in sessions and middlewares.</li>
+<li><a href="https://github.com/icyleaf/totem">totem</a> - Load and parse a configuration file or string in JSON, YAML, dotenv formats.</li>
+<li><a href="https://github.com/icyleaf/markd">markd</a> - Yet another markdown parser built for speed, Compliant to CommonMark specification.</li>
+<li><a href="https://github.com/icyleaf/poncho">poncho</a> - A .env parser/loader improved for performance.</li>
+<li><a href="https://github.com/icyleaf/popcorn">popcorn</a> - Easy and Safe casting from one type to another.</li>
+<li><a href="https://github.com/icyleaf/fast-crystal">fast-crystal</a> - 💨 Writing Fast Crystal 😍 -- Collect Common Crystal idioms.</li>
+</ul>
 <h2><a id="license" class="anchor" href="#license">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>License</h2>
-
 <p><a href="https://github.com/icyleaf/swagger/blob/master/LICENSE">MIT License</a> © icyleaf</p>
 </div>
 </body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="refs/heads/master">
 <meta name="crystal_docs.project_name" content="swagger">
 
@@ -395,7 +395,6 @@
   </h2>
 
   <p>Define a controller</p>
-
 <pre><code class="language-crystal"><span class="t">Swagger</span><span class="t">::</span><span class="t">Controller</span>.<span class="k">new</span>(<span class="s">&quot;Users&quot;</span>, <span class="s">&quot;User APIs&quot;</span>, [
   <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users&quot;</span>),
   <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>.<span class="k">new</span>(<span class="s">&quot;get&quot;</span>, <span class="s">&quot;/users/{id}&quot;</span>),
@@ -427,7 +426,7 @@
   </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L16" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L16" target="_blank">
         swagger/controller.cr
       </a>
     
@@ -449,7 +448,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(name:String,description:String,actions=[]ofSwagger::Action,external_docs:Objects::ExternalDocs?=nil)-class-method" class="signature"><strong>.new</strong>(name : String, description : String, actions = <span class="o">[]</span> <span class="k">of</span> <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>, external_docs : Objects::ExternalDocs? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AString%2Cdescription%3AString%2Cactions%3D%5B%5DofSwagger%3A%3AAction%2Cexternal_docs%3AObjects%3A%3AExternalDocs%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, description : String, actions = <span class="o">[]</span> <span class="k">of</span> <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>, external_docs : Objects::ExternalDocs? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -470,42 +469,42 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#actions:Array(Swagger::Action)-instance-method" class="signature"><strong>#actions</strong> : Array(Swagger::Action)</a>
+        <a href="#actions%3AArray%28Swagger%3A%3AAction%29-instance-method" class="signature"><strong>#actions</strong> : Array(Swagger::Action)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#actions=(actions)-instance-method" class="signature"><strong>#actions=</strong>(actions)</a>
+        <a href="#actions%3D%28actions%29-instance-method" class="signature"><strong>#actions=</strong>(actions)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description:String-instance-method" class="signature"><strong>#description</strong> : String</a>
+        <a href="#description%3AString-instance-method" class="signature"><strong>#description</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description=(description)-instance-method" class="signature"><strong>#description=</strong>(description)</a>
+        <a href="#description%3D%28description%29-instance-method" class="signature"><strong>#description=</strong>(description)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#external_docs:Swagger::Objects::ExternalDocs?-instance-method" class="signature"><strong>#external_docs</strong> : Swagger::Objects::ExternalDocs?</a>
+        <a href="#external_docs%3ASwagger%3A%3AObjects%3A%3AExternalDocs%3F-instance-method" class="signature"><strong>#external_docs</strong> : Swagger::Objects::ExternalDocs?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#external_docs=(external_docs)-instance-method" class="signature"><strong>#external_docs=</strong>(external_docs)</a>
+        <a href="#external_docs%3D%28external_docs%29-instance-method" class="signature"><strong>#external_docs=</strong>(external_docs)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name:String-instance-method" class="signature"><strong>#name</strong> : String</a>
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#name=(name)-instance-method" class="signature"><strong>#name=</strong>(name)</a>
+        <a href="#name%3D%28name%29-instance-method" class="signature"><strong>#name=</strong>(name)</a>
         
       </li>
     
@@ -564,13 +563,13 @@
         
         def self.<strong>new</strong>(name : String, description : String, actions = <span class="o">[]</span> <span class="k">of</span> <span class="t">Swagger</span><span class="t">::</span><span class="t">Action</span>, external_docs : <a href="../Swagger/Objects/ExternalDocs.html">Objects::ExternalDocs</a>? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new(name:String,description:String,actions=[]ofSwagger::Action,external_docs:Objects::ExternalDocs?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cdescription%3AString%2Cactions%3D%5B%5DofSwagger%3A%3AAction%2Cexternal_docs%3AObjects%3A%3AExternalDocs%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L22" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -594,13 +593,13 @@
         
         def <strong>actions</strong> : Array(<a href="../Swagger/Action.html">Swagger::Action</a>)
 
-        <a class="method-permalink" href="#actions:Array(Swagger::Action)-instance-method">#</a>
+        <a class="method-permalink" href="#actions%3AArray%28Swagger%3A%3AAction%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -610,13 +609,13 @@
         
         def <strong>actions=</strong>(actions)
 
-        <a class="method-permalink" href="#actions=(actions)-instance-method">#</a>
+        <a class="method-permalink" href="#actions%3D%28actions%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L19" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -626,13 +625,13 @@
         
         def <strong>description</strong> : String
 
-        <a class="method-permalink" href="#description:String-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -642,13 +641,13 @@
         
         def <strong>description=</strong>(description)
 
-        <a class="method-permalink" href="#description=(description)-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28description%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -658,13 +657,13 @@
         
         def <strong>external_docs</strong> : <a href="../Swagger/Objects/ExternalDocs.html">Swagger::Objects::ExternalDocs</a>?
 
-        <a class="method-permalink" href="#external_docs:Swagger::Objects::ExternalDocs?-instance-method">#</a>
+        <a class="method-permalink" href="#external_docs%3ASwagger%3A%3AObjects%3A%3AExternalDocs%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -674,13 +673,13 @@
         
         def <strong>external_docs=</strong>(external_docs)
 
-        <a class="method-permalink" href="#external_docs=(external_docs)-instance-method">#</a>
+        <a class="method-permalink" href="#external_docs%3D%28external_docs%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L20" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L20" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -690,13 +689,13 @@
         
         def <strong>name</strong> : String
 
-        <a class="method-permalink" href="#name:String-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -706,13 +705,13 @@
         
         def <strong>name=</strong>(name)
 
-        <a class="method-permalink" href="#name=(name)-instance-method">#</a>
+        <a class="method-permalink" href="#name%3D%28name%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/controller.cr#L17" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/controller.cr#L17" target="_blank">View source</a>]
         
       </div>
     </div>

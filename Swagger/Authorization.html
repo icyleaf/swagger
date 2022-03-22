@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 0.36.1">
+<meta name="generator" content="Crystal Docs 1.2.2">
 <meta name="crystal_docs.project_version" content="refs/heads/master">
 <meta name="crystal_docs.project_name" content="swagger">
 
@@ -395,7 +395,6 @@
   </h2>
 
   <p>Define a authentication</p>
-
 <p>Avaibled authentication in <code><a href="../Swagger/Authorization/Type.html">Type</a></code></p>
 
 
@@ -421,7 +420,7 @@
   </h2>
   
     
-      <a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L5" target="_blank">
+      <a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L5" target="_blank">
         swagger/authorization.cr
       </a>
     
@@ -443,12 +442,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new(name:String,description:String?=nil,api_key_name:String?=nil,bearer_format:String?=nil,parameter_location:String?=nil)-class-method" class="signature"><strong>.new</strong>(name : String, description : String? = <span class="n">nil</span>, api_key_name : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AString%2Cdescription%3AString%3F%3Dnil%2Capi_key_name%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : String, description : String? = <span class="n">nil</span>, api_key_name : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new(name:Type,description:String?=nil,api_key_name:String?=nil,bearer_format:String?=nil,parameter_location:String?=nil,oauth2_flows:Array(OAuth2Flow)?=nil)-class-method" class="signature"><strong>.new</strong>(name : Type, description : String? = <span class="n">nil</span>, api_key_name : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, oauth2_flows : Array(OAuth2Flow)? = <span class="n">nil</span>)</a>
+        <a href="#new%28name%3AType%2Cdescription%3AString%3F%3Dnil%2Capi_key_name%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Coauth2_flows%3AArray%28OAuth2Flow%29%3F%3Dnil%29-class-method" class="signature"><strong>.new</strong>(name : Type, description : String? = <span class="n">nil</span>, api_key_name : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, oauth2_flows : Array(OAuth2Flow)? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -467,54 +466,54 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#api_key(*,name:String,location=&quot;header&quot;,description:String?=nil)-class-method" class="signature"><strong>.api_key</strong>(*, name : String, location = <span class="s">&quot;header&quot;</span>, description : String? = <span class="n">nil</span>)</a>
+        <a href="#api_key%28%2A%2Cname%3AString%2Clocation%3D%22header%22%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.api_key</strong>(*, name : String, location = <span class="s">&quot;header&quot;</span>, description : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Access with api key auth.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#basic(description:String?=nil)-class-method" class="signature"><strong>.basic</strong>(description : String? = <span class="n">nil</span>)</a>
+        <a href="#basic%28description%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.basic</strong>(description : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Access with basic auth.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bearer(*,format:String?=nil,description:String?=nil)-class-method" class="signature"><strong>.bearer</strong>(*, format : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)</a>
+        <a href="#bearer%28%2A%2Cformat%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.bearer</strong>(*, format : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Access with bearer auth.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#cookie(*,name:String,description:String?=nil)-class-method" class="signature"><strong>.cookie</strong>(*, name : String, description : String? = <span class="n">nil</span>)</a>
+        <a href="#cookie%28%2A%2Cname%3AString%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.cookie</strong>(*, name : String, description : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Access with cookie auth.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#jwt(description:String?=nil)-class-method" class="signature"><strong>.jwt</strong>(description : String? = <span class="n">nil</span>)</a>
+        <a href="#jwt%28description%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.jwt</strong>(description : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Access with jwt auth.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#none(description:String?=nil)-class-method" class="signature"><strong>.none</strong>(description : String? = <span class="n">nil</span>)</a>
+        <a href="#none%28description%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.none</strong>(description : String? = <span class="n">nil</span>)</a>
         
           <div class="summary"><p>Access without any authorization.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#oauth2(*,grant_typename:String,authorization_url:String?=nil,token_url:String?=nil,refresh_url:String?=nil,scopes:Hash(String,String)?=nil,description:String?=nil)-class-method" class="signature"><strong>.oauth2</strong>(*, grant_type name : String, authorization_url : String? = <span class="n">nil</span>, token_url : String? = <span class="n">nil</span>, refresh_url : String? = <span class="n">nil</span>, scopes : Hash(String, String)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)</a>
+        <a href="#oauth2%28%2A%2Cgrant_typename%3AString%2Cauthorization_url%3AString%3F%3Dnil%2Ctoken_url%3AString%3F%3Dnil%2Crefresh_url%3AString%3F%3Dnil%2Cscopes%3AHash%28String%2CString%29%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.oauth2</strong>(*, grant_type name : String, authorization_url : String? = <span class="n">nil</span>, token_url : String? = <span class="n">nil</span>, refresh_url : String? = <span class="n">nil</span>, scopes : Hash(String, String)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#oauth2(*,flows:Array(OAuth2Flow)?=nil,description:String?=nil)-class-method" class="signature"><strong>.oauth2</strong>(*, flows : Array(OAuth2Flow)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)</a>
+        <a href="#oauth2%28%2A%2Cflows%3AArray%28OAuth2Flow%29%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%29-class-method" class="signature"><strong>.oauth2</strong>(*, flows : Array(OAuth2Flow)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -533,32 +532,32 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#api_key_name:String?-instance-method" class="signature"><strong>#api_key_name</strong> : String?</a>
+        <a href="#api_key_name%3AString%3F-instance-method" class="signature"><strong>#api_key_name</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#api_key_name=(api_key_name)-instance-method" class="signature"><strong>#api_key_name=</strong>(api_key_name)</a>
+        <a href="#api_key_name%3D%28api_key_name%29-instance-method" class="signature"><strong>#api_key_name=</strong>(api_key_name)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bearer_format:String?-instance-method" class="signature"><strong>#bearer_format</strong> : String?</a>
+        <a href="#bearer_format%3AString%3F-instance-method" class="signature"><strong>#bearer_format</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#bearer_format=(bearer_format)-instance-method" class="signature"><strong>#bearer_format=</strong>(bearer_format)</a>
+        <a href="#bearer_format%3D%28bearer_format%29-instance-method" class="signature"><strong>#bearer_format=</strong>(bearer_format)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description:String?-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#description=(description)-instance-method" class="signature"><strong>#description=</strong>(description)</a>
+        <a href="#description%3D%28description%29-instance-method" class="signature"><strong>#description=</strong>(description)</a>
         
       </li>
     
@@ -570,34 +569,34 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#name:String-instance-method" class="signature"><strong>#name</strong> : String</a>
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
         
           <div class="summary"><p>Transform type to String typed and downcase of value</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#oauth2_flows:Array(Swagger::OAuth2Flow)?-instance-method" class="signature"><strong>#oauth2_flows</strong> : Array(Swagger::OAuth2Flow)?</a>
+        <a href="#oauth2_flows%3AArray%28Swagger%3A%3AOAuth2Flow%29%3F-instance-method" class="signature"><strong>#oauth2_flows</strong> : Array(Swagger::OAuth2Flow)?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#oauth2_flows=(oauth2_flows)-instance-method" class="signature"><strong>#oauth2_flows=</strong>(oauth2_flows)</a>
+        <a href="#oauth2_flows%3D%28oauth2_flows%29-instance-method" class="signature"><strong>#oauth2_flows=</strong>(oauth2_flows)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parameter_location:String?-instance-method" class="signature"><strong>#parameter_location</strong> : String?</a>
+        <a href="#parameter_location%3AString%3F-instance-method" class="signature"><strong>#parameter_location</strong> : String?</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#parameter_location=(parameter_location)-instance-method" class="signature"><strong>#parameter_location=</strong>(parameter_location)</a>
+        <a href="#parameter_location%3D%28parameter_location%29-instance-method" class="signature"><strong>#parameter_location=</strong>(parameter_location)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#type:Type-instance-method" class="signature"><strong>#type</strong> : Type</a>
+        <a href="#type%3AType-instance-method" class="signature"><strong>#type</strong> : Type</a>
         
       </li>
     
@@ -656,13 +655,13 @@
         
         def self.<strong>new</strong>(name : String, description : String? = <span class="n">nil</span>, api_key_name : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new(name:String,description:String?=nil,api_key_name:String?=nil,bearer_format:String?=nil,parameter_location:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cdescription%3AString%3F%3Dnil%2Capi_key_name%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L61" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L61" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -672,13 +671,13 @@
         
         def self.<strong>new</strong>(name : <a href="../Swagger/Authorization/Type.html">Type</a>, description : String? = <span class="n">nil</span>, api_key_name : String? = <span class="n">nil</span>, bearer_format : String? = <span class="n">nil</span>, parameter_location : String? = <span class="n">nil</span>, oauth2_flows : Array(<a href="../Swagger/OAuth2Flow.html">OAuth2Flow</a>)? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new(name:Type,description:String?=nil,api_key_name:String?=nil,bearer_format:String?=nil,parameter_location:String?=nil,oauth2_flows:Array(OAuth2Flow)?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AType%2Cdescription%3AString%3F%3Dnil%2Capi_key_name%3AString%3F%3Dnil%2Cbearer_format%3AString%3F%3Dnil%2Cparameter_location%3AString%3F%3Dnil%2Coauth2_flows%3AArray%28OAuth2Flow%29%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L73" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L73" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -700,7 +699,7 @@
         
         def self.<strong>api_key</strong>(*, name : String, location = <span class="s">&quot;header&quot;</span>, description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#api_key(*,name:String,location=&quot;header&quot;,description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#api_key%28%2A%2Cname%3AString%2Clocation%3D%22header%22%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -711,7 +710,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -721,7 +720,7 @@
         
         def self.<strong>basic</strong>(description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#basic(description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#basic%28description%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -732,7 +731,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L23" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L23" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -742,7 +741,7 @@
         
         def self.<strong>bearer</strong>(*, format : String? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#bearer(*,format:String?=nil,description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#bearer%28%2A%2Cformat%3AString%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -753,7 +752,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L33" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -763,7 +762,7 @@
         
         def self.<strong>cookie</strong>(*, name : String, description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#cookie(*,name:String,description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#cookie%28%2A%2Cname%3AString%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -774,7 +773,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L38" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L38" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -784,7 +783,7 @@
         
         def self.<strong>jwt</strong>(description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#jwt(description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#jwt%28description%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -795,7 +794,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L28" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -805,7 +804,7 @@
         
         def self.<strong>none</strong>(description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#none(description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#none%28description%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
         <div class="doc">
@@ -816,7 +815,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -826,13 +825,13 @@
         
         def self.<strong>oauth2</strong>(*, grant_type name : String, authorization_url : String? = <span class="n">nil</span>, token_url : String? = <span class="n">nil</span>, refresh_url : String? = <span class="n">nil</span>, scopes : Hash(String, String)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#oauth2(*,grant_typename:String,authorization_url:String?=nil,token_url:String?=nil,refresh_url:String?=nil,scopes:Hash(String,String)?=nil,description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#oauth2%28%2A%2Cgrant_typename%3AString%2Cauthorization_url%3AString%3F%3Dnil%2Ctoken_url%3AString%3F%3Dnil%2Crefresh_url%3AString%3F%3Dnil%2Cscopes%3AHash%28String%2CString%29%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L47" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L47" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -842,13 +841,13 @@
         
         def self.<strong>oauth2</strong>(*, flows : Array(<a href="../Swagger/OAuth2Flow.html">OAuth2Flow</a>)? = <span class="n">nil</span>, description : String? = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#oauth2(*,flows:Array(OAuth2Flow)?=nil,description:String?=nil)-class-method">#</a>
+        <a class="method-permalink" href="#oauth2%28%2A%2Cflows%3AArray%28OAuth2Flow%29%3F%3Dnil%2Cdescription%3AString%3F%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -870,13 +869,13 @@
         
         def <strong>api_key_name</strong> : String?
 
-        <a class="method-permalink" href="#api_key_name:String?-instance-method">#</a>
+        <a class="method-permalink" href="#api_key_name%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -886,13 +885,13 @@
         
         def <strong>api_key_name=</strong>(api_key_name)
 
-        <a class="method-permalink" href="#api_key_name=(api_key_name)-instance-method">#</a>
+        <a class="method-permalink" href="#api_key_name%3D%28api_key_name%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L68" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L68" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -902,13 +901,13 @@
         
         def <strong>bearer_format</strong> : String?
 
-        <a class="method-permalink" href="#bearer_format:String?-instance-method">#</a>
+        <a class="method-permalink" href="#bearer_format%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -918,13 +917,13 @@
         
         def <strong>bearer_format=</strong>(bearer_format)
 
-        <a class="method-permalink" href="#bearer_format=(bearer_format)-instance-method">#</a>
+        <a class="method-permalink" href="#bearer_format%3D%28bearer_format%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -934,13 +933,13 @@
         
         def <strong>description</strong> : String?
 
-        <a class="method-permalink" href="#description:String?-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -950,13 +949,13 @@
         
         def <strong>description=</strong>(description)
 
-        <a class="method-permalink" href="#description=(description)-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28description%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L67" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -972,7 +971,6 @@
         <div class="doc">
           
           <p>Transform name to unique key name</p>
-
 <pre><code class="language-crystal"><span class="t">Swagger</span><span class="t">::</span><span class="t">Authorization</span>.basic.key                        <span class="c"># =&gt; &quot;basic_auth&quot;</span>
 <span class="t">Swagger</span><span class="t">::</span><span class="t">Authorization</span>.bearer.key                       <span class="c"># =&gt; &quot;bearer_auth&quot;</span>
 <span class="t">Swagger</span><span class="t">::</span><span class="t">Authorization</span>.bearer(format: <span class="s">&quot;custom&quot;</span>).key     <span class="c"># =&gt; &quot;custom_auth&quot;</span>
@@ -984,7 +982,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L97" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L97" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -994,7 +992,7 @@
         
         def <strong>name</strong> : String
 
-        <a class="method-permalink" href="#name:String-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1005,7 +1003,7 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L83" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1015,13 +1013,13 @@
         
         def <strong>oauth2_flows</strong> : Array(<a href="../Swagger/OAuth2Flow.html">Swagger::OAuth2Flow</a>)?
 
-        <a class="method-permalink" href="#oauth2_flows:Array(Swagger::OAuth2Flow)?-instance-method">#</a>
+        <a class="method-permalink" href="#oauth2_flows%3AArray%28Swagger%3A%3AOAuth2Flow%29%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1031,13 +1029,13 @@
         
         def <strong>oauth2_flows=</strong>(oauth2_flows)
 
-        <a class="method-permalink" href="#oauth2_flows=(oauth2_flows)-instance-method">#</a>
+        <a class="method-permalink" href="#oauth2_flows%3D%28oauth2_flows%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L71" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1047,13 +1045,13 @@
         
         def <strong>parameter_location</strong> : String?
 
-        <a class="method-permalink" href="#parameter_location:String?-instance-method">#</a>
+        <a class="method-permalink" href="#parameter_location%3AString%3F-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L70" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1063,13 +1061,13 @@
         
         def <strong>parameter_location=</strong>(parameter_location)
 
-        <a class="method-permalink" href="#parameter_location=(parameter_location)-instance-method">#</a>
+        <a class="method-permalink" href="#parameter_location%3D%28parameter_location%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L70" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L70" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1079,13 +1077,13 @@
         
         def <strong>type</strong> : <a href="../Swagger/Authorization/Type.html">Type</a>
 
-        <a class="method-permalink" href="#type:Type-instance-method">#</a>
+        <a class="method-permalink" href="#type%3AType-instance-method">#</a>
       </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/icyleaf/swagger/blob/7a828ad30925915be8cd67b29a0bf760384b12a2/src/swagger/authorization.cr#L78" target="_blank">View source</a>]
+          [<a href="https://github.com/icyleaf/swagger/blob/c94b4cd79e30e303a48cb53d48de721d93013202/src/swagger/authorization.cr#L78" target="_blank">View source</a>]
         
       </div>
     </div>
