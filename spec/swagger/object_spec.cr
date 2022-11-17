@@ -1,5 +1,12 @@
 require "../spec_helper"
 
+struct Project
+  property id, name, description, vcs, open_source
+
+  def initialize(@id : Int32, @name : String, @vcs : String, @open_source : Bool, @description : String? = nil)
+  end
+end
+
 describe Swagger::Object do
   describe "#new" do
     it "should works" do
@@ -40,6 +47,25 @@ describe Swagger::Object do
       raw.type.should eq("array")
       raw.properties.should be_nil
       raw.items.should eq("Comment")
+    end
+
+    it "should generate schema of object from object instance" do
+      raw = Swagger::Object.create_from_instance(
+        Project.new(1, "swagger", "git", true, "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler.")
+      )
+      raw.name.should eq "Project"
+      raw.type.should eq "object"
+      raw.properties.should eq [
+        Swagger::Property.new("id", "integer", "int32", example: 1, required: true),
+        Swagger::Property.new("name", example: "swagger", required: true),
+        Swagger::Property.new("vcs", example: "git", required: true),
+        Swagger::Property.new("open_source", "boolean", example: true, required: true),
+        Swagger::Property.new(
+          "description",
+          example: "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler.",
+          required: false
+        ),
+      ]
     end
   end
 end

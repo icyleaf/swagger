@@ -5,9 +5,10 @@ require "http/server/handler"
 module Swagger::HTTP::Handler
   macro included
     include ::HTTP::Handler
+
     def not_found(context)
       response_with(context, {
-        message: "not_found"
+        message: "not_found",
       }, status_code: 404)
     end
 
