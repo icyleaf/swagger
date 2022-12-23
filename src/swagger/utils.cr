@@ -12,7 +12,7 @@ module Utils
           return self.create_from_class({{ T.union_types.find { |var| var != Nil } }})
         {% else %}
           # Cf https://swagger.io/specification/#data-types
-          {% if T <= String || T <= Nil %}
+          {% if T <= String %}
             swagger_type = "string"
             swagger_format = nil
           {% elsif T <= Int %}
@@ -37,7 +37,7 @@ module Utils
             swagger_type = "boolean"
             swagger_format = nil
           {% else %}
-            swagger_type = {{ T.stringify }}
+            swagger_type = "object"
             swagger_format = nil
           {% end %}
           return self.new(swagger_type, swagger_format)

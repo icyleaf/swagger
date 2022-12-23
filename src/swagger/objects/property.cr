@@ -12,6 +12,8 @@ module Swagger::Objects
     getter default : (String | Int32 | Int64 | Float64 | Bool)? = nil
     getter example : (String | Int32 | Int64 | Float64 | Bool)? = nil
     getter required : Bool? = nil
+    @[JSON::Field(key: "enum")]
+    getter enum_values : Array(String)? = nil
 
     @[JSON::Field(key: "$ref")]
     getter ref : String? = nil
@@ -19,7 +21,8 @@ module Swagger::Objects
     def initialize(@type : String? = nil, @description : String? = nil, @items : Schema? = nil,
                    @default : (String | Int32 | Int64 | Float64 | Bool)? = nil,
                    @example : (String | Int32 | Int64 | Float64 | Bool)? = nil,
-                   @required : Bool? = nil, @ref : String? = nil,)
+                   @required : Bool? = nil, @ref : String? = nil,
+                   @enum_values : Array(String)? = nil)
     end
   end
 end

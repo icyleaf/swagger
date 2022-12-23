@@ -153,6 +153,7 @@ module Swagger
           type: property.type,
           description: property.description,
           example: property.example,
+          enum_values: property.enum_values,
         )
       end
     end
