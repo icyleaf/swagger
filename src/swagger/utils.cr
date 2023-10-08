@@ -36,6 +36,9 @@ module Utils
           {% elsif T <= Bool %}
             swagger_type = "boolean"
             swagger_format = nil
+          {% elsif T <= Array %}
+            swagger_type = "array"
+            swagger_format = nil
           {% else %}
             swagger_type = "object"
             swagger_format = nil
