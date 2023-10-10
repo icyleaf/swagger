@@ -1,5 +1,36 @@
 require "../spec_helper"
 
+module Example
+end
+
+struct Example::Author
+  property name
+
+  def initialize(@name : String)
+  end
+end
+
+enum VCS
+  GIT
+  SUBVERSION
+  MERCURIAL
+  FOSSIL
+end
+
+struct Example::SelfRef
+  property refs
+
+  def initialize(@refs : Array(Example::SelfRef) | Nil)
+  end
+end
+
+struct Project
+  property id, name, description, vcs, open_source, author
+
+  def initialize(@id : Int32, @name : String, @vcs : VCS, @open_source : Bool, @author : Example::Author, @description : String? = nil)
+  end
+end
+
 describe Swagger::Object do
   describe "#new" do
     it "should works" do
@@ -40,6 +71,77 @@ describe Swagger::Object do
       raw.type.should eq("array")
       raw.properties.should be_nil
       raw.items.should eq("Comment")
+    end
+
+    it "should generate schema of object with ref from object instance" do
+      author = Example::Author.new("icyleaf")
+      raw = Swagger::Object.create_from_instance(
+        Project.new(1,
+          "swagger", VCS::GIT, true,
+          author,
+          "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler."),
+        refs: {
+          "exampleAuthor" => Swagger::Object.create_from_instance(
+            author
+          ),
+        },
+      )
+      raw.name.should eq "project"
+      raw.type.should eq "object"
+      raw.items.should be nil
+      raw.properties.should eq [
+        Swagger::Property.new("id", "integer", "int32", example: 1, required: true),
+        Swagger::Property.new("name", example: "swagger", required: true),
+        Swagger::Property.new("vcs", "object", example: "GIT", required: true, enum_values: [
+          "GIT", "SUBVERSION", "MERCURIAL", "FOSSIL",
+        ]),
+        Swagger::Property.new("open_source", "boolean", example: true, required: true),
+        Swagger::Property.new("author", "object", required: true, ref: "exampleAuthor"),
+        Swagger::Property.new(
+          "description",
+          example: "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler.",
+          required: false
+        ),
+      ]
+    end
+
+    it "should generate schema of object with self ref" do
+      raw = Swagger::Object.create_from_instance(
+        Example::SelfRef.new(
+          [
+            Example::SelfRef.new(nil),
+          ]
+        )
+      )
+      raw.name.should eq "exampleSelfRef"
+      raw.type.should eq "object"
+      raw.items.should be nil
+      raw.properties.should eq [
+        Swagger::Property.new("refs", "array", required: false, items: "exampleSelfRef"),
+      ]
+    end
+
+    it "shouldn't generate schema of object without ref from object instance" do
+      expect_raises(Swagger::Object::RefResolutionException, "No refs provided !") do
+        Swagger::Object.create_from_instance(
+          Project.new(1,
+            "swagger", VCS::GIT, true,
+            Example::Author.new("icyleaf"),
+            "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler.")
+        )
+      end
+    end
+
+    it "shouldn't generate schema of object without correct ref from object instance" do
+      expect_raises(Swagger::Object::RefResolutionException, "Ref for Example::Author not found (Searched for followed name : exampleAuthor)") do
+        Swagger::Object.create_from_instance(
+          Project.new(1,
+            "swagger", VCS::GIT, true,
+            Example::Author.new("icyleaf"),
+            "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler."),
+          refs: {"SomeStringAlias" => "string"},
+        )
+      end
     end
   end
 end
