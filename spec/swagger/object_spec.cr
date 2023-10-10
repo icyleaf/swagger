@@ -17,6 +17,13 @@ enum VCS
   FOSSIL
 end
 
+struct Example::SelfRef
+  property refs
+
+  def initialize(@refs : Array(Example::SelfRef) | Nil)
+  end
+end
+
 struct Project
   property id, name, description, vcs, open_source, author
 
@@ -95,6 +102,22 @@ describe Swagger::Object do
           example: "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler.",
           required: false
         ),
+      ]
+    end
+
+    it "should generate schema of object with self ref" do
+      raw = Swagger::Object.create_from_instance(
+        Example::SelfRef.new(
+          [
+            Example::SelfRef.new(nil),
+          ]
+        )
+      )
+      raw.name.should eq "exampleSelfRef"
+      raw.type.should eq "object"
+      raw.items.should be nil
+      raw.properties.should eq [
+        Swagger::Property.new("refs", "array", required: false, items: "exampleSelfRef"),
       ]
     end
 

@@ -59,13 +59,13 @@ module Swagger
                 ( instance_name == {{ type_ivar.type_vars }}.first.name ?
                   instance_name
                 :
-                  resolve_ref({{ type_ivar.type_vars }}.first, refs)
+                  resolve_ref({{ type_ivar.type_vars }}.first, instance_name, refs)
                 )
                 : nil
               ),
             {% else %}
             ref: (instance_name == {{ type_ivar }}.name ?
-                instance_name : resolve_ref({{ type_ivar }}, refs)
+                instance_name : resolve_ref({{ type_ivar }}, instance_name, refs)
               ),
             {% end %}
             required: {{ irequired }},
@@ -79,17 +79,22 @@ module Swagger
     class RefResolutionException < Exception
     end
 
-    private def self.resolve_ref(type : T.class, refs : Hash(String, (String | self))? = nil) : String forall T
+    private def self.resolve_ref(type : T.class, caller_type_name : String, refs : Hash(String, (String | self))? = nil) : String forall T
       swagger_data_type = Utils::SwaggerDataType.create_from_class(type)
       if swagger_data_type.type != "array" && swagger_data_type.type != "object"
         return swagger_data_type.type
+      end
+
+      type_name = compliant_type_name(type)
+      # Self references
+      if caller_type_name == type_name
+        return type_name
       end
 
       if refs.nil?
         raise RefResolutionException.new("No refs provided !")
       end
 
-      type_name = compliant_type_name(type)
       current_ref = refs[type_name]?
       if current_ref.nil?
         raise RefResolutionException.new("Ref for #{type} not found (Searched for followed name : #{type_name})")
