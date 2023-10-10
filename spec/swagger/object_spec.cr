@@ -64,12 +64,17 @@ describe Swagger::Object do
     end
 
     it "should generate schema of object with ref from object instance" do
+      author = Author.new("icyleaf")
       raw = Swagger::Object.create_from_instance(
         Project.new(1,
           "swagger", VCS::GIT, true,
-          Author.new("icyleaf"),
+          author,
           "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler."),
-        refs: {Author => "Author"},
+        refs: {
+          "Author" => Swagger::Object.create_from_instance(
+            author
+          ),
+        },
       )
       raw.name.should eq "Project"
       raw.type.should eq "object"
@@ -108,7 +113,7 @@ describe Swagger::Object do
             "swagger", VCS::GIT, true,
             Author.new("icyleaf"),
             "Swagger contains a OpenAPI / Swagger universal documentation generator and HTTP server handler."),
-          refs: {Hash => "Hash"},
+          refs: {"SomeStringAlias" => "string"},
         )
       end
     end
