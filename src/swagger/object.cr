@@ -24,7 +24,7 @@ module Swagger
 
     def self.create_from_instance(reflecting instance : T, custom_name : String? = nil, refs : Hash(String, (String | self))? = nil) forall T
       {% begin %}
-        instance_name = custom_name ? custom_name.as(String) : instance.class.name
+        instance_name = custom_name ? custom_name.as(String) : compliant_type_name(instance.class)
         properties = [] of Property
         {% for ivar in T.instance.instance_vars %}
           {{ iname = ivar.name.stringify }}
@@ -89,12 +89,20 @@ module Swagger
         raise RefResolutionException.new("No refs provided !")
       end
 
-      current_ref = refs[type.name]?
+      type_name = compliant_type_name(type)
+      current_ref = refs[type_name]?
       if current_ref.nil?
-        raise RefResolutionException.new("Ref for #{type} not found")
+        raise RefResolutionException.new("Ref for #{type} not found (Searched for followed name : #{type_name})")
       end
 
       return current_ref.is_a?(String) ? current_ref : current_ref.name
+    end
+
+    def self.compliant_type_name(type : T.class) : String forall T
+      type.name.gsub("::") { "" }.camelcase(
+        options: Unicode::CaseOptions::ASCII,
+        lower: true
+      )
     end
   end
 end
