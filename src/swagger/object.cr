@@ -59,12 +59,12 @@ module Swagger
                 ( instance_name == {{ type_ivar.type_vars }}.first.name ?
                   instance_name
                 :
-                  resolve_ref({{ type_ivar.type_vars }}.first, instance_name, refs)
+                  resolve_type({{ type_ivar.type_vars }}.first, instance_name, refs)
                 )
                 : nil
               ),
             {% else %}
-            ref: (instance_name == {{ type_ivar }}.name ?
+              ref: (instance_name == {{ type_ivar }}.name ?
                 instance_name : resolve_ref({{ type_ivar }}, instance_name, refs)
               ),
             {% end %}
@@ -79,12 +79,16 @@ module Swagger
     class RefResolutionException < Exception
     end
 
-    private def self.resolve_ref(type : T.class, caller_type_name : String, refs : Hash(String, (String | self))? = nil) : String forall T
+    private def self.resolve_type(type : T.class, caller_type_name : String, refs : Hash(String, (String | self))? = nil) : self | String forall T
       swagger_data_type = Utils::SwaggerDataType.create_from_class(type)
       if swagger_data_type.type != "array" && swagger_data_type.type != "object"
-        return swagger_data_type.type
+        return self.new("itemOf#{compliant_type_name(type)}", swagger_data_type.type)
       end
 
+      return resolve_ref(type, caller_type_name, refs)
+    end
+
+    private def self.resolve_ref(type : T.class, caller_type_name : String, refs : Hash(String, (String | self))? = nil) : String forall T
       type_name = compliant_type_name(type)
       # Self references
       if caller_type_name == type_name
