@@ -17,9 +17,9 @@ module Utils
             swagger_format = nil
           {% elsif T <= Int %}
             swagger_type = "integer"
-            {% if T <= Int32 %}
+            {% if T <= Int32 || T <= Int16 || T <= UInt16 || T <= Int8 || T <= UInt8 %}
               swagger_format = "int32"
-            {% elsif T <= Int64 %}
+            {% elsif T <= Int64 || T <= UInt32 %}
               swagger_format = "int64"
             {% else %}
               swagger_format = nil
